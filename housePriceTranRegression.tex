@@ -1,0 +1,32 @@
+\documentclass{article}
+\usepackage{amsmath} % For advanced math features like \text, \frac, etc.
+\usepackage[utf8]{inputenc} % To handle various characters
+\usepackage[a4paper, margin=0.2in]{geometry}
+
+\begin{document}
+\setcounter{table}{1}
+\begin{table}[h]
+\centering
+\caption{House Price Regression: Sqrt, Log1p, and Box–Cox($\lambda$ = 0.2 to 0.6)}
+\label{tab:TranRegression}
+\begin{tabular}{|c|c|c|c|c|c|c|c|} \hline 
+Metric & sqrt & log1p & box-cox($\lambda$=0.2) & box-cox($\lambda$=0.3) & box-cox($\lambda$=0.4) & box-cox($\lambda$=0.5) & box-cox($\lambda$=0.6) \\ \hline \hline 
+rSq &0.986164 & 0.922376 &      0.959263 &      0.970923 &      0.979648 &      0.986164 &      0.990975 \\ \hline 
+rSqBar &0.986067 &      0.921828 &      0.958975 &      0.970718 &      0.979505 &      0.986067 &      0.990911 \\ \hline 
+sst &6.42325e+13 &      6.42325e+13 &   6.42325e+13 &   6.42325e+13 &   6.42325e+13 &   6.42325e+13 &   6.42325e+13 \\ \hline 
+sse &8.88711e+11 &      4.98598e+12 &   2.61666e+12 &   1.86769e+12 &   1.30725e+12 &   8.88711e+11 &   5.79720e+11 \\ \hline 
+sde &29823.1 &  70573.3 &       51174.1 &       43238.3 &       36172.9 &       29823.1 &       24085.8 \\ \hline 
+mse0 &8.88711e+08 &     4.98598e+09 &   2.61666e+09 &   1.86769e+09 &   1.30725e+09 &   8.88711e+08 &   5.79720e+08 \\ \hline 
+rmse &29811.3 & 70611.5 &       51153.3 &       43216.7 &       36155.9 &       29811.3 &       24077.4 \\ \hline 
+mae &24296.5 &  52989.3 &       40099.4 &       34454.9 &       29213.6 &       24296.5 &       19682.3 \\ \hline 
+smape &4.85788 &        9.21218 &       7.38111 &       6.52076 &       5.68306 &       4.85788 &       4.04104 \\ \hline 
+m &1000.00 &    1000.00 &       1000.00 &       1000.00 &       1000.00 &       1000.00 &       1000.00 \\ \hline 
+dfr &7.00000 &  7.00000 &       7.00000 &       7.00000 &       7.00000 &       7.00000 &       7.00000 \\ \hline 
+df &992.000 &   992.000 &       992.000 &       992.000 &       992.000 &       992.000 &       992.000 \\ \hline 
+fStat &10100.8 &        1683.94 &       3337.02 &       4732.05 &       6821.49 &       10100.8 &       15560.1 \\ \hline 
+aic &-11705.6 & -12567.9 &      -12245.5 &      -12076.9 &      -11898.5 &      -11705.6 &      -11492.0 \\ \hline 
+bic &-11666.3 & -12528.6 &      -12206.3 &      -12037.7 &      -11859.3 &      -11666.3 &      -11452.7 \\ \hline 
+\end{tabular}
+\end{table}
+
+\end{document}
