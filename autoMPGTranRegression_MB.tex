@@ -1,0 +1,32 @@
+\documentclass{article}
+\usepackage{amsmath} % For advanced math features like \text, \frac, etc.
+\usepackage[utf8]{inputenc} % To handle various characters
+\usepackage[a4paper, margin=0.5in]{geometry}
+
+\begin{document}
+
+\begin{table}[h]
+\centering
+\caption{Auto MPG Regression: Sqrt, Log1p, and Box–Cox($\lambda$ = 0.2 to 0.6)}
+\label{tab:TranRegression}
+\begin{tabular}{|c|c|c|c|c|c|c|c|} \hline 
+Metric & sqrt & log1p & box-cox($\lambda$=0.2) & box-cox($\lambda$=0.3) & box-cox($\lambda$=0.4) & box-cox($\lambda$=0.5) & box-cox($\lambda$=0.6) \\ \hline \hline 
+rSq &0.835138 & 0.849102 &      0.845081 &      0.842076 &      0.838774 &      0.835138 &      0.831115 \\ \hline 
+rSqBar &0.832569 &      0.846751 &      0.842667 &      0.839615 &      0.836261 &      0.832569 &      0.828484 \\ \hline 
+sst &23819.0 &  23819.0 &       23819.0 &       23819.0 &       23819.0 &       23819.0 &       23819.0 \\ \hline 
+sse &3926.85 &  3594.23 &       3690.01 &       3761.60 &       3840.25 &       3926.85 &       4022.66 \\ \hline 
+sde &3.16757 &  3.02514 &       3.06750 &       3.09834 &       3.13160 &       3.16757 &       3.20662 \\ \hline 
+mse0 &10.0175 & 9.16895 &       9.41330 &       9.59591 &       9.79654 &       10.0175 &       10.2619 \\ \hline 
+rmse &3.16504 & 3.02803 &       3.06811 &       3.09773 &       3.12994 &       3.16504 &       3.20342 \\ \hline 
+mae &2.34675 &  2.18422 &       2.23278 &       2.26767 &       2.30537 &       2.34675 &       2.39157 \\ \hline 
+smape &10.2046 &        9.32001 &       9.56222 &       9.74981 &       9.95951 &       10.2046 &       10.4805 \\ \hline 
+m &392.000 &    392.000 &       392.000 &       392.000 &       392.000 &       392.000 &       392.000 \\ \hline 
+dfr &6.00000 &  6.00000 &       6.00000 &       6.00000 &       6.00000 &       6.00000 &       6.00000 \\ \hline 
+df &385.000 &   385.000 &       385.000 &       385.000 &       385.000 &       385.000 &       385.000 \\ \hline 
+fStat &325.048 &        361.067 &       350.028 &       342.146 &       333.825 &       325.048 &       315.777 \\ \hline 
+aic &-993.873 & -976.527 &      -981.681 &      -985.446 &      -989.502 &      -993.873 &      -998.598 \\ \hline 
+bic &-966.074 & -948.728 &      -953.882 &      -957.648 &      -961.703 &      -966.074 &      -970.799 \\ \hline 
+\end{tabular}
+\end{table}
+
+\end{document}
