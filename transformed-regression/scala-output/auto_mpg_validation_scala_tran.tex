@@ -1,0 +1,30 @@
+\documentclass{article}
+\usepackage{amsmath} % For advanced math features like \text, \frac, etc.
+\usepackage[utf8]{inputenc} % To handle various characters
+\begin{document}
+
+\begin{table}[h]
+\centering
+\caption{Auto MPG (Validation): Sqrt, Log1p, and Box–Cox($\lambda$ = 0.19)}
+\label{tab:Auto_MPG_(Validation)}
+\begin{tabular}{|c|c|c|c|} \hline 
+Metric & sqrt & log1p & box-cox($\lambda$=0.19) \\ \hline \hline 
+rSq &0.846480 & 0.852864 &      0.851819 \\ \hline 
+rSqBar &0.844088 &      0.850571 &      0.849510 \\ \hline 
+sst &4731.23 &  4731.23 &       4731.23 \\ \hline 
+sse &726.337 &  696.133 &       701.080 \\ \hline 
+sde &3.05724 &  2.97969 &       2.99552 \\ \hline 
+mse0 &9.31202 & 8.92478 &       8.98820 \\ \hline 
+rmse &3.05156 & 2.98744 &       2.99803 \\ \hline 
+mae &2.11846 &  1.98665 &       2.01582 \\ \hline 
+smape &9.00068 &        8.28831 &       8.41880 \\ \hline 
+m &78.0000 &    78.0000 &       78.0000 \\ \hline 
+dfr &6.00000 &  6.00000 &       6.00000 \\ \hline 
+df &385.000 &   385.000 &       385.000 \\ \hline 
+fStat &353.804 &        371.939 &       368.862 \\ \hline 
+aic &-183.700 & -182.048 &      -182.322 \\ \hline 
+bic &-167.203 & -165.551 &      -165.825 \\ \hline 
+\end{tabular}
+\end{table}
+
+\end{document}
