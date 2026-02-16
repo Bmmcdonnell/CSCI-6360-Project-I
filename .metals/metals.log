@@ -506,3 +506,44 @@ INFO: Unsupported notification method: $/setTrace
 2026.02.15 23:32:09 INFO  compiling csci-6360-project-i_d5c0a6989e (3 scala sources)
 2026.02.15 23:32:09 INFO  time: compiled CSCI-6360-Project-I_d5c0a6989e in 95ms
 2026.02.15 23:32:09 INFO  time: indexed workspace in 2.77s
+Feb 15, 2026 11:33:37 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTrace
+Feb 15, 2026 11:33:37 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTrace
+Feb 15, 2026 11:33:37 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTrace
+Feb 15, 2026 11:33:37 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTrace
+Feb 15, 2026 11:33:37 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTrace
+Feb 15, 2026 11:33:37 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTrace
+Feb 15, 2026 11:33:37 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTrace
+Feb 15, 2026 11:33:37 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTrace
+Feb 15, 2026 11:33:37 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTrace
+Feb 15, 2026 11:33:37 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTrace
+2026.02.15 23:33:37 INFO  Shutting down server
+2026.02.15 23:33:37 INFO  Memory monitor stopped
+2026.02.15 23:33:37 INFO  shutting down Metals
+2026.02.15 23:33:37 INFO  Shut down connection with build server.
+2026.02.15 23:33:37 INFO  Exiting server
+2026.02.16 08:37:44 INFO  Started: Metals version 1.6.5 in folders '/Users/gabriel/Library/Mobile Documents/com~apple~CloudDocs/CSCI-6360-Project-I' for client Visual Studio Code 1.109.3.
+2026.02.16 08:37:44 INFO  Memory monitor started
+2026.02.16 08:37:45 WARN  Using H2 2.4.240 which is newer than the version Flyway has been verified with. The latest verified version of H2 is 2.3.232.
+2026.02.16 08:37:46 INFO  Attempting to connect to the build server...
+2026.02.16 08:37:46 INFO  Running BSP server List(/usr/local/bin/scala-cli, bsp, --json-options, /Users/gabriel/Library/Mobile Documents/com~apple~CloudDocs/CSCI-6360-Project-I/.scala-build/ide-options-v2.json, --json-launcher-options, /Users/gabriel/Library/Mobile Documents/com~apple~CloudDocs/CSCI-6360-Project-I/.scala-build/ide-launcher-options.json, --envs-file, /Users/gabriel/Library/Mobile Documents/com~apple~CloudDocs/CSCI-6360-Project-I/.scala-build/ide-envs.json, /Users/gabriel/Library/Mobile Documents/com~apple~CloudDocs/CSCI-6360-Project-I)
+2026.02.16 08:37:46 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /Users/gabriel/Library/Mobile Documents/com~apple~CloudDocs/CSCI-6360-Project-I/.metals/bsp.trace.json or /Users/gabriel/Library/Caches/org.scalameta.metals/bsp.trace.json
+2026.02.16 08:37:48 INFO  time: Connected to build server in 2.4s
+2026.02.16 08:37:48 INFO  Connected to Build server: scala-cli v1.12.0
+2026.02.16 08:37:49 INFO  compiling csci-6360-project-i_d5c0a6989e (3 scala sources)
+2026.02.16 08:37:51 INFO  time: compiled CSCI-6360-Project-I_d5c0a6989e in 1.73s
+2026.02.16 08:37:51 INFO  compiling csci-6360-project-i_d5c0a6989e (3 scala sources)
+2026.02.16 08:37:52 INFO  time: compiled CSCI-6360-Project-I_d5c0a6989e in 1.06s
+2026.02.16 08:37:54 WARN  Using H2 2.4.240 which is newer than the version Flyway has been verified with. The latest verified version of H2 is 2.3.232.
+2026.02.16 08:37:54 INFO  time: indexed workspace in 5.73s
+Feb 16, 2026 8:38:35 AM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTrace
