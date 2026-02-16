@@ -141,8 +141,8 @@ Roshan Ravichandran}
 
 \begin{table}[h]
 \centering
-\caption{AutoMPG Linear Regression}
-\label{tab:Linear Regression}
+\caption{Scalation - AutoMPG Linear Regression}
+\label{tab: Scalation - Auto MPG Linear Regression}
 \begin{tabular}{|c|c|c|} \hline 
 Regression & In-Sample & 80-20 Split \\ \hline \hline 
 rSq &0.809255 & 0.808725 \\ \hline 
@@ -166,8 +166,8 @@ bic &-994.656 & -995.200 \\ \hline
 
 \begin{table}[h]
 \centering
-\caption{Auto MPG Linear Regression}
-\label{tab:Linear Regression}
+\caption{Scalation - Auto MPG Linear Regression CV}
+\label{tab: Scalation - Auto MPG Linear Regression CV}
 \begin{tabular}{|c|c|c|c|c|c|c|} \hline 
 Name &  num & min & max & mean & stdev & interval \\ \hline \hline 
 rSq & 5 & \\ \hline 
@@ -203,6 +203,8 @@ bic & 5 & \\ \hline
     \caption{Auto MPG Linear Regression 80-20 Validation Split Predictions: yy black/actual vs. yp red/predicted}
     \label{fig:Auto MPG Linear Regression 80-20 Validation Split Predictions}
 \end{figure}
+
+\subsection{Statsmodels}
 
 This text is here to force the images and tables to be in the correct section.
 
@@ -240,8 +242,8 @@ This text is here to force the images and tables to be in the correct section.
 
 \begin{table}[h]
 \centering
-\caption{House Price Linear Regression}
-\label{tab:Linear Regression}
+\caption{Scalation - House Price Linear Regression}
+\label{tab: Scalation - House Price Linear Regression}
 \begin{tabular}{|c|c|c|} \hline 
 Regression & In-Sample & 80-20 Split \\ \hline \hline 
 rSq &0.998516 & 0.998515 \\ \hline 
@@ -264,8 +266,8 @@ bic &-10556.9 & -10557.4 \\ \hline
 
 \begin{table}[h]
 \centering
-\caption{House Price Linear Regression}
-\label{tab:Linear Regression}
+\caption{Scalation - House Price Linear Regression CV}
+\label{tab: Scalation - House Price Linear Regression CV}
 \begin{tabular}{|c|c|c|c|c|c|c|} \hline 
 Name &  num folds & min & max & mean & stdev & interval \\ \hline \hline 
 rSq & 5 & 0.998 & 0.999 & 0.998 & 0.000 & 0.000 \\ \hline 
@@ -302,6 +304,32 @@ bic & 5 & -2104.190 &  -2077.067 &  -2085.993 &     11.789 &     14.641 \\ \hlin
     \label{fig:House Price Linear Regression 80-20 Validation Split Predictions}
 \end{figure}
 
+\subsection{Statsmodels}
+
+\begin{table}[h]
+\centering
+\caption{Statsmodels - House Price Linear Regression}
+\label{tab:Statsmodels - House Price Linear Regression}
+\begin{tabular}{|c|c|c|}\hline
+Regression & In-Sample & 80-20 Split \\ \hline \hline
+rSq & 0.9985 & 0.9985 \\ \hline
+rSqBar & 0.9985 & 0.9985 \\ \hline
+sst & 64232463468052.5469 & 64232463468052.5469 \\ \hline
+sse & 95249090298.3967 & 95367385265.9364 \\ \hline
+sde & 9793.9029 & 9799.9828 \\ \hline
+mse0 & 95249090298.3967 & 95367385265.9364 \\ \hline
+rmse & 9793.9029 & 9799.9828 \\ \hline
+mae & 7740.4301 & 7748.4110 \\ \hline
+smape & 1.5774 & 1.5785 \\ \hline
+m & 1000.0000 & 1000.0000 \\ \hline
+dfr & 6.0000 & 6.0000 \\ \hline
+df & 993.0000 & 993.0000 \\ \hline
+fStat & 668.6425 & 667.8118 \\ \hline
+aic & 18386.0060 & 18387.2472 \\ \hline
+bic & 18420.3603 & 18421.6015 \\ \hline
+\end{tabular}
+\end{table}
+
 This text is here to force the images and tables to be in the correct section.
 
 \vspace{5cm}
@@ -326,8 +354,8 @@ This text is here to force the images and tables to be in the correct section.
 
 \begin{table}[h]
 \centering
-\caption{Insurance Charges Linear Regression}
-\label{tab:Linear Regression}
+\caption{Scalation - Insurance Charges Linear Regression}
+\label{tab: Scalation - Insurance Charges Linear Regression}
 \begin{tabular}{|c|c|c|} \hline 
 Regression & In-Sample & 80-20 Split \\ \hline \hline 
 rSq &0.750157 & 0.749834 \\ \hline 
@@ -348,11 +376,10 @@ bic &-13492.2 & -13493.1 \\ \hline
 \end{tabular}
 \end{table}
 
-
 \begin{table}[h]
 \centering
-\caption{Insurance Charges Linear Regression}
-\label{tab:Linear Regression}
+\caption{Scalation - Insurance Charges Linear Regression CV}
+\label{tab: Scalation - Insurance Charges Linear Regression CV}
 \begin{tabular}{|c|c|c|c|c|c|c|} \hline 
 Name &  num & min & max & mean & stdev & interval \\ \hline \hline 
 rSq & 5 & 0.701 &      0.814 &      0.743 &      0.046 &      0.057 \\ \hline 
@@ -373,8 +400,6 @@ bic & 5 & -2680.349 &  -2634.412 &  -2662.319 &     19.599 &     24.340 \\ \hlin
 \end{tabular}
 \end{table}
 
-
-
 \begin{figure}[h]
     \centering
     \includegraphics[width=0.8\textwidth]{Insurance/In_Sample.png}
@@ -388,5 +413,31 @@ bic & 5 & -2680.349 &  -2634.412 &  -2662.319 &     19.599 &     24.340 \\ \hlin
     \caption{Insurance Charges Linear Regression 80-20 Validation Split Predictions: yy black/actual vs. yp red/predicted}
     \label{fig:Insurance Charges Linear Regression 80-20 Validation Split Predictions}
 \end{figure}
+
+\subsection{Statsmodels}
+
+\begin{table}[h]
+\centering
+\caption{Statsmodels - Insurance Charges Linear Regression}
+\label{tab:Statsmodels - Insurance Charges Linear Regression}
+\begin{tabular}{|c|c|c|}\hline
+Regression & In-Sample & 80-20 Split \\ \hline \hline
+rSq & 0.7509 & 0.7507 \\ \hline
+rSqBar & 0.7494 & 0.7492 \\ \hline
+sst & 196074221568.3671 & 196074221568.3671 \\ \hline
+sse & 48839532843.9219 & 48891092869.3249 \\ \hline
+sde & 6059.8229 & 6063.0207 \\ \hline
+mse0 & 48839532843.9219 & 48891092869.3249 \\ \hline
+rmse & 6059.8229 & 6063.0207 \\ \hline
+mae & 4170.8869 & 4202.8185 \\ \hline
+smape & 37.8059 & 38.1000 \\ \hline
+m & 1338.0000 & 1338.0000 \\ \hline
+dfr & 7.0000 & 7.0000 \\ \hline
+df & 1330.0000 & 1330.0000 \\ \hline
+fStat & 2.9907 & 2.9864 \\ \hline
+aic & 23314.4263 & 23315.8381 \\ \hline
+bic & 23356.0178 & 23357.4296 \\ \hline
+\end{tabular}
+\end{table}
 
 \end{document}

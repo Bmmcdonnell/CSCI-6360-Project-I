@@ -547,3 +547,168 @@ INFO: Unsupported notification method: $/setTrace
 2026.02.16 08:37:54 INFO  time: indexed workspace in 5.73s
 Feb 16, 2026 8:38:35 AM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
 INFO: Unsupported notification method: $/setTrace
+2026.02.16 08:41:16 INFO  BSP server: java.lang.NullPointerException
+2026.02.16 08:41:16 INFO  BSP server: 	at java.base@17.0.6/java.util.Objects.requireNonNull(Objects.java:208)
+2026.02.16 08:41:16 INFO  BSP server: 	at java.base@17.0.6/sun.nio.fs.UnixFileSystem.getPath(UnixFileSystem.java:263)
+2026.02.16 08:41:16 INFO  BSP server: 	at java.base@17.0.6/java.nio.file.Path.of(Path.java:147)
+2026.02.16 08:41:16 INFO  BSP server: 	at java.base@17.0.6/java.nio.file.Paths.get(Paths.java:69)
+2026.02.16 08:41:16 INFO  BSP server: 	at com.swoval.files.ApplePathWatcher$1.accept(ApplePathWatcher.java:268)
+2026.02.16 08:41:16 INFO  BSP server: 	at com.swoval.files.ApplePathWatcher$1.accept(ApplePathWatcher.java:261)
+2026.02.16 08:41:16 INFO  BSP server: 	at com.swoval.files.apple.FileEventMonitorImpl$WrappedConsumer$1.run(FileEventMonitors.java:178)
+2026.02.16 08:41:16 INFO  BSP server: 	at java.base@17.0.6/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+2026.02.16 08:41:16 INFO  BSP server: 	at java.base@17.0.6/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+2026.02.16 08:41:16 INFO  BSP server: 	at java.base@17.0.6/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+2026.02.16 08:41:16 INFO  BSP server: 	at java.base@17.0.6/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+2026.02.16 08:41:16 INFO  BSP server: 	at java.base@17.0.6/java.lang.Thread.run(Thread.java:833)
+2026.02.16 08:41:16 INFO  BSP server: 	at com.oracle.svm.core.thread.PlatformThreads.threadStartRoutine(PlatformThreads.java:775)
+2026.02.16 08:41:16 INFO  BSP server: 	at com.oracle.svm.core.posix.thread.PosixPlatformThreads.pthreadStartRoutine(PosixPlatformThreads.java:203)
+2026.02.16 08:41:17 INFO  BSP server: java.lang.NullPointerException
+2026.02.16 08:41:17 INFO  BSP server: 	at java.base@17.0.6/java.util.Objects.requireNonNull(Objects.java:208)
+2026.02.16 08:41:17 INFO  BSP server: 	at java.base@17.0.6/sun.nio.fs.UnixFileSystem.getPath(UnixFileSystem.java:263)
+2026.02.16 08:41:17 INFO  BSP server: 	at java.base@17.0.6/java.nio.file.Path.of(Path.java:147)
+2026.02.16 08:41:17 INFO  BSP server: 	at java.base@17.0.6/java.nio.file.Paths.get(Paths.java:69)
+2026.02.16 08:41:17 INFO  BSP server: 	at com.swoval.files.ApplePathWatcher$1.accept(ApplePathWatcher.java:268)
+2026.02.16 08:41:17 INFO  BSP server: 	at com.swoval.files.ApplePathWatcher$1.accept(ApplePathWatcher.java:261)
+2026.02.16 08:41:17 INFO  BSP server: 	at com.swoval.files.apple.FileEventMonitorImpl$WrappedConsumer$1.run(FileEventMonitors.java:178)
+2026.02.16 08:41:17 INFO  BSP server: 	at java.base@17.0.6/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+2026.02.16 08:41:17 INFO  BSP server: 	at java.base@17.0.6/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+2026.02.16 08:41:17 INFO  BSP server: 	at java.base@17.0.6/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+2026.02.16 08:41:17 INFO  BSP server: 	at java.base@17.0.6/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+2026.02.16 08:41:17 INFO  BSP server: 	at java.base@17.0.6/java.lang.Thread.run(Thread.java:833)
+2026.02.16 08:41:17 INFO  BSP server: 	at com.oracle.svm.core.thread.PlatformThreads.threadStartRoutine(PlatformThreads.java:775)
+2026.02.16 08:41:17 INFO  BSP server: 	at com.oracle.svm.core.posix.thread.PosixPlatformThreads.pthreadStartRoutine(PosixPlatformThreads.java:203)
+2026.02.16 08:41:19 INFO  BSP server: java.lang.NullPointerException
+2026.02.16 08:41:19 INFO  BSP server: 	at java.base@17.0.6/java.util.Objects.requireNonNull(Objects.java:208)
+2026.02.16 08:41:19 INFO  BSP server: 	at java.base@17.0.6/sun.nio.fs.UnixFileSystem.getPath(UnixFileSystem.java:263)
+2026.02.16 08:41:19 INFO  BSP server: 	at java.base@17.0.6/java.nio.file.Path.of(Path.java:147)
+2026.02.16 08:41:19 INFO  BSP server: 	at java.base@17.0.6/java.nio.file.Paths.get(Paths.java:69)
+2026.02.16 08:41:19 INFO  BSP server: 	at com.swoval.files.ApplePathWatcher$1.accept(ApplePathWatcher.java:268)
+2026.02.16 08:41:19 INFO  BSP server: 	at com.swoval.files.ApplePathWatcher$1.accept(ApplePathWatcher.java:261)
+2026.02.16 08:41:19 INFO  BSP server: 	at com.swoval.files.apple.FileEventMonitorImpl$WrappedConsumer$1.run(FileEventMonitors.java:178)
+2026.02.16 08:41:19 INFO  BSP server: 	at java.base@17.0.6/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+2026.02.16 08:41:19 INFO  BSP server: 	at java.base@17.0.6/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+2026.02.16 08:41:19 INFO  BSP server: 	at java.base@17.0.6/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+2026.02.16 08:41:19 INFO  BSP server: 	at java.base@17.0.6/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+2026.02.16 08:41:19 INFO  BSP server: 	at java.base@17.0.6/java.lang.Thread.run(Thread.java:833)
+2026.02.16 08:41:19 INFO  BSP server: 	at com.oracle.svm.core.thread.PlatformThreads.threadStartRoutine(PlatformThreads.java:775)
+2026.02.16 08:41:19 INFO  BSP server: 	at com.oracle.svm.core.posix.thread.PosixPlatformThreads.pthreadStartRoutine(PosixPlatformThreads.java:203)
+2026.02.16 08:41:46 INFO  Shutting down server
+2026.02.16 08:41:46 INFO  Memory monitor stopped
+2026.02.16 08:41:46 INFO  shutting down Metals
+2026.02.16 08:41:46 INFO  Shut down connection with build server.
+2026.02.16 08:41:46 INFO  Exiting server
+2026.02.16 08:42:10 INFO  Started: Metals version 1.6.5 in folders '/Users/gabriel/Library/Mobile Documents/com~apple~CloudDocs/CSCI-6360-Project-I' for client Visual Studio Code 1.109.3.
+2026.02.16 08:42:10 INFO  Memory monitor started
+2026.02.16 08:42:12 WARN  Using H2 2.4.240 which is newer than the version Flyway has been verified with. The latest verified version of H2 is 2.3.232.
+2026.02.16 08:42:12 INFO  Attempting to connect to the build server...
+2026.02.16 08:42:12 INFO  Running BSP server List(/usr/local/bin/scala-cli, bsp, --json-options, /Users/gabriel/Library/Mobile Documents/com~apple~CloudDocs/CSCI-6360-Project-I/.scala-build/ide-options-v2.json, --json-launcher-options, /Users/gabriel/Library/Mobile Documents/com~apple~CloudDocs/CSCI-6360-Project-I/.scala-build/ide-launcher-options.json, --envs-file, /Users/gabriel/Library/Mobile Documents/com~apple~CloudDocs/CSCI-6360-Project-I/.scala-build/ide-envs.json, /Users/gabriel/Library/Mobile Documents/com~apple~CloudDocs/CSCI-6360-Project-I)
+2026.02.16 08:42:12 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /Users/gabriel/Library/Mobile Documents/com~apple~CloudDocs/CSCI-6360-Project-I/.metals/bsp.trace.json or /Users/gabriel/Library/Caches/org.scalameta.metals/bsp.trace.json
+2026.02.16 08:42:14 INFO  time: Connected to build server in 1.36s
+2026.02.16 08:42:14 INFO  Connected to Build server: scala-cli v1.12.0
+2026.02.16 08:42:14 INFO  compiling csci-6360-project-i_d5c0a6989e (3 scala sources)
+2026.02.16 08:42:15 INFO  time: compiled CSCI-6360-Project-I_d5c0a6989e in 1.33s
+2026.02.16 08:42:15 INFO  compiling csci-6360-project-i_d5c0a6989e (3 scala sources)
+2026.02.16 08:42:17 INFO  time: compiled CSCI-6360-Project-I_d5c0a6989e in 1.2s
+2026.02.16 08:42:19 WARN  Using H2 2.4.240 which is newer than the version Flyway has been verified with. The latest verified version of H2 is 2.3.232.
+2026.02.16 08:42:19 INFO  time: indexed workspace in 5.62s
+Feb 16, 2026 8:50:28 AM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTrace
+Feb 16, 2026 8:51:06 AM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTrace
+Feb 16, 2026 8:51:12 AM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTrace
+Feb 16, 2026 8:51:12 AM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTrace
+2026.02.16 08:51:12 INFO  Shutting down server
+2026.02.16 08:51:12 INFO  Memory monitor stopped
+2026.02.16 08:51:12 INFO  shutting down Metals
+2026.02.16 08:51:12 INFO  Shut down connection with build server.
+2026.02.16 08:51:12 INFO  Exiting server
+2026.02.16 08:51:30 INFO  Started: Metals version 1.6.5 in folders '/Users/gabriel/Library/Mobile Documents/com~apple~CloudDocs/CSCI-6360-Project-I' for client Visual Studio Code 1.109.3.
+2026.02.16 08:51:30 INFO  Memory monitor started
+2026.02.16 08:51:32 WARN  Using H2 2.4.240 which is newer than the version Flyway has been verified with. The latest verified version of H2 is 2.3.232.
+2026.02.16 08:51:32 INFO  Attempting to connect to the build server...
+2026.02.16 08:51:32 INFO  Running BSP server List(/usr/local/bin/scala-cli, bsp, --json-options, /Users/gabriel/Library/Mobile Documents/com~apple~CloudDocs/CSCI-6360-Project-I/.scala-build/ide-options-v2.json, --json-launcher-options, /Users/gabriel/Library/Mobile Documents/com~apple~CloudDocs/CSCI-6360-Project-I/.scala-build/ide-launcher-options.json, --envs-file, /Users/gabriel/Library/Mobile Documents/com~apple~CloudDocs/CSCI-6360-Project-I/.scala-build/ide-envs.json, /Users/gabriel/Library/Mobile Documents/com~apple~CloudDocs/CSCI-6360-Project-I)
+2026.02.16 08:51:32 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /Users/gabriel/Library/Mobile Documents/com~apple~CloudDocs/CSCI-6360-Project-I/.metals/bsp.trace.json or /Users/gabriel/Library/Caches/org.scalameta.metals/bsp.trace.json
+2026.02.16 08:51:34 INFO  time: Connected to build server in 1.3s
+2026.02.16 08:51:34 INFO  Connected to Build server: scala-cli v1.12.0
+2026.02.16 08:51:34 INFO  compiling csci-6360-project-i_d5c0a6989e (3 scala sources)
+2026.02.16 08:51:35 INFO  time: compiled CSCI-6360-Project-I_d5c0a6989e in 1.19s
+2026.02.16 08:51:35 INFO  compiling csci-6360-project-i_d5c0a6989e (3 scala sources)
+2026.02.16 08:51:36 INFO  time: compiled CSCI-6360-Project-I_d5c0a6989e in 0.98s
+2026.02.16 08:51:38 WARN  Using H2 2.4.240 which is newer than the version Flyway has been verified with. The latest verified version of H2 is 2.3.232.
+2026.02.16 08:51:38 INFO  time: indexed workspace in 4.87s
+Feb 16, 2026 8:51:52 AM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTrace
+Feb 16, 2026 8:52:02 AM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTrace
+Feb 16, 2026 8:52:08 AM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTrace
+Feb 16, 2026 8:52:20 AM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTrace
+Feb 16, 2026 8:54:00 AM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTrace
+Feb 16, 2026 8:54:19 AM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTrace
+Feb 16, 2026 8:54:53 AM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTrace
+Feb 16, 2026 8:54:53 AM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTrace
+Feb 16, 2026 8:54:53 AM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTrace
+Feb 16, 2026 8:54:53 AM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTrace
+Feb 16, 2026 8:54:53 AM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTrace
+Feb 16, 2026 8:55:05 AM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTrace
+Feb 16, 2026 8:55:11 AM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTrace
+Feb 16, 2026 8:55:47 AM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTrace
+Feb 16, 2026 8:56:01 AM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTrace
+Feb 16, 2026 8:56:16 AM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTrace
+Feb 16, 2026 8:56:24 AM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTrace
+Feb 16, 2026 9:00:17 AM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTrace
+Feb 16, 2026 9:02:23 AM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTrace
+Feb 16, 2026 9:02:42 AM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTrace
+Feb 16, 2026 9:05:55 AM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTrace
+Feb 16, 2026 9:06:31 AM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTrace
+Feb 16, 2026 9:06:57 AM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTrace
+Feb 16, 2026 9:15:43 AM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTrace
+Feb 16, 2026 9:16:44 AM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTrace
+Feb 16, 2026 9:35:52 AM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTrace
+Feb 16, 2026 9:53:50 AM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTrace
+Feb 16, 2026 9:54:17 AM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTrace
+Feb 16, 2026 10:02:38 AM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTrace
+Feb 16, 2026 10:05:19 AM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTrace
+Feb 16, 2026 10:07:09 AM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTrace
+Feb 16, 2026 10:07:49 AM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTrace
+Feb 16, 2026 10:13:27 AM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTrace
+Feb 16, 2026 10:18:15 AM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTrace
+Feb 16, 2026 10:18:21 AM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTrace
+Feb 16, 2026 10:19:38 AM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTrace
+Feb 16, 2026 10:28:24 AM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTrace
