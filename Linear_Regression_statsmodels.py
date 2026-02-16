@@ -1,3 +1,4 @@
+from wsgiref import validate
 import statsmodels.api as sm
 import pandas as pd
 import numpy as np
@@ -5,52 +6,58 @@ import matplotlib.pyplot as plt
 from sklearn.model_selection import train_test_split
 
 
-def LatexTable(y_actual, y_pred_in_sample, y_pred_split, m, k, data_name):
+def LatexTable(y_actual, y_test, y_pred_in_sample, y_pred_split_test, k, data_name):
+    # Get the number of observations (m) or (t) for the test set
+    m = len(y_actual)  # Number of observations in the original dataset
+    t = len(y_test)  # Number of observations in the test set
+
     # Calculate SSR (Sum of Squared Residuals)
     ssr_in_sample = np.sum((y_actual - y_pred_in_sample)**2)
-    ssr_split = np.sum((y_actual - y_pred_split)**2)
+    ssr_test = np.sum((y_test - y_pred_split_test)**2)
 
     # Calculate SST (Total Sum of Squares)
-    sst = np.sum((y_actual - np.mean(y_actual))**2)
+    sst_in_sample = np.sum((y_actual - np.mean(y_actual))**2)
+    sst_test = np.sum((y_test - np.mean(y_test))**2)
 
     # Compute R-squared
-    r_squared_in_sample = 1 - (ssr_in_sample / sst)
-    r_squared_split = 1 - (ssr_split / sst)
+    r_squared_in_sample = 1 - (ssr_in_sample / sst_in_sample)
+    r_squared_test = 1 - (ssr_test / sst_test)
 
     # Calculate Adjusted R-squared
     r_squared_adj_in_sample = 1 - (1 - r_squared_in_sample) * (m) / (m - k)
-    r_squared_adj_split = 1 - (1 - r_squared_split) * (m) / (m - k)
+    r_squared_adj_test = 1 - (1 - r_squared_test) * (t) / (t - k)
 
     # Standard Deviation of the Errors (SDE)
     sde_in_sample = np.sqrt(ssr_in_sample / (m - k))
-    sde_split = np.sqrt(ssr_split / (m - k))
+    sde_test = np.sqrt(ssr_test / (t))
 
     # Calculate Mean Squared Error
-    mse0 = sst / m
+    mse0_in_sample = sst_in_sample / m
+    mse0_test = sst_test / t
 
     # Root Mean Squared Error
     rmse_in_sample = np.sqrt(ssr_in_sample / (m - k))
-    rmse_split = np.sqrt(ssr_split / (m - k))
+    rmse_test = np.sqrt(ssr_test / (t))
 
     # Mean Absolute Error
     mae_in_sample = np.mean(np.abs(y_actual - y_pred_in_sample))
-    mae_split = np.mean(np.abs(y_actual - y_pred_split))
+    mae_test = np.mean(np.abs(y_test - y_pred_split_test))
 
     # Symmetric Mean Absolute Percentage Error (SMAPE)
     smape_in_sample = np.mean(2 * np.abs(y_actual - y_pred_in_sample) / (np.abs(y_actual) + np.abs(y_pred_in_sample))) * 100
-    smape_split = np.mean(2 * np.abs(y_actual - y_pred_split) / (np.abs(y_actual) + np.abs(y_pred_split))) * 100  
+    smape_test = np.mean(2 * np.abs(y_test - y_pred_split_test) / (np.abs(y_test) + np.abs(y_pred_split_test))) * 100  
 
     # Calculate F-statistic
-    f_stat_in_sample = (mse0 - (ssr_in_sample / (m - k))) / (ssr_in_sample / (m - k))
-    f_stat_split = (mse0 - (ssr_split / (m - k))) / (ssr_split / (m - k))
+    f_stat_in_sample = (mse0_in_sample - (ssr_in_sample / (m - k))) / (ssr_in_sample / (m - k))
+    f_stat_test = (mse0_test - (ssr_test / t)) / (ssr_test / t)
 
     # Calculate AIC
     aic_in_sample = m * np.log(ssr_in_sample / m) + 2 * k
-    aic_split = m * np.log(ssr_split / m) + 2 * k
+    aic_test = t * np.log(ssr_test / t) + 2 * k
 
     # Calculate BIC
     bic_in_sample = m * np.log(ssr_in_sample / m) + k * np.log(m)
-    bic_split = m * np.log(ssr_split / m) + k * np.log(m)
+    bic_test = t * np.log(ssr_test / t) + k * np.log(t)
 
     # Print the results in a LaTeX table format
     print("\\begin{table}[h]")
@@ -59,21 +66,21 @@ def LatexTable(y_actual, y_pred_in_sample, y_pred_split, m, k, data_name):
     print(f"\\label{{tab:Statsmodels - {data_name} Linear Regression}}")
     print("\\begin{tabular}{|c|c|c|}\\hline")
     print("Regression & In-Sample & 80-20 Split \\\\ \\hline \\hline")
-    print(f"rSq & {r_squared_in_sample:.4f} & {r_squared_split:.4f} \\\\ \\hline")
-    print(f"rSqBar & {r_squared_adj_in_sample:.4f} & {r_squared_adj_split:.4f} \\\\ \\hline")
-    print(f"sst & {sst:.4f} & {sst:.4f} \\\\ \\hline")
-    print(f"sse & {ssr_in_sample:.4f} & {ssr_split:.4f} \\\\ \\hline")
-    print(f"sde & {sde_in_sample:.4f} & {sde_split:.4f} \\\\ \\hline")
-    print(f"mse0 & {mse0:.4f} & {mse0:.4f} \\\\ \\hline")
-    print(f"rmse & {rmse_in_sample:.4f} & {rmse_split:.4f} \\\\ \\hline")
-    print(f"mae & {mae_in_sample:.4f} & {mae_split:.4f} \\\\ \\hline")
-    print(f"smape & {smape_in_sample:.4f} & {smape_split:.4f} \\\\ \\hline")
-    print(f"m & {m:.4f} & {m:.4f} \\\\ \\hline")
-    print(f"dfr & {k-1:.4f} & {k-1:.4f} \\\\ \\hline")
-    print(f"df & {m - k:.4f} & {m - k:.4f} \\\\ \\hline")
-    print(f"fStat & {f_stat_in_sample:.4f} & {f_stat_split:.4f} \\\\ \\hline")
-    print(f"aic & {aic_in_sample:.4f} & {aic_split:.4f} \\\\ \\hline")
-    print(f"bic & {bic_in_sample:.4f} & {bic_split:.4f} \\\\ \\hline")
+    print(f"rSq & {r_squared_in_sample:.4f} & {r_squared_test:.4f} \\\\ \\hline")
+    print(f"rSqBar & {r_squared_adj_in_sample:.4f} & {r_squared_adj_test:.4f} \\\\ \\hline")
+    print(f"sst & {sst_in_sample:.4f} & {sst_test:.4f} \\\\ \\hline")
+    print(f"sse & {ssr_in_sample:.4f} & {ssr_test:.4f} \\\\ \\hline")
+    print(f"sde & {sde_in_sample:.4f} & {sde_test:.4f} \\\\ \\hline")
+    print(f"mse0 & {mse0_in_sample:.4f} & {mse0_test:.4f} \\\\ \\hline")
+    print(f"rmse & {rmse_in_sample:.4f} & {rmse_test:.4f} \\\\ \\hline")
+    print(f"mae & {mae_in_sample:.4f} & {mae_test:.4f} \\\\ \\hline")
+    print(f"smape & {smape_in_sample:.4f} & {smape_test:.4f} \\\\ \\hline")
+    # print(f"m & {m:.4f} & {t:.4f} \\\\ \\hline")
+    # print(f"dfr & {k-1:.4f} & {k-1:.4f} \\\\ \\hline")
+    # print(f"df & {m - k:.4f} & {t - k:.4f} \\\\ \\hline")
+    # print(f"fStat & {f_stat_in_sample:.4f} & {f_stat_test:.4f} \\\\ \\hline")
+    # print(f"aic & {aic_in_sample:.4f} & {aic_test:.4f} \\\\ \\hline")
+    # print(f"bic & {bic_in_sample:.4f} & {bic_test:.4f} \\\\ \\hline")
     print("\\end{tabular}")
     print("\\end{table}")
 
@@ -87,10 +94,13 @@ def sorted_plot(y_actual, y_pred, data_name, validate=False):
     x = np.arange(0, x_end)  # X-axis values from 1 to number of observations
     # Plot the sorted data
     plt.figure(figsize=(10, 6))
-    plt.scatter(x, df_sorted['Predicted'], label='Predicted Values', color='red')
+    plt.plot(x, df_sorted['Predicted'], label='Predicted Values', color='red')
     plt.plot(x, df_sorted['Actual'], color='black', label='Actual Values')
-    plt.title(f'Sorted Plot - {data_name}')
+    plt.title(f'{data_name} Linear Regression, {"80-20 Split" if validate else "In-Sample"}: yy black/actual vs. yp red/predicted')
     plt.legend()
+    plt.ylim(0, 50)
+    plt.xlim(-20, x_end + 20)
+    plt.savefig(f'{data_name}_Linear_Regression_{"80-20_Split" if validate else "In-Sample"}.png')
     plt.show()
 
 
@@ -138,14 +148,16 @@ def LinRegAutoMPG():
 
     # Make predictions on the original data set to compare to the in-sample regression results
     y_pred_in_sample = reg_in_sample.predict(X)
-    y_pred_split = reg_train.predict(X)
+    y_pred_split_test = reg_train.predict(X_test)
 
     # Get the number of observations (m) and the number of independent variables (k)
-    m = len(y)  # Number of observations
     k = X.shape[1] - 1  # Number of independent variables
 
     # Print the qof statistics in a LaTeX table format
-    LatexTable(y, y_pred_in_sample, y_pred_split, m, k, "Auto MPG")
+    LatexTable(y, y_test, y_pred_in_sample, y_pred_split_test, k, "Auto MPG")
+
+    sorted_plot(y, y_pred_in_sample, "Auto MPG", validate=False)
+    sorted_plot(y_test, y_pred_split_test, "Auto MPG", validate=True)
 
 
 
