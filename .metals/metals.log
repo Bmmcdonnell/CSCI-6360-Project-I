@@ -205,3 +205,251 @@ INFO: Unsupported notification method: $/setTrace
 2026.02.15 17:28:31 INFO  time: compiled CSCI-6360-Project-I_d5c0a6989e in 0.56s
 2026.02.15 17:29:35 INFO  compiling csci-6360-project-i_d5c0a6989e (3 scala sources)
 2026.02.15 17:29:35 INFO  time: compiled CSCI-6360-Project-I_d5c0a6989e in 0.71s
+2026.02.15 17:32:09 INFO  Shutting down server
+2026.02.15 17:32:09 INFO  Memory monitor stopped
+2026.02.15 17:32:09 INFO  shutting down Metals
+2026.02.15 17:32:09 INFO  Shut down connection with build server.
+2026.02.15 17:32:09 INFO  Exiting server
+2026.02.15 17:58:20 INFO  Started: Metals version 1.6.5 in folders '/Users/gabriel/Library/Mobile Documents/com~apple~CloudDocs/CSCI-6360-Project-I' for client Visual Studio Code 1.109.3.
+2026.02.15 17:58:20 INFO  Memory monitor started
+2026.02.15 17:58:23 WARN  Using H2 2.4.240 which is newer than the version Flyway has been verified with. The latest verified version of H2 is 2.3.232.
+2026.02.15 17:58:23 INFO  no build target found for /Users/gabriel/Library/Mobile Documents/com~apple~CloudDocs/CSCI-6360-Project-I/Linear_Regression.scala. Using presentation compiler with project's scala-library version: 3.3.7
+2026.02.15 17:58:23 INFO  Attempting to connect to the build server...
+2026.02.15 17:58:23 INFO  Running BSP server List(/usr/local/bin/scala-cli, bsp, --json-options, /Users/gabriel/Library/Mobile Documents/com~apple~CloudDocs/CSCI-6360-Project-I/.scala-build/ide-options-v2.json, --json-launcher-options, /Users/gabriel/Library/Mobile Documents/com~apple~CloudDocs/CSCI-6360-Project-I/.scala-build/ide-launcher-options.json, --envs-file, /Users/gabriel/Library/Mobile Documents/com~apple~CloudDocs/CSCI-6360-Project-I/.scala-build/ide-envs.json, /Users/gabriel/Library/Mobile Documents/com~apple~CloudDocs/CSCI-6360-Project-I)
+2026.02.15 17:58:23 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /Users/gabriel/Library/Mobile Documents/com~apple~CloudDocs/CSCI-6360-Project-I/.metals/bsp.trace.json or /Users/gabriel/Library/Caches/org.scalameta.metals/bsp.trace.json
+2026.02.15 17:58:26 INFO  time: Connected to build server in 2.47s
+2026.02.15 17:58:26 INFO  Connected to Build server: scala-cli v1.12.0
+2026.02.15 17:58:26 INFO  compiling csci-6360-project-i_d5c0a6989e (3 scala sources)
+Feb 15, 2026 5:58:27 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 3
+Feb 15, 2026 5:58:27 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 2
+Feb 15, 2026 5:58:27 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 1
+2026.02.15 17:58:30 INFO  time: compiled CSCI-6360-Project-I_d5c0a6989e in 3.54s
+2026.02.15 17:58:30 INFO  compiling csci-6360-project-i_d5c0a6989e (3 scala sources)
+Feb 15, 2026 5:58:31 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 17
+2026.02.15 17:58:33 INFO  time: compiled CSCI-6360-Project-I_d5c0a6989e in 2.92s
+Feb 15, 2026 5:58:33 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 21
+2026.02.15 17:58:33 INFO  compiling csci-6360-project-i_d5c0a6989e (3 scala sources)
+Feb 15, 2026 5:58:33 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 26
+2026.02.15 17:58:35 INFO  time: compiled CSCI-6360-Project-I_d5c0a6989e in 1.96s
+2026.02.15 17:58:36 WARN  Using H2 2.4.240 which is newer than the version Flyway has been verified with. The latest verified version of H2 is 2.3.232.
+2026.02.15 17:58:39 INFO  time: indexed workspace in 13s
+2026.02.15 17:58:40 INFO  compiling csci-6360-project-i_d5c0a6989e (3 scala sources)
+2026.02.15 17:58:41 INFO  time: compiled CSCI-6360-Project-I_d5c0a6989e in 1.57s
+2026.02.15 18:59:39 INFO  Shutting down server
+2026.02.15 18:59:39 INFO  Memory monitor stopped
+2026.02.15 18:59:39 INFO  shutting down Metals
+2026.02.15 18:59:40 INFO  Shut down connection with build server.
+2026.02.15 18:59:39 INFO  Exiting server
+2026.02.15 19:04:23 INFO  Started: Metals version 1.6.5 in folders '/Users/gabriel/Library/Mobile Documents/com~apple~CloudDocs/CSCI-6360-Project-I' for client Visual Studio Code 1.109.3.
+2026.02.15 19:04:23 INFO  Memory monitor started
+2026.02.15 19:04:25 WARN  Using H2 2.4.240 which is newer than the version Flyway has been verified with. The latest verified version of H2 is 2.3.232.
+2026.02.15 19:04:25 INFO  no build target found for /Users/gabriel/Library/Mobile Documents/com~apple~CloudDocs/CSCI-6360-Project-I/Linear_Regression.scala. Using presentation compiler with project's scala-library version: 3.3.7
+2026.02.15 19:04:28 INFO  no build target found for /Users/gabriel/Library/Mobile Documents/com~apple~CloudDocs/CSCI-6360-Project-I/Linear_Regression.scala. Using presentation compiler with project's scala-library version: 3.3.7
+2026.02.15 19:04:28 INFO  no build target found for /Users/gabriel/Library/Mobile Documents/com~apple~CloudDocs/CSCI-6360-Project-I/Linear_Regression.scala. Using presentation compiler with project's scala-library version: 3.3.7
+Feb 15, 2026 7:04:28 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 2
+2026.02.15 19:04:28 INFO  no build target found for /Users/gabriel/Library/Mobile Documents/com~apple~CloudDocs/CSCI-6360-Project-I/Linear_Regression.scala. Using presentation compiler with project's scala-library version: 3.3.7
+2026.02.15 19:04:28 INFO  Attempting to connect to the build server...
+2026.02.15 19:04:28 INFO  Running BSP server List(/usr/local/bin/scala-cli, bsp, --json-options, /Users/gabriel/Library/Mobile Documents/com~apple~CloudDocs/CSCI-6360-Project-I/.scala-build/ide-options-v2.json, --json-launcher-options, /Users/gabriel/Library/Mobile Documents/com~apple~CloudDocs/CSCI-6360-Project-I/.scala-build/ide-launcher-options.json, --envs-file, /Users/gabriel/Library/Mobile Documents/com~apple~CloudDocs/CSCI-6360-Project-I/.scala-build/ide-envs.json, /Users/gabriel/Library/Mobile Documents/com~apple~CloudDocs/CSCI-6360-Project-I)
+2026.02.15 19:04:28 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /Users/gabriel/Library/Mobile Documents/com~apple~CloudDocs/CSCI-6360-Project-I/.metals/bsp.trace.json or /Users/gabriel/Library/Caches/org.scalameta.metals/bsp.trace.json
+Feb 15, 2026 7:04:29 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 9
+2026.02.15 19:04:28 INFO  no build target found for /Users/gabriel/Library/Mobile Documents/com~apple~CloudDocs/CSCI-6360-Project-I/Linear_Regression.scala. Using presentation compiler with project's scala-library version: 3.3.7
+Feb 15, 2026 7:04:29 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 11
+2026.02.15 19:04:29 INFO  no build target found for /Users/gabriel/Library/Mobile Documents/com~apple~CloudDocs/CSCI-6360-Project-I/Linear_Regression.scala. Using presentation compiler with project's scala-library version: 3.3.7
+Feb 15, 2026 7:04:29 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 7
+2026.02.15 19:04:31 INFO  time: Connected to build server in 2.31s
+2026.02.15 19:04:31 INFO  Connected to Build server: scala-cli v1.12.0
+2026.02.15 19:04:31 INFO  compiling csci-6360-project-i_d5c0a6989e (3 scala sources)
+2026.02.15 19:04:38 WARN  Using H2 2.4.240 which is newer than the version Flyway has been verified with. The latest verified version of H2 is 2.3.232.
+2026.02.15 19:04:40 INFO  time: indexed workspace in 8.91s
+2026.02.15 19:04:40 INFO  time: compiled CSCI-6360-Project-I_d5c0a6989e in 8.8s
+2026.02.15 19:04:40 INFO  compiling csci-6360-project-i_d5c0a6989e (3 scala sources)
+2026.02.15 19:04:45 INFO  time: compiled CSCI-6360-Project-I_d5c0a6989e in 5.18s
+2026.02.15 19:04:45 INFO  compiling csci-6360-project-i_d5c0a6989e (3 scala sources)
+2026.02.15 19:04:48 INFO  time: compiled CSCI-6360-Project-I_d5c0a6989e in 2.94s
+Feb 15, 2026 7:18:59 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTrace
+2026.02.15 19:28:30 INFO  Shutting down server
+2026.02.15 19:28:30 INFO  Memory monitor stopped
+2026.02.15 19:28:30 INFO  shutting down Metals
+2026.02.15 19:28:30 INFO  Shut down connection with build server.
+2026.02.15 19:28:30 INFO  Exiting server
+2026.02.15 19:33:23 INFO  Started: Metals version 1.6.5 in folders '/Users/gabriel/Library/Mobile Documents/com~apple~CloudDocs/CSCI-6360-Project-I' for client Visual Studio Code 1.109.3.
+2026.02.15 19:33:23 INFO  Memory monitor started
+2026.02.15 19:33:24 WARN  Using H2 2.4.240 which is newer than the version Flyway has been verified with. The latest verified version of H2 is 2.3.232.
+2026.02.15 19:33:24 INFO  no build target found for /Users/gabriel/Library/Mobile Documents/com~apple~CloudDocs/CSCI-6360-Project-I/Linear_Regression.scala. Using presentation compiler with project's scala-library version: 3.3.7
+Feb 15, 2026 7:33:26 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 2
+2026.02.15 19:33:26 INFO  no build target found for /Users/gabriel/Library/Mobile Documents/com~apple~CloudDocs/CSCI-6360-Project-I/Linear_Regression.scala. Using presentation compiler with project's scala-library version: 3.3.7
+2026.02.15 19:33:26 INFO  no build target found for /Users/gabriel/Library/Mobile Documents/com~apple~CloudDocs/CSCI-6360-Project-I/Linear_Regression.scala. Using presentation compiler with project's scala-library version: 3.3.7
+2026.02.15 19:33:26 INFO  Attempting to connect to the build server...
+2026.02.15 19:33:26 INFO  Running BSP server List(/usr/local/bin/scala-cli, bsp, --json-options, /Users/gabriel/Library/Mobile Documents/com~apple~CloudDocs/CSCI-6360-Project-I/.scala-build/ide-options-v2.json, --json-launcher-options, /Users/gabriel/Library/Mobile Documents/com~apple~CloudDocs/CSCI-6360-Project-I/.scala-build/ide-launcher-options.json, --envs-file, /Users/gabriel/Library/Mobile Documents/com~apple~CloudDocs/CSCI-6360-Project-I/.scala-build/ide-envs.json, /Users/gabriel/Library/Mobile Documents/com~apple~CloudDocs/CSCI-6360-Project-I)
+2026.02.15 19:33:27 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /Users/gabriel/Library/Mobile Documents/com~apple~CloudDocs/CSCI-6360-Project-I/.metals/bsp.trace.json or /Users/gabriel/Library/Caches/org.scalameta.metals/bsp.trace.json
+Feb 15, 2026 7:33:27 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 8
+2026.02.15 19:33:26 INFO  no build target found for /Users/gabriel/Library/Mobile Documents/com~apple~CloudDocs/CSCI-6360-Project-I/Linear_Regression.scala. Using presentation compiler with project's scala-library version: 3.3.7
+2026.02.15 19:33:26 INFO  no build target found for /Users/gabriel/Library/Mobile Documents/com~apple~CloudDocs/CSCI-6360-Project-I/Linear_Regression.scala. Using presentation compiler with project's scala-library version: 3.3.7
+Feb 15, 2026 7:33:27 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 7
+2026.02.15 19:33:28 INFO  time: Connected to build server in 1.55s
+2026.02.15 19:33:28 INFO  Connected to Build server: scala-cli v1.12.0
+2026.02.15 19:33:28 INFO  compiling csci-6360-project-i_d5c0a6989e (3 scala sources)
+2026.02.15 19:33:32 WARN  Using H2 2.4.240 which is newer than the version Flyway has been verified with. The latest verified version of H2 is 2.3.232.
+2026.02.15 19:33:33 INFO  time: compiled CSCI-6360-Project-I_d5c0a6989e in 4.57s
+2026.02.15 19:33:33 INFO  compiling csci-6360-project-i_d5c0a6989e (3 scala sources)
+2026.02.15 19:33:33 INFO  time: indexed workspace in 4.94s
+2026.02.15 19:33:36 INFO  time: compiled CSCI-6360-Project-I_d5c0a6989e in 2.79s
+2026.02.15 19:33:36 INFO  compiling csci-6360-project-i_d5c0a6989e (3 scala sources)
+2026.02.15 19:33:38 INFO  time: compiled CSCI-6360-Project-I_d5c0a6989e in 2.27s
+2026.02.15 19:38:23 INFO  Shutting down server
+2026.02.15 19:38:23 INFO  Memory monitor stopped
+2026.02.15 19:38:23 INFO  shutting down Metals
+2026.02.15 19:38:24 INFO  Shut down connection with build server.
+2026.02.15 19:38:23 INFO  Exiting server
+2026.02.15 20:26:37 INFO  Started: Metals version 1.6.5 in folders '/Users/gabriel/Library/Mobile Documents/com~apple~CloudDocs/CSCI-6360-Project-I' for client Visual Studio Code 1.109.3.
+2026.02.15 20:26:37 INFO  Memory monitor started
+2026.02.15 20:26:39 WARN  Using H2 2.4.240 which is newer than the version Flyway has been verified with. The latest verified version of H2 is 2.3.232.
+2026.02.15 20:26:39 INFO  no build target found for /Users/gabriel/Library/Mobile Documents/com~apple~CloudDocs/CSCI-6360-Project-I/Linear_Regression.scala. Using presentation compiler with project's scala-library version: 3.3.7
+2026.02.15 20:26:41 INFO  no build target found for /Users/gabriel/Library/Mobile Documents/com~apple~CloudDocs/CSCI-6360-Project-I/Linear_Regression.scala. Using presentation compiler with project's scala-library version: 3.3.7
+2026.02.15 20:26:41 INFO  no build target found for /Users/gabriel/Library/Mobile Documents/com~apple~CloudDocs/CSCI-6360-Project-I/Linear_Regression.scala. Using presentation compiler with project's scala-library version: 3.3.7
+Feb 15, 2026 8:26:41 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 2
+2026.02.15 20:26:41 INFO  no build target found for /Users/gabriel/Library/Mobile Documents/com~apple~CloudDocs/CSCI-6360-Project-I/Linear_Regression.scala. Using presentation compiler with project's scala-library version: 3.3.7
+2026.02.15 20:26:41 INFO  Attempting to connect to the build server...
+2026.02.15 20:26:41 INFO  Running BSP server List(/usr/local/bin/scala-cli, bsp, --json-options, /Users/gabriel/Library/Mobile Documents/com~apple~CloudDocs/CSCI-6360-Project-I/.scala-build/ide-options-v2.json, --json-launcher-options, /Users/gabriel/Library/Mobile Documents/com~apple~CloudDocs/CSCI-6360-Project-I/.scala-build/ide-launcher-options.json, --envs-file, /Users/gabriel/Library/Mobile Documents/com~apple~CloudDocs/CSCI-6360-Project-I/.scala-build/ide-envs.json, /Users/gabriel/Library/Mobile Documents/com~apple~CloudDocs/CSCI-6360-Project-I)
+2026.02.15 20:26:41 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /Users/gabriel/Library/Mobile Documents/com~apple~CloudDocs/CSCI-6360-Project-I/.metals/bsp.trace.json or /Users/gabriel/Library/Caches/org.scalameta.metals/bsp.trace.json
+2026.02.15 20:26:41 INFO  no build target found for /Users/gabriel/Library/Mobile Documents/com~apple~CloudDocs/CSCI-6360-Project-I/Linear_Regression.scala. Using presentation compiler with project's scala-library version: 3.3.7
+2026.02.15 20:26:41 INFO  no build target found for /Users/gabriel/Library/Mobile Documents/com~apple~CloudDocs/CSCI-6360-Project-I/Linear_Regression.scala. Using presentation compiler with project's scala-library version: 3.3.7
+Feb 15, 2026 8:26:42 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 7
+2026.02.15 20:26:44 INFO  time: Connected to build server in 2.31s
+2026.02.15 20:26:44 INFO  Connected to Build server: scala-cli v1.12.0
+2026.02.15 20:26:44 INFO  compiling csci-6360-project-i_d5c0a6989e (3 scala sources)
+2026.02.15 20:26:47 INFO  time: compiled CSCI-6360-Project-I_d5c0a6989e in 2.67s
+2026.02.15 20:26:47 INFO  compiling csci-6360-project-i_d5c0a6989e (3 scala sources)
+2026.02.15 20:26:49 INFO  time: compiled CSCI-6360-Project-I_d5c0a6989e in 2.33s
+2026.02.15 20:26:50 WARN  Using H2 2.4.240 which is newer than the version Flyway has been verified with. The latest verified version of H2 is 2.3.232.
+2026.02.15 20:26:52 INFO  time: indexed workspace in 8.01s
+2026.02.15 20:26:52 INFO  compiling csci-6360-project-i_d5c0a6989e (3 scala sources)
+2026.02.15 20:26:54 INFO  time: compiled CSCI-6360-Project-I_d5c0a6989e in 2.33s
+Feb 15, 2026 9:07:48 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTrace
+2026.02.15 21:08:35 INFO  compiling csci-6360-project-i_d5c0a6989e (3 scala sources)
+2026.02.15 21:08:36 INFO  time: compiled CSCI-6360-Project-I_d5c0a6989e in 1.04s
+2026.02.15 21:15:01 INFO  Shutting down server
+2026.02.15 21:15:01 INFO  Memory monitor stopped
+2026.02.15 21:15:01 INFO  shutting down Metals
+2026.02.15 21:15:01 INFO  Shut down connection with build server.
+2026.02.15 21:15:01 INFO  Exiting server
+2026.02.15 21:15:20 INFO  Started: Metals version 1.6.5 in folders '/Users/gabriel/Library/Mobile Documents/com~apple~CloudDocs/CSCI-6360-Project-I' for client Visual Studio Code 1.109.3.
+2026.02.15 21:15:20 INFO  Memory monitor started
+2026.02.15 21:15:20 WARN  Using H2 2.4.240 which is newer than the version Flyway has been verified with. The latest verified version of H2 is 2.3.232.
+2026.02.15 21:15:21 INFO  no build target found for /Users/gabriel/Library/Mobile Documents/com~apple~CloudDocs/CSCI-6360-Project-I/Linear_Regression.scala. Using presentation compiler with project's scala-library version: 3.3.7
+Feb 15, 2026 9:15:23 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 2
+2026.02.15 21:15:23 INFO  no build target found for /Users/gabriel/Library/Mobile Documents/com~apple~CloudDocs/CSCI-6360-Project-I/Linear_Regression.scala. Using presentation compiler with project's scala-library version: 3.3.7
+2026.02.15 21:15:23 INFO  no build target found for /Users/gabriel/Library/Mobile Documents/com~apple~CloudDocs/CSCI-6360-Project-I/Linear_Regression.scala. Using presentation compiler with project's scala-library version: 3.3.7
+2026.02.15 21:15:23 INFO  Attempting to connect to the build server...
+2026.02.15 21:15:23 INFO  Running BSP server List(/usr/local/bin/scala-cli, bsp, --json-options, /Users/gabriel/Library/Mobile Documents/com~apple~CloudDocs/CSCI-6360-Project-I/.scala-build/ide-options-v2.json, --json-launcher-options, /Users/gabriel/Library/Mobile Documents/com~apple~CloudDocs/CSCI-6360-Project-I/.scala-build/ide-launcher-options.json, --envs-file, /Users/gabriel/Library/Mobile Documents/com~apple~CloudDocs/CSCI-6360-Project-I/.scala-build/ide-envs.json, /Users/gabriel/Library/Mobile Documents/com~apple~CloudDocs/CSCI-6360-Project-I)
+2026.02.15 21:15:23 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /Users/gabriel/Library/Mobile Documents/com~apple~CloudDocs/CSCI-6360-Project-I/.metals/bsp.trace.json or /Users/gabriel/Library/Caches/org.scalameta.metals/bsp.trace.json
+Feb 15, 2026 9:15:23 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 8
+2026.02.15 21:15:23 INFO  no build target found for /Users/gabriel/Library/Mobile Documents/com~apple~CloudDocs/CSCI-6360-Project-I/Linear_Regression.scala. Using presentation compiler with project's scala-library version: 3.3.7
+2026.02.15 21:15:23 INFO  no build target found for /Users/gabriel/Library/Mobile Documents/com~apple~CloudDocs/CSCI-6360-Project-I/Linear_Regression.scala. Using presentation compiler with project's scala-library version: 3.3.7
+Feb 15, 2026 9:15:24 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 4
+2026.02.15 21:15:24 INFO  time: Connected to build server in 1.49s
+2026.02.15 21:15:24 INFO  Connected to Build server: scala-cli v1.12.0
+2026.02.15 21:15:25 INFO  compiling csci-6360-project-i_d5c0a6989e (3 scala sources)
+2026.02.15 21:15:27 INFO  time: compiled CSCI-6360-Project-I_d5c0a6989e in 2.09s
+2026.02.15 21:15:27 INFO  compiling csci-6360-project-i_d5c0a6989e (3 scala sources)
+2026.02.15 21:15:28 INFO  time: compiled CSCI-6360-Project-I_d5c0a6989e in 1.72s
+2026.02.15 21:15:28 INFO  compiling csci-6360-project-i_d5c0a6989e (3 scala sources)
+2026.02.15 21:15:29 WARN  Using H2 2.4.240 which is newer than the version Flyway has been verified with. The latest verified version of H2 is 2.3.232.
+2026.02.15 21:15:31 INFO  time: compiled CSCI-6360-Project-I_d5c0a6989e in 1.9s
+2026.02.15 21:15:31 INFO  time: indexed workspace in 6.37s
+2026.02.15 21:15:31 INFO  compiling csci-6360-project-i_d5c0a6989e (3 scala sources)
+2026.02.15 21:15:32 INFO  time: compiled CSCI-6360-Project-I_d5c0a6989e in 1.03s
+Feb 15, 2026 9:15:50 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTrace
+Feb 15, 2026 9:17:35 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTrace
+Feb 15, 2026 9:17:36 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTrace
+2026.02.15 21:27:39 INFO  Shutting down server
+2026.02.15 21:27:39 INFO  Memory monitor stopped
+2026.02.15 21:27:39 INFO  shutting down Metals
+2026.02.15 21:27:39 INFO  Shut down connection with build server.
+2026.02.15 21:27:39 INFO  Exiting server
+2026.02.15 21:28:08 INFO  Started: Metals version 1.6.5 in folders '/Users/gabriel/Library/Mobile Documents/com~apple~CloudDocs/CSCI-6360-Project-I' for client Visual Studio Code 1.109.3.
+2026.02.15 21:28:08 INFO  Memory monitor started
+2026.02.15 21:28:09 WARN  Using H2 2.4.240 which is newer than the version Flyway has been verified with. The latest verified version of H2 is 2.3.232.
+2026.02.15 21:28:09 INFO  no build target found for /Users/gabriel/Library/Mobile Documents/com~apple~CloudDocs/CSCI-6360-Project-I/Linear_Regression.scala. Using presentation compiler with project's scala-library version: 3.3.7
+2026.02.15 21:28:11 INFO  no build target found for /Users/gabriel/Library/Mobile Documents/com~apple~CloudDocs/CSCI-6360-Project-I/Linear_Regression.scala. Using presentation compiler with project's scala-library version: 3.3.7
+2026.02.15 21:28:11 INFO  no build target found for /Users/gabriel/Library/Mobile Documents/com~apple~CloudDocs/CSCI-6360-Project-I/Linear_Regression.scala. Using presentation compiler with project's scala-library version: 3.3.7
+Feb 15, 2026 9:28:11 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 2
+2026.02.15 21:28:11 INFO  no build target found for /Users/gabriel/Library/Mobile Documents/com~apple~CloudDocs/CSCI-6360-Project-I/Linear_Regression.scala. Using presentation compiler with project's scala-library version: 3.3.7
+2026.02.15 21:28:11 INFO  Attempting to connect to the build server...
+2026.02.15 21:28:11 INFO  Running BSP server List(/usr/local/bin/scala-cli, bsp, --json-options, /Users/gabriel/Library/Mobile Documents/com~apple~CloudDocs/CSCI-6360-Project-I/.scala-build/ide-options-v2.json, --json-launcher-options, /Users/gabriel/Library/Mobile Documents/com~apple~CloudDocs/CSCI-6360-Project-I/.scala-build/ide-launcher-options.json, --envs-file, /Users/gabriel/Library/Mobile Documents/com~apple~CloudDocs/CSCI-6360-Project-I/.scala-build/ide-envs.json, /Users/gabriel/Library/Mobile Documents/com~apple~CloudDocs/CSCI-6360-Project-I)
+2026.02.15 21:28:11 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /Users/gabriel/Library/Mobile Documents/com~apple~CloudDocs/CSCI-6360-Project-I/.metals/bsp.trace.json or /Users/gabriel/Library/Caches/org.scalameta.metals/bsp.trace.json
+Feb 15, 2026 9:28:12 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 4
+2026.02.15 21:28:11 INFO  no build target found for /Users/gabriel/Library/Mobile Documents/com~apple~CloudDocs/CSCI-6360-Project-I/Linear_Regression.scala. Using presentation compiler with project's scala-library version: 3.3.7
+Feb 15, 2026 9:28:12 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 11
+2026.02.15 21:28:11 INFO  no build target found for /Users/gabriel/Library/Mobile Documents/com~apple~CloudDocs/CSCI-6360-Project-I/Linear_Regression.scala. Using presentation compiler with project's scala-library version: 3.3.7
+Feb 15, 2026 9:28:12 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 10
+2026.02.15 21:28:13 INFO  time: Connected to build server in 1.53s
+2026.02.15 21:28:13 INFO  Connected to Build server: scala-cli v1.12.0
+2026.02.15 21:28:13 INFO  compiling csci-6360-project-i_d5c0a6989e (3 scala sources)
+2026.02.15 21:28:15 INFO  time: compiled CSCI-6360-Project-I_d5c0a6989e in 1.54s
+2026.02.15 21:28:15 INFO  compiling csci-6360-project-i_d5c0a6989e (3 scala sources)
+2026.02.15 21:28:16 INFO  time: compiled CSCI-6360-Project-I_d5c0a6989e in 1.37s
+2026.02.15 21:28:17 WARN  Using H2 2.4.240 which is newer than the version Flyway has been verified with. The latest verified version of H2 is 2.3.232.
+2026.02.15 21:28:17 INFO  time: indexed workspace in 5.19s
+2026.02.15 21:28:18 INFO  compiling csci-6360-project-i_d5c0a6989e (3 scala sources)
+2026.02.15 21:28:19 INFO  time: compiled CSCI-6360-Project-I_d5c0a6989e in 1.18s
+Feb 15, 2026 9:29:28 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTrace
+2026.02.15 21:30:10 INFO  Shutting down server
+2026.02.15 21:30:10 INFO  Memory monitor stopped
+2026.02.15 21:30:10 INFO  shutting down Metals
+2026.02.15 21:30:10 INFO  Shut down connection with build server.
+2026.02.15 21:30:10 INFO  Exiting server
+2026.02.15 21:30:55 INFO  Started: Metals version 1.6.5 in folders '/Users/gabriel/Library/Mobile Documents/com~apple~CloudDocs/CSCI-6360-Project-I' for client Visual Studio Code 1.109.3.
+2026.02.15 21:30:55 INFO  Memory monitor started
+2026.02.15 21:30:55 WARN  Using H2 2.4.240 which is newer than the version Flyway has been verified with. The latest verified version of H2 is 2.3.232.
+2026.02.15 21:30:56 INFO  no build target found for /Users/gabriel/Library/Mobile Documents/com~apple~CloudDocs/CSCI-6360-Project-I/Linear_Regression.scala. Using presentation compiler with project's scala-library version: 3.3.7
+2026.02.15 21:30:58 INFO  no build target found for /Users/gabriel/Library/Mobile Documents/com~apple~CloudDocs/CSCI-6360-Project-I/Linear_Regression.scala. Using presentation compiler with project's scala-library version: 3.3.7
+2026.02.15 21:30:58 INFO  no build target found for /Users/gabriel/Library/Mobile Documents/com~apple~CloudDocs/CSCI-6360-Project-I/Linear_Regression.scala. Using presentation compiler with project's scala-library version: 3.3.7
+Feb 15, 2026 9:30:58 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 2
+2026.02.15 21:30:58 INFO  no build target found for /Users/gabriel/Library/Mobile Documents/com~apple~CloudDocs/CSCI-6360-Project-I/Linear_Regression.scala. Using presentation compiler with project's scala-library version: 3.3.7
+2026.02.15 21:30:58 INFO  Attempting to connect to the build server...
+2026.02.15 21:30:58 INFO  Running BSP server List(/usr/local/bin/scala-cli, bsp, --json-options, /Users/gabriel/Library/Mobile Documents/com~apple~CloudDocs/CSCI-6360-Project-I/.scala-build/ide-options-v2.json, --json-launcher-options, /Users/gabriel/Library/Mobile Documents/com~apple~CloudDocs/CSCI-6360-Project-I/.scala-build/ide-launcher-options.json, --envs-file, /Users/gabriel/Library/Mobile Documents/com~apple~CloudDocs/CSCI-6360-Project-I/.scala-build/ide-envs.json, /Users/gabriel/Library/Mobile Documents/com~apple~CloudDocs/CSCI-6360-Project-I)
+2026.02.15 21:30:58 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /Users/gabriel/Library/Mobile Documents/com~apple~CloudDocs/CSCI-6360-Project-I/.metals/bsp.trace.json or /Users/gabriel/Library/Caches/org.scalameta.metals/bsp.trace.json
+2026.02.15 21:30:58 INFO  no build target found for /Users/gabriel/Library/Mobile Documents/com~apple~CloudDocs/CSCI-6360-Project-I/Linear_Regression.scala. Using presentation compiler with project's scala-library version: 3.3.7
+2026.02.15 21:30:58 INFO  no build target found for /Users/gabriel/Library/Mobile Documents/com~apple~CloudDocs/CSCI-6360-Project-I/Linear_Regression.scala. Using presentation compiler with project's scala-library version: 3.3.7
+Feb 15, 2026 9:30:59 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 6
+2026.02.15 21:31:00 INFO  time: Connected to build server in 1.41s
+2026.02.15 21:31:00 INFO  Connected to Build server: scala-cli v1.12.0
+2026.02.15 21:31:00 INFO  compiling csci-6360-project-i_d5c0a6989e (3 scala sources)
+2026.02.15 21:31:01 INFO  time: compiled CSCI-6360-Project-I_d5c0a6989e in 1.05s
+2026.02.15 21:31:01 INFO  compiling csci-6360-project-i_d5c0a6989e (3 scala sources)
+2026.02.15 21:31:03 INFO  time: compiled CSCI-6360-Project-I_d5c0a6989e in 1.42s
+2026.02.15 21:31:04 WARN  Using H2 2.4.240 which is newer than the version Flyway has been verified with. The latest verified version of H2 is 2.3.232.
+2026.02.15 21:31:04 INFO  time: indexed workspace in 4.49s
+2026.02.15 21:31:05 INFO  compiling csci-6360-project-i_d5c0a6989e (3 scala sources)
+2026.02.15 21:31:05 INFO  time: compiled CSCI-6360-Project-I_d5c0a6989e in 0.9s
