@@ -5,7 +5,6 @@ import matplotlib.pyplot as plt
 from sklearn.model_selection import train_test_split
 
 
-
 def LatexTable(y_actual, y_pred_in_sample, y_pred_split, m, k, data_name):
     # Calculate SSR (Sum of Squared Residuals)
     ssr_in_sample = np.sum((y_actual - y_pred_in_sample)**2)
@@ -26,8 +25,8 @@ def LatexTable(y_actual, y_pred_in_sample, y_pred_split, m, k, data_name):
     sde_in_sample = np.sqrt(ssr_in_sample / (m - k))
     sde_split = np.sqrt(ssr_split / (m - k))
 
-    # Calculate Mean Squared Error of the Null Model (MSE0)
-    mse0 = np.sum((y_actual - np.mean(y_actual))**2) / m
+    # Calculate Mean Squared Error
+    mse0 = sst / m
 
     # Root Mean Squared Error
     rmse_in_sample = np.sqrt(ssr_in_sample / (m - k))
@@ -65,7 +64,7 @@ def LatexTable(y_actual, y_pred_in_sample, y_pred_split, m, k, data_name):
     print(f"sst & {sst:.4f} & {sst:.4f} \\\\ \\hline")
     print(f"sse & {ssr_in_sample:.4f} & {ssr_split:.4f} \\\\ \\hline")
     print(f"sde & {sde_in_sample:.4f} & {sde_split:.4f} \\\\ \\hline")
-    print(f"mse0 & {ssr_in_sample:.4f} & {ssr_split:.4f} \\\\ \\hline")
+    print(f"mse0 & {mse0:.4f} & {mse0:.4f} \\\\ \\hline")
     print(f"rmse & {rmse_in_sample:.4f} & {rmse_split:.4f} \\\\ \\hline")
     print(f"mae & {mae_in_sample:.4f} & {mae_split:.4f} \\\\ \\hline")
     print(f"smape & {smape_in_sample:.4f} & {smape_split:.4f} \\\\ \\hline")
@@ -79,15 +78,35 @@ def LatexTable(y_actual, y_pred_in_sample, y_pred_split, m, k, data_name):
     print("\\end{table}")
 
 
+def sorted_plot(y_actual, y_pred, data_name, validate=False):
+    # Create a DataFrame with actual and predicted values
+    df = pd.DataFrame({'Actual': y_actual, 'Predicted': y_pred})
+    # Sort the DataFrame by actual values
+    df_sorted = df.sort_values(by='Actual')
+    x_end = df_sorted.shape[0]  # Number of observations
+    x = np.arange(0, x_end)  # X-axis values from 1 to number of observations
+    # Plot the sorted data
+    plt.figure(figsize=(10, 6))
+    plt.scatter(x, df_sorted['Predicted'], label='Predicted Values', color='red')
+    plt.plot(x, df_sorted['Actual'], color='black', label='Actual Values')
+    plt.title(f'Sorted Plot - {data_name}')
+    plt.legend()
+    plt.show()
+
+
 
 def LinRegAutoMPG():
 
     # Load the dataset
     Auto_MPG = pd.read_csv('auto_mpg_cleaned.csv')
 
+    # Drop rows with missing values and the 'origin' column
+    Auto_MPG = Auto_MPG.dropna()
+    Auto_MPG = Auto_MPG.drop('origin', axis=1)
+
     # Define the independent variable (X) and the dependent variable (y)
     X = Auto_MPG[['displacement', 'cylinders', 'horsepower', 'weight', 'acceleration', 'model_year']]
-    y = Auto_MPG['MPG']
+    y = Auto_MPG['mpg']
 
     # Add a constant to the independent variables (for the intercept)
     X = sm.add_constant(X)
@@ -231,6 +250,6 @@ def LinReginsurance():
 
 
 
-# LinRegAutoMPG()
+LinRegAutoMPG()
 # LinReghouse()
 # LinReginsurance()
