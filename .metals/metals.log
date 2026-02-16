@@ -491,3 +491,18 @@ Feb 15, 2026 11:29:00 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint noti
 INFO: Unsupported notification method: $/setTrace
 Feb 15, 2026 11:29:24 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
 INFO: Unsupported notification method: $/setTrace
+2026.02.15 23:32:07 INFO  Cancelling compilation on scala-cli server
+2026.02.15 23:32:07 INFO  compiling csci-6360-project-i_d5c0a6989e (3 scala sources)
+2026.02.15 23:32:07 INFO  Deduplicating compilation of CSCI-6360-Project-I_d5c0a6989e from bsp client 'scala-cli 1.12.0' (since 19m 24.405s)
+2026.02.15 23:32:07 INFO  compiling csci-6360-project-i_d5c0a6989e (3 scala sources)
+2026.02.15 23:32:07 INFO  Deduplicating compilation of CSCI-6360-Project-I_d5c0a6989e from bsp client 'scala-cli 1.12.0' (since 19m 25.009s)
+2026.02.15 23:32:07 INFO  compiling csci-6360-project-i_d5c0a6989e (3 scala sources)
+2026.02.15 23:32:08 WARN  Invalid text document uri received from build server: file:///Users/gabriel/Library/Mobile%20Documents/com~apple~CloudDocs/CSCI-6360-Project-I/Linear_Regression.scala
+2026.02.15 23:32:08 INFO  time: compiled CSCI-6360-Project-I_d5c0a6989e in 0.51s
+2026.02.15 23:32:08 WARN  Invalid text document uri received from build server: file:///Users/gabriel/Library/Mobile%20Documents/com~apple~CloudDocs/CSCI-6360-Project-I/Linear_Regression.scala
+2026.02.15 23:32:08 WARN  Invalid text document uri received from build server: file:///Users/gabriel/Library/Mobile%20Documents/com~apple~CloudDocs/CSCI-6360-Project-I/Linear_Regression.scala
+2026.02.15 23:32:08 INFO  compiling csci-6360-project-i_d5c0a6989e (3 scala sources)
+2026.02.15 23:32:09 INFO  Deduplicating compilation of CSCI-6360-Project-I_d5c0a6989e from bsp client 'scala-cli 1.12.0' (since 19m 26.587s)
+2026.02.15 23:32:09 INFO  compiling csci-6360-project-i_d5c0a6989e (3 scala sources)
+2026.02.15 23:32:09 INFO  time: compiled CSCI-6360-Project-I_d5c0a6989e in 95ms
+2026.02.15 23:32:09 INFO  time: indexed workspace in 2.77s
