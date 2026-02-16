@@ -453,3 +453,41 @@ WARNING: Unmatched cancel notification for request id 6
 2026.02.15 21:31:04 INFO  time: indexed workspace in 4.49s
 2026.02.15 21:31:05 INFO  compiling csci-6360-project-i_d5c0a6989e (3 scala sources)
 2026.02.15 21:31:05 INFO  time: compiled CSCI-6360-Project-I_d5c0a6989e in 0.9s
+2026.02.15 21:33:03 INFO  compiling csci-6360-project-i_d5c0a6989e (3 scala sources)
+2026.02.15 21:33:03 INFO  time: compiled CSCI-6360-Project-I_d5c0a6989e in 0.84s
+2026.02.15 23:12:39 INFO  Started: Metals version 1.6.5 in folders '/Users/gabriel/Library/Mobile Documents/com~apple~CloudDocs/CSCI-6360-Project-I' for client Visual Studio Code 1.109.3.
+2026.02.15 23:12:39 INFO  Memory monitor started
+2026.02.15 23:12:41 WARN  Using H2 2.4.240 which is newer than the version Flyway has been verified with. The latest verified version of H2 is 2.3.232.
+2026.02.15 23:12:42 INFO  Attempting to connect to the build server...
+2026.02.15 23:12:42 INFO  Running BSP server List(/usr/local/bin/scala-cli, bsp, --json-options, /Users/gabriel/Library/Mobile Documents/com~apple~CloudDocs/CSCI-6360-Project-I/.scala-build/ide-options-v2.json, --json-launcher-options, /Users/gabriel/Library/Mobile Documents/com~apple~CloudDocs/CSCI-6360-Project-I/.scala-build/ide-launcher-options.json, --envs-file, /Users/gabriel/Library/Mobile Documents/com~apple~CloudDocs/CSCI-6360-Project-I/.scala-build/ide-envs.json, /Users/gabriel/Library/Mobile Documents/com~apple~CloudDocs/CSCI-6360-Project-I)
+2026.02.15 23:12:42 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /Users/gabriel/Library/Mobile Documents/com~apple~CloudDocs/CSCI-6360-Project-I/.metals/bsp.trace.json or /Users/gabriel/Library/Caches/org.scalameta.metals/bsp.trace.json
+2026.02.15 23:12:43 INFO  time: Connected to build server in 1.38s
+2026.02.15 23:12:43 INFO  Connected to Build server: scala-cli v1.12.0
+2026.02.15 23:12:43 INFO  compiling csci-6360-project-i_d5c0a6989e (3 scala sources)
+2026.02.15 23:12:48 WARN  Using H2 2.4.240 which is newer than the version Flyway has been verified with. The latest verified version of H2 is 2.3.232.
+2026.02.15 23:12:48 INFO  time: indexed workspace in 4.76s
+2026.02.15 23:12:49 INFO  time: compiled CSCI-6360-Project-I_d5c0a6989e in 5.42s
+2026.02.15 23:12:49 INFO  compiling csci-6360-project-i_d5c0a6989e (3 scala sources)
+2026.02.15 23:12:52 INFO  time: compiled CSCI-6360-Project-I_d5c0a6989e in 2.78s
+Feb 15, 2026 11:13:32 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTrace
+Feb 15, 2026 11:14:43 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTrace
+Feb 15, 2026 11:15:35 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTrace
+Feb 15, 2026 11:16:26 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTrace
+Feb 15, 2026 11:18:49 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTrace
+Feb 15, 2026 11:20:19 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTrace
+Feb 15, 2026 11:20:28 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTrace
+Feb 15, 2026 11:23:27 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTrace
+Feb 15, 2026 11:28:45 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTrace
+Feb 15, 2026 11:29:00 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTrace
+Feb 15, 2026 11:29:24 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTrace
