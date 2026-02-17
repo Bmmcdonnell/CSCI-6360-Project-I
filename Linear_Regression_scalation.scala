@@ -1,13 +1,16 @@
 package scalation
 package modeling
 
+// import scalation.mathstat._
+import scalation.modeling._
+
 @main def LinRegAutoMPG (): Unit =
 
     import Example_AutoMPG._
     import scalation.mathstat._
     import scalation.mathstat.Scala2LaTeX._
     // import scala.runtime.ScalaRunTime.stringOf
-    import scalation.scala2d.writeImage
+    // import scalation.scala2d.writeImage
 
     // // val xyr_fname = Array ("displacement", "cylinders", "horsepower", "weight", "acceleration", "modelyear", "origin", "mpg")
     // // val xr_fname = Array ("displacement", "cylinders", "horsepower", "weight", "acceleration", "modelyear", "origin")
@@ -38,14 +41,8 @@ package modeling
 
     banner ("In-Sample")                 
     var reg = new Regression (ox, y, ox_fname)                               // Regression model
-    val (yp1, qof1_full) = reg.trainNtest ()()                     // train and test on full dataset
-    val qof1 = qof1_full(r_q)                                      // slice QoF to first 15 metrics
+    val qof1 = reg.trainNtest ()()._2(r_q)                     // train and test on full dataset
     println (reg.summary ())                                       // parameter/coefficient statistics
-    val (y_ord, yp1_ord) = orderByY (y, yp1)                                 // order the actual and predicted values by the actual values for better visualization 
-    val InSample_Plot = new Plot (null, y_ord, yp1_ord, s"Plot ${reg.modelName} predictions: yy black/actual vs. yp red/predicted", lines = true)
-    InSample_Plot.setSize(800, 800) // the scale still needs to be fixed. It was working then just stopped. IDK why.                                 // set explicit frame size before saving
-    Thread.sleep(2000)                                              // wait for plot to render
-    writeImage("LinReg_InSample.png", InSample_Plot)                 // save the plot as a PNG file
     
 
 
@@ -58,11 +55,8 @@ package modeling
     val y_train = yy_train.col(0)                                                     // get the test response vector from the test response matrix
     val y_test = yy_test.col(0)                                                       // get the test response vector from the test response matrix
     reg = new Regression (ox, y, ox_fname)                       // Regression model
-    // val (yp2, qof2_full) = reg.trainNtest (ox_train,y_train)()              // train on random 80%, test on whole dataset
-    // val qof2 = qof2_full(r_q)                                      // slice QoF to first 15 metrics
     val qof2 = reg.trainNtest (ox_train,y_train)(ox_test, y_test)._2(r_q)              // train on random 80%, test on whole dataset
     println (reg.summary ())                                       // parameter/coefficient statistics
-    // Predictor.plotPrediction(y, yp2, "Lin Reg 80-20 Split")            // plot predicted vs actual values for 80-20 split predictions  
 
 
     reg = new Regression (ox, y, ox_fname)                       // Regression model
@@ -70,21 +64,6 @@ package modeling
     banner("5-Fold CV")
     banner ("Cross-Validation")
     FitM.showQofStatTable (reg.crossValidate ())
-
-    // println (s"ox_fname = ${stringOf (ox_fname)}")
-
-    // for tech <- SelectionTech.values do
-    //     banner (s"Feature Selection Technique: $tech")
-    //     val (cols, rSq) = reg.selectFeatures (tech)           // R^2, R^2 bar, sMAPE, R^2 cv
-    //     val k = cols.size
-    //     println (s"k = $k, n = ${x.dim2}")
-    //     new PlotM (null, rSq.ᵀ, Regression.metrics, s"R^2 vs n for Regression with $tech", lines = true)
-    //     banner ("Feature Importance")
-    //     println (s"$tech: rSq = $rSq")
-    //     val imp = reg.importance (cols.toArray, rSq)
-    //     for (c, r) <- imp do println (s"col = $c, \t ${ox_fname(c)}, \t importance = $r") 
-    // end for
-
 
     val caption = "AutoMPG Linear Regression"
     val name    = "Linear Regression"
@@ -129,10 +108,8 @@ end LinRegAutoMPG
 
     banner ("In-Sample")                 
     var reg = new Regression (ox, y, ox_fname)                               // Regression model
-    val (yp1, qof1_full) = reg.trainNtest ()()                     // train and test on full dataset
-    val qof1 = qof1_full(r_q)                                      // slice QoF to first 15 metrics
+    val qof1 = reg.trainNtest ()()._2(r_q)                     // train and test on full dataset
     println (reg.summary ())                                       // parameter/coefficient statistics
-    Predictor.plotPrediction(y, yp1, "Lin Reg In-Sample")               // plot predicted vs actual values for in-sample predictions
 
 
 
@@ -140,14 +117,13 @@ end LinRegAutoMPG
     val permGen = scalation.mathstat.TnT_Split.makePermGen (oxy.dim)             // make a permutation generator
     val n_test = (oxy.dim * 0.2).toInt                                           // 80% training, 20% testing
     val idx = scalation.mathstat.TnT_Split.testIndices(permGen, n_test)         // get test indices for 80-20 split
-    val (_, ox_train) = TnT_Split (ox, idx)                               // TnT split the dataset ox (row split)
-    val (_, yy_train) = TnT_Split (yy, idx)                               // TnT split the response vector y (row split)
+    val (ox_test, ox_train) = TnT_Split (ox, idx)                               // TnT split the dataset ox (row split)
+    val (yy_test, yy_train) = TnT_Split (yy, idx)                               // TnT split the response vector y (row split)
     val y_train = yy_train.col(0)                                                     // get the test response vector from the test response matrix
+    val y_test = yy_test.col(0)                                                       // get the test response vector from the test response matrix
     reg = new Regression (ox, y, ox_fname)                       // Regression model
-    val (yp2, qof2_full) = reg.trainNtest (ox_train,y_train)()              // train on random 80%, test on whole dataset
-    val qof2 = qof2_full(r_q)                                      // slice QoF to first 15 metrics
+    val qof2 = reg.trainNtest (ox_train,y_train)(ox_test, y_test)._2(r_q)              // train on random 80%, test on 20%
     println (reg.summary ())                                       // parameter/coefficient statistics
-    Predictor.plotPrediction(y, yp2, "Lin Reg 80-20 Split")            // plot predicted vs actual values for 80-20 split predictions  
 
 
     reg = new Regression (ox, y, ox_fname)                       // Regression model
@@ -155,21 +131,6 @@ end LinRegAutoMPG
     banner("5-Fold CV")
     banner ("Cross-Validation")
     FitM.showQofStatTable (reg.crossValidate ())
-
-    // println (s"ox_fname = ${stringOf (ox_fname)}")
-
-    // for tech <- SelectionTech.values do
-    //     banner (s"Feature Selection Technique: $tech")
-    //     val (cols, rSq) = reg.selectFeatures (tech)           // R^2, R^2 bar, sMAPE, R^2 cv
-    //     val k = cols.size
-    //     println (s"k = $k, n = ${x.dim2}")
-    //     new PlotM (null, rSq.ᵀ, Regression.metrics, s"R^2 vs n for Regression with $tech", lines = true)
-    //     banner ("Feature Importance")
-    //     println (s"$tech: rSq = $rSq")
-    //     val imp = reg.importance (cols.toArray, rSq)
-    //     for (c, r) <- imp do println (s"col = $c, \t ${ox_fname(c)}, \t importance = $r") 
-    // end for
-
 
     val caption = "House Price Linear Regression"
     val name    = "Linear Regression"
@@ -209,10 +170,8 @@ end LinReghouse
 
     banner ("In-Sample")                 
     var reg = new Regression (ox, y, ox_fname)                               // Regression model
-    val (yp1, qof1_full) = reg.trainNtest ()()                     // train and test on full dataset
-    val qof1 = qof1_full(r_q)                                      // slice QoF to first 15 metrics
+    val qof1 = reg.trainNtest ()()._2(r_q)                     // train and test on full dataset
     println (reg.summary ())                                       // parameter/coefficient statistics
-    Predictor.plotPrediction(y, yp1, "Lin Reg In-Sample")               // plot predicted vs actual values for in-sample predictions
 
 
 
@@ -220,14 +179,13 @@ end LinReghouse
     val permGen = scalation.mathstat.TnT_Split.makePermGen (oxy.dim)             // make a permutation generator
     val n_test = (oxy.dim * 0.2).toInt                                           // 80% training, 20% testing
     val idx = scalation.mathstat.TnT_Split.testIndices(permGen, n_test)         // get test indices for 80-20 split
-    val (_, ox_train) = TnT_Split (ox, idx)                               // TnT split the dataset ox (row split)
-    val (_, yy_train) = TnT_Split (yy, idx)                               // TnT split the response vector y (row split)
+    val (ox_test, ox_train) = TnT_Split (ox, idx)                               // TnT split the dataset ox (row split)
+    val (yy_test, yy_train) = TnT_Split (yy, idx)                               // TnT split the response vector y (row split)
     val y_train = yy_train.col(0)                                                     // get the test response vector from the test response matrix
+    val y_test = yy_test.col(0)                                                       // get the test response vector from the test response matrix
     reg = new Regression (ox, y, ox_fname)                       // Regression model
-    val (yp2, qof2_full) = reg.trainNtest (ox_train,y_train)()              // train on random 80%, test on whole dataset
-    val qof2 = qof2_full(r_q)                                      // slice QoF to first 15 metrics
+    val qof2 = reg.trainNtest (ox_train,y_train)(ox_test, y_test)._2(r_q)              // train on random 80%, test on 20%
     println (reg.summary ())                                       // parameter/coefficient statistics
-    Predictor.plotPrediction(y, yp2, "Lin Reg 80-20 Split")            // plot predicted vs actual values for 80-20 split predictions  
 
 
     reg = new Regression (ox, y, ox_fname)                       // Regression model
@@ -235,21 +193,6 @@ end LinReghouse
     banner("5-Fold CV")
     banner ("Cross-Validation")
     FitM.showQofStatTable (reg.crossValidate ())
-
-    // println (s"ox_fname = ${stringOf (ox_fname)}")
-
-    // for tech <- SelectionTech.values do
-    //     banner (s"Feature Selection Technique: $tech")
-    //     val (cols, rSq) = reg.selectFeatures (tech)           // R^2, R^2 bar, sMAPE, R^2 cv
-    //     val k = cols.size
-    //     println (s"k = $k, n = ${ox.dim2}")
-    //     new PlotM (null, rSq.ᵀ, Regression.metrics, s"R^2 vs n for Regression with $tech", lines = true)
-    //     banner ("Feature Importance")
-    //     println (s"$tech: rSq = $rSq")
-    //     val imp = reg.importance (cols.toArray, rSq)
-    //     for (c, r) <- imp do println (s"col = $c, \t ${ox_fname(c)}, \t importance = $r") 
-    // end for
-
 
     val caption = "Insurance Charges Linear Regression"
     val name    = "Linear Regression"
