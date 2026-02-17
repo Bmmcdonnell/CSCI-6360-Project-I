@@ -93,14 +93,21 @@ def sorted_plot(y_actual, y_pred, data_name, validate=False):
     df_sorted = df.sort_values(by='Actual')
     x_end = df_sorted.shape[0]  # Number of observations
     x = np.arange(0, x_end)  # X-axis values from 1 to number of observations
+    y_start = min(df_sorted['Actual'].min(), df_sorted['Predicted'].min())
+    y_end = max(df_sorted['Actual'].max(), df_sorted['Predicted'].max())
+    y_dist = y_end - y_start
+    y_start = y_start - 0.1 * y_dist
+    y_end = y_end + 0.1 * y_dist
+    x_end_2 = int(1.1 * x_end) if x_end > 0 else int(0.9 * x_end)
+    x_start = int(-0.1 * x_end)
     # Plot the sorted data
     plt.figure(figsize=(10, 6))
     plt.plot(x, df_sorted['Predicted'], label='Predicted Values', color='red')
     plt.plot(x, df_sorted['Actual'], color='black', label='Actual Values')
     plt.title(f'{data_name} Linear Regression, {"80-20 Split" if validate else "In-Sample"}: yy black/actual vs. yp red/predicted')
     plt.legend()
-    plt.ylim(0, 50)
-    plt.xlim(-20, x_end + 20)
+    plt.ylim(y_start, y_end)
+    plt.xlim(x_start, x_end_2)
     plt.savefig(f'statsmodels_{"80_20" if validate else "In_Sample"}.png')
     plt.show()
 
@@ -285,14 +292,23 @@ def LinReghouse():
 
     # Make predictions on the original data set to compare to the in-sample regression results
     y_pred_in_sample = reg_in_sample.predict(X)
-    y_pred_split = reg_train.predict(X)
+    y_pred_split_test = reg_train.predict(X_test)
 
     # Get the number of observations (m) and the number of independent variables (k)
     m = len(y)  # Number of observations
     k = X.shape[1] - 1  # Number of independent variables
 
     # Print the qof statistics in a LaTeX table format
-    LatexTable(y, y_pred_in_sample, y_pred_split, m, k, "House Price")
+    LatexTable(y, y_test, y_pred_in_sample, y_pred_split_test, k, "House Price")
+
+    print("-" * 88)
+    print("-" * 88)
+    print("-" * 88)
+
+    CV_Latex_Table(X, y, 5, "House Price")
+
+    sorted_plot(y, y_pred_in_sample, "House Price", validate=False)
+    sorted_plot(y_test, y_pred_split_test, "House Price", validate=True)
 
 
 
@@ -333,18 +349,27 @@ def LinReginsurance():
 
     # Make predictions on the original data set to compare to the in-sample regression results
     y_pred_in_sample = reg_in_sample.predict(X)
-    y_pred_split = reg_train.predict(X)
+    y_pred_split_test = reg_train.predict(X_test)
 
     # Get the number of observations (m) and the number of independent variables (k)
     m = len(y)  # Number of observations
     k = X.shape[1] - 1  # Number of independent variables
 
     # Print the qof statistics in a LaTeX table format
-    LatexTable(y, y_pred_in_sample, y_pred_split, m, k, "Insurance Charges")
+    LatexTable(y, y_test, y_pred_in_sample, y_pred_split_test, k, "Insurance Charges")
+
+    print("-" * 88)
+    print("-" * 88)
+    print("-" * 88)
+
+    CV_Latex_Table(X, y, 5, "Insurance Charges")
+
+    sorted_plot(y, y_pred_in_sample, "Insurance Charges", validate=False)
+    sorted_plot(y_test, y_pred_split_test, "Insurance Charges", validate=True)
 
 
 
 
-LinRegAutoMPG()
+# LinRegAutoMPG()
 # LinReghouse()
 # LinReginsurance()
