@@ -4,6 +4,7 @@ import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
 from sklearn.model_selection import train_test_split
+from sklearn.model_selection import KFold
 
 
 def LatexTable(y_actual, y_test, y_pred_in_sample, y_pred_split_test, k, data_name):
@@ -100,8 +101,83 @@ def sorted_plot(y_actual, y_pred, data_name, validate=False):
     plt.legend()
     plt.ylim(0, 50)
     plt.xlim(-20, x_end + 20)
-    plt.savefig(f'{data_name}_Linear_Regression_{"80-20_Split" if validate else "In-Sample"}.png')
+    plt.savefig(f'statsmodels_{"80_20" if validate else "In_Sample"}.png')
     plt.show()
+
+
+def CV_Latex_Table(X, y, k, data_name):
+    # Initialize lists to store the results of each fold
+    rSq_list = []
+    rSqBar_list = []
+    sst_list = []
+    sse_list = []
+    sde_list = []
+    mse0_list = []
+    rmse_list = []
+    mae_list = []
+    smape_list = []
+
+    # Initialize KFold with the specified number of splits
+    kf = KFold(n_splits=5, shuffle=True, random_state=42)
+
+    # Loop through each fold
+    for i, (train_index, test_index) in enumerate(kf.split(X)):
+        # Split data
+        X_train = X.iloc[train_index]
+        y_train = y.iloc[train_index]
+        
+        X_test = X.iloc[test_index]
+        y_test = y.iloc[test_index]
+        
+        # Fit model
+        model = sm.OLS(y_train, X_train).fit()
+        
+        # Predict
+        y_pred = model.predict(X_test)
+        
+        # Calculate metrics and append to lists
+        ssr = np.sum((y_test - y_pred)**2)
+        sst = np.sum((y_test - np.mean(y_test))**2)
+        r_squared = 1 - (ssr / sst)
+        r_squared_adj = 1 - (1 - r_squared) * (len(y_test) / (len(y_test) - X.shape[1]+1))
+        sde = np.sqrt(ssr / (len(y_test) - X.shape[1]+1))
+        mse0 = sst / len(y_test)
+        rmse = np.sqrt(ssr / (len(y_test) - X.shape[1]+1))
+        mae = np.mean(np.abs(y_test - y_pred))
+        smape = np.mean(2 * np.abs((y_test - y_pred) / (np.abs(y_test) + np.abs(y_pred)))) * 100
+
+        rSq_list.append(r_squared)
+        rSqBar_list.append(r_squared_adj)
+        sst_list.append(sst)
+        sse_list.append(ssr)
+        sde_list.append(sde)
+        mse0_list.append(mse0)
+        rmse_list.append(rmse)
+        mae_list.append(mae)
+        smape_list.append(smape)
+    
+    print("\\begin{table}[h]")
+    print("\\centering")
+    print(f"\\caption{{Statsmodels - {data_name} Linear Regression CV}}")
+    print(f"\\label{{tab:Statsmodels - {data_name} Linear Regression CV}}")
+    print("\\begin{tabular}{|c|c|c|c|c|c|}\\hline")
+    print("Name & In-num folds & min & max & mean & stdev \\\\ \\hline \\hline")
+    print(f"rSq & {len(rSq_list)} & {min(rSq_list):.4f} & {max(rSq_list):.4f} & {np.mean(rSq_list):.4f} & {np.std(rSq_list):.4f} \\\\ \\hline")
+    print(f"rSqBar & {len(rSqBar_list)} & {min(rSqBar_list):.4f} & {max(rSqBar_list):.4f} & {np.mean(rSqBar_list):.4f} & {np.std(rSqBar_list):.4f} \\\\ \\hline")
+    print(f"sst & {len(sst_list)} & {min(sst_list):.4f} & {max(sst_list):.4f} & {np.mean(sst_list):.4f} & {np.std(sst_list):.4f} \\\\ \\hline")
+    print(f"sse & {len(sse_list)} & {min(sse_list):.4f} & {max(sse_list):.4f} & {np.mean(sse_list):.4f} & {np.std(sse_list):.4f} \\\\ \\hline")
+    print(f"sde & {len(sde_list)} & {min(sde_list):.4f} & {max(sde_list):.4f} & {np.mean(sde_list):.4f} & {np.std(sde_list):.4f} \\\\ \\hline")
+    print(f"mse0 & {len(mse0_list)} & {min(mse0_list):.4f} & {max(mse0_list):.4f} & {np.mean(mse0_list):.4f} & {np.std(mse0_list):.4f} \\\\ \\hline")
+    print(f"rmse & {len(rmse_list)} & {min(rmse_list):.4f} & {max(rmse_list):.4f} & {np.mean(rmse_list):.4f} & {np.std(rmse_list):.4f} \\\\ \\hline")
+    print(f"mae & {len(mae_list)} & {min(mae_list):.4f} & {max(mae_list):.4f} & {np.mean(mae_list):.4f} & {np.std(mae_list):.4f} \\\\ \\hline")
+    print(f"smape & {len(smape_list)} & {min(smape_list):.4f} & {max(smape_list):.4f} & {np.mean(smape_list):.4f} & {np.std(smape_list):.4f} \\\\ \\hline")
+    print("\\end{tabular}")
+    print("\\end{table}")
+
+
+        
+
+
 
 
 
@@ -156,8 +232,15 @@ def LinRegAutoMPG():
     # Print the qof statistics in a LaTeX table format
     LatexTable(y, y_test, y_pred_in_sample, y_pred_split_test, k, "Auto MPG")
 
+    print("-" * 88)
+    print("-" * 88)
+    print("-" * 88)
+
+    CV_Latex_Table(X, y, 5, "Auto MPG")
+
     sorted_plot(y, y_pred_in_sample, "Auto MPG", validate=False)
     sorted_plot(y_test, y_pred_split_test, "Auto MPG", validate=True)
+    
 
 
 
