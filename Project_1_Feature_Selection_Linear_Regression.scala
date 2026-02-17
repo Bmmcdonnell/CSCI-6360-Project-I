@@ -51,7 +51,7 @@ def LinRegBE (ox: MatrixD,  y: VectorD, ox_fname: Array[String]): Unit =
 
     // 1. Run Forward Selection to get the order of important columns
     val reg = new Regression (ox, y, ox_fname)
-    val (cols, rSq) = reg.backwardElimAll ()(using 13) // cols = indices of selected features
+    val (cols, rSq) = reg.backwardElimAll () // cols = indices of selected features
 
     // 2. Calculate AIC for each stage of the selection
     //    We loop from 1 feature up to all features selected
@@ -94,7 +94,7 @@ def LinRegSS (ox: MatrixD,  y: VectorD, ox_fname: Array[String]): Unit =
 
     // 1. Run Forward Selection to get the order of important columns
     val reg = new Regression (ox, y, ox_fname)
-    val (cols, rSq) = reg.stepwiseSelAll ()(using 13) // cols = indices of selected features
+    val (cols, rSq) = reg.stepwiseSelAll () // cols = indices of selected features
 
     // 2. Calculate AIC for each stage of the selection
     //    We loop from 1 feature up to all features selected
