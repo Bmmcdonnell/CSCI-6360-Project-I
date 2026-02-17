@@ -1027,3 +1027,10 @@ Feb 17, 2026 10:23:55 AM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint noti
 INFO: Unsupported notification method: $/setTrace
 2026.02.17 10:28:53 INFO  compiling csci-6360-project-i_d5c0a6989e (3 scala sources)
 2026.02.17 10:28:54 INFO  time: compiled CSCI-6360-Project-I_d5c0a6989e in 1.3s
+2026.02.17 16:11:03 INFO  no build target found for /Users/gabriel/Library/Mobile Documents/com~apple~CloudDocs/CSCI-6360-Project-I/Project_1_Feature_Selection_Linear_Regression.scala. Using presentation compiler with project's scala-library version: 3.8.0
+2026.02.17 16:11:03 INFO  no build target found for /Users/gabriel/Library/Mobile Documents/com~apple~CloudDocs/CSCI-6360-Project-I/Project_1_Feature_Selection_Linear_Regression.scala. Using presentation compiler with project's scala-library version: 3.8.0
+2026.02.17 16:11:03 INFO  no build target found for /Users/gabriel/Library/Mobile Documents/com~apple~CloudDocs/CSCI-6360-Project-I/Project_1_Feature_Selection_Linear_Regression.scala. Using presentation compiler with project's scala-library version: 3.8.0
+2026.02.17 16:11:03 INFO  no build target found for /Users/gabriel/Library/Mobile Documents/com~apple~CloudDocs/CSCI-6360-Project-I/Project_1_Feature_Selection_Linear_Regression.scala. Using presentation compiler with project's scala-library version: 3.8.0
+2026.02.17 16:11:03 WARN  no build target for: /Users/gabriel/Library/Mobile Documents/com~apple~CloudDocs/CSCI-6360-Project-I/Project_1_Feature_Selection_Linear_Regression.scala
+2026.02.17 16:11:03 INFO  no build target found for /Users/gabriel/Library/Mobile Documents/com~apple~CloudDocs/CSCI-6360-Project-I/Project_1_Feature_Selection_Linear_Regression.scala. Using presentation compiler with project's scala-library version: 3.8.0
+2026.02.17 16:11:03 INFO  no build target found for /Users/gabriel/Library/Mobile Documents/com~apple~CloudDocs/CSCI-6360-Project-I/Project_1_Feature_Selection_Linear_Regression.scala. Using presentation compiler with project's scala-library version: 3.8.0
