@@ -1253,3 +1253,5 @@ WARNING: Unmatched cancel notification for request id 7
 2026.02.18 11:17:47 INFO  time: compiled CSCI-6360-Project-I_d5c0a6989e in 1.05s
 Feb 18, 2026 11:17:50 AM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
 INFO: Unsupported notification method: $/setTrace
+2026.02.18 11:33:27 INFO  compiling csci-6360-project-i_d5c0a6989e (5 scala sources)
+2026.02.18 11:33:27 INFO  time: compiled CSCI-6360-Project-I_d5c0a6989e in 0.89s

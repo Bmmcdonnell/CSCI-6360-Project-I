@@ -33,7 +33,7 @@ def InSample (ox: MatrixD,  y: VectorD, ox_fname: Array[String], data_name: Stri
     val qof5 = Log1p.trainNtest ()()._2(r_q) // train and test on the same data (in-sample)
 
     
-    val caption = data_name + " In-Sample QoF Comparison"
+    val caption = "Scalation: - " + data_name + " In-Sample QoF Comparison"
     val name    = "tab:" + caption
     val qof_matrix = MatrixD (qof1, qof2, qof3, qof4, qof5).transpose // transpose to get metrics as rows and models as columns
 
@@ -112,7 +112,7 @@ def OutOfSample (ox: MatrixD,  y: VectorD, ox_fname: Array[String], data_name: S
     val (y_test_ord_2, log1yp_ord) = orderByY (y_test, log1pyp) // order the test response and the log1p predictions by the test response for better visualization
     new Plot (null, y_test_ord_2, log1yp_ord, s"Plot ${Log1p.modelName} predictions: yy black/actual vs. yp red/predicted", lines = true)
     
-    val caption = data_name + " Out-of-Sample QoF Comparison"
+    val caption = "Scalation: - " + data_name + " Out-of-Sample QoF Comparison"
     val name    = "tab:" + caption
     val qof_matrix = MatrixD (qof1, qof2, qof3, qof4, qof5).transpose // transpose to get metrics as rows and models as columns
 
