@@ -1,0 +1,491 @@
+\section*{Transformed Regression: Sqrt, Log1p, Box-Cox}
+In this section, we applied three different transformation techniques to the response variables (mpg, house price, and insurance charge) across the Auto MPG, Boston House Price, and Medical Cost datasets. The distributions for mpg, house price, and medical charge exhibit right-skewed patterns. Therefore, these transformations could significantly improved model accuracy. To measure and compare the quality of fit for the different transformation models, we extracted 15 metrics, including $R^{2}$, adjusted $R^{2}$, MSE, and MAE. Each model was evaluated using both in-sample validation and a validation set with an 80-20\% split. Finally, we applied feature selection to identify the optimal set of features that best describe the response variable. For box-cox transformation we reqired a optimal lamda parameter which was 0.19, 0.85, and 0.04 for mpg, house price, and insurance cost respectively. 
+
+\subsection*{Transformed Regression using Scala}
+We used TranRegression function form the modeling to perfrom Sqrt, Log1p, Box-Cox on the Auto MPG, Boston House Price, and Medical Cost datasets. The function takes predictor variables, a response variable, feature names, a factorization method, and transformation and inverse transformation methods as input, and fits the model based on the specified transformation. An example of the code used to fit the square-root (sqrt) transformation model is provided below.
+
+\begin{verbatim}
+f = ("sqrt, sq, "sqrt")
+val mod = new modeling.TranRegression (ox, y, ox_fname, 
+                                       modeling.Regression.hp, 
+                                       f._1, f._2, f._3)  
+\end{verbatim}
+
+\subsection*{Transformed Regression on the Auto MPG Dataset using Scala: In-Sample and Validation Results}
+Tables 1 and 2 present the quality of fit for the in-sample and validation (80-20\% split) evaluations using the Auto MPG data. For the in-sample case, the models utilized all available data. The results indicate that the log1p and Box-Cox transformations outperform the sqrt transformation, which is further confirmed by the adjusted $R^{2}$ values. The Mean Square Error (MSE) for the sqrt, log1p, and Box-Cox transformations reached 10.02, 9.17, and 9.40, respectively, with the log1p transformation achieving the lowest error. Similarly, in the validation accuracy results, where 80\% of the data was randomly used for model training and 20\% for testing, the log1p transformation achieved the highest $R^{2}$ and adjusted $R^{2}$ values, as well as the lowest MSE.
+
+\begin{table}[h]
+\centering
+\caption{Auto MPG (In-Sample): Sqrt, Log1p, and Box–Cox($\lambda$ = 0.19)}
+\label{tab:Auto_MPG_(In-Sample)}
+\begin{tabular}{|c|c|c|c|} \hline 
+Metric & sqrt & log1p & box-cox($\lambda$=0.19) \\ \hline \hline 
+rSq &0.835138 & 0.849102 &      0.845366 \\ \hline 
+rSqBar &0.832569 &      0.846751 &      0.842956 \\ \hline 
+sst &23819.0 &  23819.0 &       23819.0 \\ \hline 
+sse &3926.85 &  3594.23 &       3683.22 \\ \hline 
+sde &3.16757 &  3.02514 &       3.06455 \\ \hline 
+mse0 &10.0175 & 9.16895 &       9.39596 \\ \hline 
+rmse &3.16504 & 3.02803 &       3.06528 \\ \hline 
+mae &2.34675 &  2.18422 &       2.22945 \\ \hline 
+smape &10.2046 &        9.32001 &       9.54480 \\ \hline 
+m &392.000 &    392.000 &       392.000 \\ \hline 
+dfr &6.00000 &  6.00000 &       6.00000 \\ \hline 
+df &385.000 &   385.000 &       385.000 \\ \hline 
+fStat &325.048 &        361.067 &       350.793 \\ \hline 
+aic &-993.873 & -976.527 &      -981.320 \\ \hline 
+bic &-966.074 & -948.728 &      -953.521 \\ \hline 
+\end{tabular}
+\end{table}
+
+\begin{table}[h]
+\centering
+\caption{Auto MPG (Validation): Sqrt, Log1p, and Box–Cox($\lambda$ = 0.19)}
+\label{tab:Auto_MPG_(Validation)}
+\begin{tabular}{|c|c|c|c|} \hline 
+Metric & sqrt & log1p & box-cox($\lambda$=0.19) \\ \hline \hline 
+rSq &0.846480 & 0.852864 &      0.851819 \\ \hline 
+rSqBar &0.844088 &      0.850571 &      0.849510 \\ \hline 
+sst &4731.23 &  4731.23 &       4731.23 \\ \hline 
+sse &726.337 &  696.133 &       701.080 \\ \hline 
+sde &3.05724 &  2.97969 &       2.99552 \\ \hline 
+mse0 &9.31202 & 8.92478 &       8.98820 \\ \hline 
+rmse &3.05156 & 2.98744 &       2.99803 \\ \hline 
+mae &2.11846 &  1.98665 &       2.01582 \\ \hline 
+smape &9.00068 &        8.28831 &       8.41880 \\ \hline 
+m &78.0000 &    78.0000 &       78.0000 \\ \hline 
+dfr &6.00000 &  6.00000 &       6.00000 \\ \hline 
+df &385.000 &   385.000 &       385.000 \\ \hline 
+fStat &353.804 &        371.939 &       368.862 \\ \hline 
+aic &-183.700 & -182.048 &      -182.322 \\ \hline 
+bic &-167.203 & -165.551 &      -165.825 \\ \hline 
+\end{tabular}
+\end{table}
+
+\begin{figure}[h]
+    \centering
+    \captionsetup{justification=centering}
+    \begin{subfigure}[b]{0.45\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{Auto_MPG/scalation_sqrt_In_Sample.png} 
+        %\caption{Description of left image}
+        %\label{fig:left}
+    \end{subfigure}
+    \hfill % Adds flexible space between the images
+    \begin{subfigure}[b]{0.45\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{Auto_MPG/scalation_sqrt_80_20.png}
+        %\caption{Description of right image}
+        %\label{fig:right}
+    \end{subfigure}
+    \caption{Scalation - Auto MPG Sqrt\\ Left: In Sample Predictions\\ Right: 80-20 Out of Sample Predictions\\ yy black/actual vs. yp red/predicted}
+    \label{fig:Scalation - AutoMPG sqrt}
+\end{figure}
+
+\begin{figure}[h]
+    \centering
+    \captionsetup{justification=centering}
+    \begin{subfigure}[b]{0.45\textwidth}
+        \centering
+        \includegraphics[width=1.1\textwidth]{Auto_MPG/statsmodels_sqrt_In_Sample.png} 
+        %\caption{Description of left image}
+        %\label{fig:left}
+    \end{subfigure}
+    \hfill % Adds flexible space between the images
+    \begin{subfigure}[b]{0.45\textwidth}
+        \centering
+        \includegraphics[width=1.1\textwidth]{Auto_MPG/statsmodels_sqrt_80_20.png}
+        %\caption{Description of right image}
+        %\label{fig:right}
+    \end{subfigure}
+    \caption{Statsmodels - Auto MPG Sqrt\\ Left: In Sample Predictions\\ Right: 80-20 Out of Sample Predictions\\ yy black/actual vs. yp red/predicted}
+    \label{fig:Statsmodels - AutoMPG sqrt}
+\end{figure}
+
+\begin{figure}[h]
+    \centering
+    \captionsetup{justification=centering}
+    \begin{subfigure}[b]{0.45\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{Auto_MPG/scalation_log1p_In_Sample.png} 
+        %\caption{Description of left image}
+        %\label{fig:left}
+    \end{subfigure}
+    \hfill % Adds flexible space between the images
+    \begin{subfigure}[b]{0.45\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{Auto_MPG/scalation_log1p_80_20.png}
+        %\caption{Description of right image}
+        %\label{fig:right}
+    \end{subfigure}
+    \caption{Scalation - Auto MPG log1p\\ Left: In Sample Predictions\\ Right: 80-20 Out of Sample Predictions\\ yy black/actual vs. yp red/predicted}
+    \label{fig:Scalation - AutoMPG log1p}
+\end{figure}
+
+\begin{figure}[h]
+    \centering
+    \captionsetup{justification=centering}
+    \begin{subfigure}[b]{0.45\textwidth}
+        \centering
+        \includegraphics[width=1.1\textwidth]{Auto_MPG/statsmodels_log1p_In_Sample.png} 
+        %\caption{Description of left image}
+        %\label{fig:left}
+    \end{subfigure}
+    \hfill % Adds flexible space between the images
+    \begin{subfigure}[b]{0.45\textwidth}
+        \centering
+        \includegraphics[width=1.1\textwidth]{Auto_MPG/statsmodels_log1p_80_20.png}
+        %\caption{Description of right image}
+        %\label{fig:right}
+    \end{subfigure}
+    \caption{Statsmodels - Auto MPG log1p\\ Left: In Sample Predictions\\ Right: 80-20 Out of Sample Predictions\\ yy black/actual vs. yp red/predicted}
+    \label{fig:Statsmodels - AutoMPG log1p}
+\end{figure}
+
+\subsection*{Transformed Regression on the Boston House Price Dataset: In-Sample and Validation Results}
+For the house price prediction, the log1p transformed model performed significantly worse than the sqrt and Box-Cox transformations. The Box-Cox and sqrt models performed similarly, although Box-Cox achieved highest $R^{2}$ and adjusted $R^{2}$ of 0.998 in the in-sample evaluation. A similar trend was observed in the validation, where Box-Cox and sqrt outperformed the log1p transformation, with Box-Cox achieving the highest $R^{2}$ and adjusted $R^{2}$.
+
+\begin{table}[h]
+\centering
+\caption{House Price (In-Sample): Sqrt, Log1p, and Box–Cox($\lambda$ = 0.85)}
+\label{tab:House_Price_(In-Sample)}
+\begin{tabular}{|c|c|c|c|} \hline 
+Metric & sqrt & log1p & box-cox($\lambda$=0.85) \\ \hline \hline 
+rSq &0.986164 & 0.922376 &      0.997549 \\ \hline 
+rSqBar &0.986067 &      0.921828 &      0.997531 \\ \hline 
+sst &6.42325e+13 &      6.42325e+13 &   6.42325e+13 \\ \hline 
+sse &8.88711e+11 &      4.98598e+12 &   1.57458e+11 \\ \hline 
+sde &29823.1 &  70573.3 &       12554.0 \\ \hline 
+mse0 &8.88711e+08 &     4.98598e+09 &   1.57458e+08 \\ \hline 
+rmse &29811.3 & 70611.5 &       12548.2 \\ \hline 
+mae &24296.5 &  52989.3 &       10078.9 \\ \hline 
+smape &4.85788 &        9.21218 &       2.12365 \\ \hline 
+m &1000.00 &    1000.00 &       1000.00 \\ \hline 
+dfr &7.00000 &  7.00000 &       7.00000 \\ \hline 
+df &992.000 &   992.000 &       992.000 \\ \hline 
+fStat &10100.8 &        1683.94 &       57668.5 \\ \hline 
+aic &-11705.6 & -12567.9 &      -10840.3 \\ \hline 
+bic &-11666.3 & -12528.6 &      -10801.0 \\ \hline 
+\end{tabular}
+\end{table}
+
+\begin{table}[h]
+\centering
+\caption{House Price (Validation): Sqrt, Log1p, and Box–Cox($\lambda$ = 0.85)}
+\label{tab:House_Price_(Validation)}
+\begin{tabular}{|c|c|c|c|} \hline 
+Metric & sqrt & log1p & box-cox($\lambda$=0.85) \\ \hline \hline 
+rSq &0.984017 & 0.906459 &      0.997398 \\ \hline 
+rSqBar &0.983904 &      0.905799 &      0.997380 \\ \hline 
+sst &1.33700e+13 &      1.33700e+13 &   1.33700e+13 \\ \hline 
+sse &2.13694e+11 &      1.25064e+12 &   3.47839e+10 \\ \hline 
+sde &32755.5 &  78812.3 &       13217.8 \\ \hline 
+mse0 &1.06847e+09 &     6.25321e+09 &   1.73920e+08 \\ \hline 
+rmse &32687.5 & 79077.2 &       13187.9 \\ \hline 
+mae &26140.1 &  58024.9 &       10655.9 \\ \hline 
+smape &5.18595 &        9.88665 &       2.22264 \\ \hline 
+m &200.000 &    200.000 &       200.000 \\ \hline 
+dfr &7.00000 &  7.00000 &       7.00000 \\ \hline 
+df &992.000 &   992.000 &       992.000 \\ \hline 
+fStat &8724.77 &        1373.28 &       54329.4 \\ \hline 
+aic &-2346.74 & -2523.43 &      -2165.20 \\ \hline 
+bic &-2320.35 & -2497.04 &      -2138.81 \\ \hline 
+\end{tabular}
+\end{table}
+
+\begin{figure}[h]
+    \centering
+    \captionsetup{justification=centering}
+    \begin{subfigure}[b]{0.45\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{Housing/scalation_sqrt_In_Sample.png} 
+        %\caption{Description of left image}
+        %\label{fig:left}
+    \end{subfigure}
+    \hfill % Adds flexible space between the images
+    \begin{subfigure}[b]{0.45\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{Housing/scalation_sqrt_80_20.png}
+        %\caption{Description of right image}
+        %\label{fig:right}
+    \end{subfigure}
+    \caption{Scalation - House Price Sqrt\\ Left: In Sample Predictions\\ Right: 80-20 Out of Sample Predictions\\ yy black/actual vs. yp red/predicted}
+    \label{fig:Scalation - Housing sqrt}
+\end{figure}
+
+\begin{figure}[h]
+    \centering
+    \captionsetup{justification=centering}
+    \begin{subfigure}[b]{0.45\textwidth}
+        \centering
+        \includegraphics[width=1.1\textwidth]{Housing/statsmodels_sqrt_In_Sample.png} 
+        %\caption{Description of left image}
+        %\label{fig:left}
+    \end{subfigure}
+    \hfill % Adds flexible space between the images
+    \begin{subfigure}[b]{0.45\textwidth}
+        \centering
+        \includegraphics[width=1.1\textwidth]{Housing/statsmodels_sqrt_80_20.png}
+        %\caption{Description of right image}
+        %\label{fig:right}
+    \end{subfigure}
+    \caption{Statsmodels - House Price Sqrt\\ Left: In Sample Predictions\\ Right: 80-20 Out of Sample Predictions\\ yy black/actual vs. yp red/predicted}
+    \label{fig:Statsmodels - Housing sqrt}
+\end{figure}
+
+\begin{figure}[h]
+    \centering
+    \captionsetup{justification=centering}
+    \begin{subfigure}[b]{0.45\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{Housing/scalation_log1p_In_Sample.png} 
+        %\caption{Description of left image}
+        %\label{fig:left}
+    \end{subfigure}
+    \hfill % Adds flexible space between the images
+    \begin{subfigure}[b]{0.45\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{Housing/scalation_log1p_80_20.png}
+        %\caption{Description of right image}
+        %\label{fig:right}
+    \end{subfigure}
+    \caption{Scalation - House Price log1p\\ Left: In Sample Predictions\\ Right: 80-20 Out of Sample Predictions\\ yy black/actual vs. yp red/predicted}
+    \label{fig:Scalation - Housing log1p}
+\end{figure}
+
+\begin{figure}[h]
+    \centering
+    \captionsetup{justification=centering}
+    \begin{subfigure}[b]{0.45\textwidth}
+        \centering
+        \includegraphics[width=1.1\textwidth]{Housing/statsmodels_log1p_In_Sample.png} 
+        %\caption{Description of left image}
+        %\label{fig:left}
+    \end{subfigure}
+    \hfill % Adds flexible space between the images
+    \begin{subfigure}[b]{0.45\textwidth}
+        \centering
+        \includegraphics[width=1.1\textwidth]{Housing/statsmodels_log1p_80_20.png}
+        %\caption{Description of right image}
+        %\label{fig:right}
+    \end{subfigure}
+    \caption{Statsmodels - House Price log1p\\ Left: In Sample Predictions\\ Right: 80-20 Out of Sample Predictions\\ yy black/actual vs. yp red/predicted}
+    \label{fig:Statsmodels - Housing log1p}
+\end{figure}
+
+\subsection*{Transformed Regression on the Medical Cost Dataset: In-Sample and Validation Results}
+In the Medical Cost dataset, the sqrt transformation performed significantly better than the log1p and Box-Cox transformations. The sqrt transformation achieved an $R^{2}$ of 0.753 and an adjusted $R^{2}$ of 0.751 in the in-sample evaluation, compared to 0.730 and 0.729, respectively, for the validation set. The adjusted $R^{2}$ also shows a similar trend, where sqrt, log1p, and Box-Cox achieved 0.751, 0.520, and 0.574 for in-sample evaluation and 0.729, 0.569, and 0.607 for validation, respectively.
+
+\begin{table}[h]
+\centering
+\caption{Medical Cost (In-Sample): Sqrt, Log1p, and Box–Cox($\lambda$ = 0.04)}
+\label{tab:Medical_Cost_(In-Sample)}
+\begin{tabular}{|c|c|c|c|} \hline 
+Metric & sqrt & log1p & box-cox($\lambda$=0.04) \\ \hline \hline 
+rSq &0.752657 & 0.522782 &      0.576265 \\ \hline 
+rSqBar &0.751168 &      0.519909 &      0.573715 \\ \hline 
+sst &1.96074e+11 &      1.96074e+11 &   1.96074e+11 \\ \hline 
+sse &4.84975e+10 &      9.35702e+10 &   8.30835e+10 \\ \hline 
+sde &6001.71 &  8358.44 &       7870.39 \\ \hline 
+mse0 &3.62463e+07 &     6.99329e+07 &   6.20953e+07 \\ \hline 
+rmse &6020.49 & 8362.59 &       7880.06 \\ \hline 
+mae &3613.90 &  4219.51 &       4052.90 \\ \hline 
+smape &27.6903 &        26.2889 &       26.0851 \\ \hline 
+m &1338.00 &    1338.00 &       1338.00 \\ \hline 
+dfr &8.00000 &  8.00000 &       8.00000 \\ \hline 
+df &1329.00 &   1329.00 &       1329.00 \\ \hline 
+fStat &505.514 &        181.986 &       225.924 \\ \hline 
+aic &-13525.1 & -13964.7 &      -13885.2 \\ \hline 
+bic &-13478.3 & -13917.9 &      -13838.4 \\ \hline 
+\end{tabular}
+\end{table}
+
+\begin{table}[h]
+\centering
+\caption{Medical Cost (Validation): Sqrt, Log1p, and Box–Cox($\lambda$ = 0.04)}
+\label{tab:Medical_Cost_(Validation)}
+\begin{tabular}{|c|c|c|c|} \hline 
+Metric & sqrt & log1p & box-cox($\lambda$=0.04) \\ \hline \hline 
+rSq &0.730154 & 0.571048 &      0.609124 \\ \hline 
+rSqBar &0.728530 &      0.568466 &      0.606771 \\ \hline 
+sst &4.06432e+10 &      4.06432e+10 &   4.06432e+10 \\ \hline 
+sse &1.09674e+10 &      1.74340e+10 &   1.58865e+10 \\ \hline 
+sde &6405.50 &  8088.13 &       7716.02 \\ \hline 
+mse0 &4.10764e+07 &     6.52957e+07 &   5.94998e+07 \\ \hline 
+rmse &6409.08 & 8080.58 &       7713.61 \\ \hline 
+mae &3839.79 &  4116.83 &       3998.83 \\ \hline 
+smape &30.1151 &        27.3599 &       27.2984 \\ \hline 
+m &267.000 &    267.000 &       267.000 \\ \hline 
+dfr &8.00000 &  8.00000 &       8.00000 \\ \hline 
+df &1329.00 &   1329.00 &       1329.00 \\ \hline 
+fStat &449.505 &        221.156 &       258.882 \\ \hline 
+aic &-2701.24 & -2763.11 &      -2750.71 \\ \hline 
+bic &-2668.95 & -2730.83 &      -2718.42 \\ \hline 
+\end{tabular}
+\end{table}
+
+\begin{figure}[h]
+    \centering
+    \captionsetup{justification=centering}
+    \begin{subfigure}[b]{0.45\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{Insurance/scalation_sqrt_In_Sample.png} 
+        %\caption{Description of left image}
+        %\label{fig:left}
+    \end{subfigure}
+    \hfill % Adds flexible space between the images
+    \begin{subfigure}[b]{0.45\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{Insurance/scalation_sqrt_80_20.png}
+        %\caption{Description of right image}
+        %\label{fig:right}
+    \end{subfigure}
+    \caption{Scalation - Insurance Charges Sqrt\\ Left: In Sample Predictions\\ Right: 80-20 Out of Sample Predictions\\ yy black/actual vs. yp red/predicted}
+    \label{fig:Scalation - Insurance sqrt}
+\end{figure}
+
+\begin{figure}[h]
+    \centering
+    \captionsetup{justification=centering}
+    \begin{subfigure}[b]{0.45\textwidth}
+        \centering
+        \includegraphics[width=1.1\textwidth]{Insurance/statsmodels_sqrt_In_Sample.png} 
+        %\caption{Description of left image}
+        %\label{fig:left}
+    \end{subfigure}
+    \hfill % Adds flexible space between the images
+    \begin{subfigure}[b]{0.45\textwidth}
+        \centering
+        \includegraphics[width=1.1\textwidth]{Insurance/statsmodels_sqrt_80_20.png}
+        %\caption{Description of right image}
+        %\label{fig:right}
+    \end{subfigure}
+    \caption{Statsmodels - Insurance Charges Sqrt\\ Left: In Sample Predictions\\ Right: 80-20 Out of Sample Predictions\\ yy black/actual vs. yp red/predicted}
+    \label{fig:Statsmodels - Insurance sqrt}
+\end{figure}
+
+\begin{figure}[h]
+    \centering
+    \captionsetup{justification=centering}
+    \begin{subfigure}[b]{0.45\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{Insurance/scalation_log1p_In_Sample.png} 
+        %\caption{Description of left image}
+        %\label{fig:left}
+    \end{subfigure}
+    \hfill % Adds flexible space between the images
+    \begin{subfigure}[b]{0.45\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{Insurance/scalation_log1p_80_20.png}
+        %\caption{Description of right image}
+        %\label{fig:right}
+    \end{subfigure}
+    \caption{Scalation - Insurance Charges log1p\\ Left: In Sample Predictions\\ Right: 80-20 Out of Sample Predictions\\ yy black/actual vs. yp red/predicted}
+    \label{fig:Scalation - Insurance log1p}
+\end{figure}
+
+\begin{figure}[h]
+    \centering
+    \captionsetup{justification=centering}
+    \begin{subfigure}[b]{0.45\textwidth}
+        \centering
+        \includegraphics[width=1.1\textwidth]{Insurance/statsmodels_log1p_In_Sample.png} 
+        %\caption{Description of left image}
+        %\label{fig:left}
+    \end{subfigure}
+    \hfill % Adds flexible space between the images
+    \begin{subfigure}[b]{0.45\textwidth}
+        \centering
+        \includegraphics[width=1.1\textwidth]{Insurance/statsmodels_log1p_80_20.png}
+        %\caption{Description of right image}
+        %\label{fig:right}
+    \end{subfigure}
+    \caption{Statsmodels - Insurance Charges log1p\\ Left: In Sample Predictions\\ Right: 80-20 Out of Sample Predictions\\ yy black/actual vs. yp red/predicted}
+    \label{fig:Statsmodels - Insurance log1p}
+\end{figure}
+
+\section*{Transformed Regression using statsmodels}
+Here, we used Python statsmodels library to reproduce all results generated by the TranRegression package.
+
+
+%%%%%%%%%%%%%%%%%% statsmodels %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%% Auto MPG %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection*{Transformed Regression with Sqrt, Log1p, and Box--Cox Transformations on the Auto MPG Dataset: In-Sample, Validation, Forward, and Backward Results}
+
+The following three tables present the results for the sqrt, log1p, and Box-Cox transformations, including in-sample evaluation, validation, and forward and backward feature selection. From these tables, we can see that, similar to the Scala results, the log1p and Box-Cox transformations perform similarly, with log1p being slightly better than Box-Cox. For the in-sample case, the sqrt, log1p, and Box-Cox transformations achieved $R^{2}$ values of 0.835, 0.849, and 0.845, respectively, with adjusted $R^{2}$ values of 0.833, 0.847, and 0.843. Similarly, for the validation case, the $R^{2}$ values were 0.822, 0.832, and 0.830, with adjusted $R^{2}$ values of 0.807, 0.818, and 0.816.
+\begin{table}[h]
+\centering
+\caption{Auto MPG Regression with Square-Root Transformation}
+\label{tab:auto_mpg_sqrt}
+\input{statsmodels/df_sqrt_autoMPG}
+\end{table}
+
+\begin{table}[h]
+\centering
+\caption{Auto MPG Regression with Log1p Transformation}
+\label{tab:auto_mpg_Log1p}
+\input{statsmodels/df_log1p_autoMPG}
+\end{table}
+
+\begin{table}[h]
+\centering
+\caption{Auto MPG Regression with Box-Cox Transformation}
+\label{tab:auto_mpg_box_cox}
+\input{statsmodels/df_boxcox_autoMPG}
+\end{table}
+
+%%%%%%%%%%%%%%%%%% House Price %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection*{Transformed Regression with Sqrt, Log1p, and Box--Cox Transformations on the Boston House Price Dataset: In-Sample, Validation, Forward, and Backward Results}
+
+For the house price prediction dataset, the ScalaTion and statsmodels summaries are consistent, as the Box–Cox transformation was identified as the best-performing model under both approaches.
+
+
+\begin{table}[h]
+\centering
+\caption{Boston House Price Regression with Square-Root Transformation}
+\label{tab:house_price_sqrt}
+\input{statsmodels/df_sqrt_housePrice}
+\end{table}
+
+\begin{table}[h]
+\centering
+\caption{Boston House Price Regression with Log1p Transformation}
+\label{tab:house_price_log1p}
+\input{statsmodels/df_log1p_housePrice}
+\end{table}
+
+\begin{table}[h]
+\centering
+\caption{Boston House Price Regression with Box-Cox Transformation}
+\label{tab:house_price_box-cox}
+\input{statsmodels/df_boxcox_housePrice}
+\end{table}
+
+%%%%%%%%%%%%%%%%%%%%%%% Medical Cost %%%%%%%%%%%%%%%%%%%%%%%
+\subsection*{Transformed Regression with Sqrt, Log1p, and Box--Cox Transformations on the Medical Cost Dataset: In-Sample, Validation, Forward, and Backward Results}
+
+Finally, for the medical cost dataset, the sqrt transformation explained the insurance costs better than the other methods, despite the relatively lower $R^{2}$ values. For the in-sample case, the $R^{2}$ values were 0.753, 0.523, and 0.576 for the sqrt, log1p, and Box-Cox transformations, respectively, with adjusted $R^{2}$ values of 0.751, 0.520, and 0.574. These results were verified by the validation set, where the sqrt transformation achieved an $R^{2}$ of 0.706 and an adjusted $R^{2}$ of 0.697, outperforming the log1p ($R^{2}$ of 0.505, Adjusted $R^{2}$ of 0.490) and Box-Cox (($R^{2}$ of 0.546, Adjusted $R^{2}$ of 0.532) models.
+
+\begin{table}[h]
+\centering
+\caption{Medical Cost  Regression with Square-Root Transformation}
+\label{tab:medical_cost_sqrt}
+\input{statsmodels/df_sqrt_medicalCost}
+\end{table}
+
+\begin{table}[h]
+\centering
+\caption{Medical Cost  Regression with Log1p Transformation}
+\label{tab:medical_cost_log1p}
+\input{statsmodels/df_log1p_medicalCost}
+\end{table}
+
+\begin{table}[h]
+\centering
+\caption{Medical Cost  Regression with Box-Cox Transformation}
+\label{tab:medical_cost_box_cox}
+\input{statsmodels/df_boxcox_medicalCost}
+\end{table}

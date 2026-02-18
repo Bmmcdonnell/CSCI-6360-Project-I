@@ -1,0 +1,676 @@
+\section{Linear Regression}
+
+\subsection{Auto MPG}
+
+\begin{table}[h]
+\centering
+\caption{Scalation - AutoMPG Linear Regression}
+\label{tab:Scalation - Linear Regression}
+\begin{tabular}{|c|c|c|} \hline 
+Metric & In-Sample & 80-20 Split \\ \hline \hline 
+rSq &0.809255 & 0.822842 \\ \hline 
+rSqBar &0.806283 &      0.820081 \\ \hline 
+sst &23819.0 &  4731.23 \\ \hline 
+sse &4543.35 &  838.174 \\ \hline 
+sde &3.40878 &  3.29026 \\ \hline 
+mse0 &11.5902 & 10.7458 \\ \hline 
+rmse &3.40443 & 3.27808 \\ \hline 
+mae &2.61826 &  2.48735 \\ \hline 
+smape &12.0589 &  11.8858 \\ \hline 
+m &392.000 &    78.0000 \\ \hline 
+dfr &6.00000 &  6.00000 \\ \hline 
+df &385.000 &   385.000 \\ \hline 
+fStat &272.234 &        298.034 \\ \hline 
+aic &-1022.45 & -189.284 \\ \hline 
+bic &-994.656 & -172.787 \\ \hline 
+\end{tabular}
+\end{table}
+
+\begin{table}[h]
+\centering
+\caption{Statsmodels - Auto MPG Linear Regression}
+\label{tab:Statsmodels - Auto MPG Linear Regression}
+\begin{tabular}{|c|c|c|}\hline
+Metric & In-Sample & 80-20 Split \\ \hline \hline
+rSq & 0.8093 & 0.8223 \\ \hline
+rSqBar & 0.8063 & 0.8075 \\ \hline
+sst & 23818.9935 & 4032.2061 \\ \hline
+sse & 4543.3470 & 716.3916 \\ \hline
+sde & 3.4352 & 3.1543 \\ \hline
+mse0 & 11.8009 & 9.9499 \\ \hline
+rmse & 3.4352 & 3.1543 \\ \hline
+mae & 2.6183 & 2.2526 \\ \hline
+smape & 12.0589 & 10.0104 \\ \hline
+m & 392.0000 & 79.0000 \\ \hline
+dfr & 6.0000 & 6.0000 \\ \hline
+df & 385.0000 & 72.0000 \\ \hline
+fStat & 272.2341 & 55.5419 \\ \hline
+aic & 2086.9095 & 412.3698 \\ \hline
+bic & 2114.7083 & 428.9560 \\ \hline
+\end{tabular}
+\end{table}
+
+
+\begin{figure}[h]
+    \centering
+    \captionsetup{justification=centering}
+    \begin{subfigure}[b]{0.45\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{Auto_MPG/scalation_reg_In_Sample.png} 
+        %\caption{Description of left image}
+        %\label{fig:left}
+    \end{subfigure}
+    \hfill % Adds flexible space between the images
+    \begin{subfigure}[b]{0.45\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{Auto_MPG/scalation_reg_80_20.png}
+        %\caption{Description of right image}
+        %\label{fig:right}
+    \end{subfigure}
+    \caption{Scalation - Auto MPG Regression\\ Left: In Sample Predictions\\ Right: 80-20 Out of Sample Predictions\\ yy black/actual vs. yp red/predicted}
+    \label{fig:Scalation - AutoMPG reg}
+\end{figure}
+
+\begin{figure}[h]
+    \centering
+    \captionsetup{justification=centering}
+    \begin{subfigure}[b]{0.45\textwidth}
+        \centering
+        \includegraphics[width=1.1\textwidth]{Auto_MPG/statsmodels_reg_In_Sample.png} 
+        %\caption{Description of left image}
+        %\label{fig:left}
+    \end{subfigure}
+    \hfill % Adds flexible space between the images
+    \begin{subfigure}[b]{0.45\textwidth}
+        \centering
+        \includegraphics[width=1.1\textwidth]{Auto_MPG/statsmodels_reg_80_20.png}
+        %\caption{Description of right image}
+        %\label{fig:right}
+    \end{subfigure}
+    \caption{Statsmodels - Auto MPG Regression\\ Left: In Sample Predictions\\ Right: 80-20 Out of Sample Predictions\\ yy black/actual vs. yp red/predicted}
+    \label{fig:Statsmodels - AutoMPG reg}
+\end{figure}
+
+
+\begin{table}[h]
+\centering
+\caption{Scalation - Auto MPG Linear Regression CV}
+\label{tab: Scalation - Auto MPG Linear Regression CV}
+\begin{tabular}{|c|c|c|c|c|c|c|} \hline
+Name & num & min & max & mean & stdev & interval \\ \hline \hline
+rSq & 5 & 0.788 & 0.823 & 0.798 & 0.014 & 0.018 \\ \hline
+rSqBar & 5 & 0.785 & 0.820 & 0.795 & 0.014 & 0.018 \\ \hline
+sst & 5 & 3962.818 & 5671.580 & 4700.481 & 620.767 & 770.935 \\ \hline
+sse & 5 & 824.554 & 1176.435 & 950.494 & 142.696 & 177.215 \\ \hline
+sde & 5 & 3.177 & 3.738 & 3.431 & 0.226 & 0.281 \\ \hline
+mse0 & 5 & 10.571 & 15.083 & 12.186 & 1.829 & 2.272 \\ \hline
+rmse & 5 & 3.251 & 3.884 & 3.483 & 0.256 & 0.318 \\ \hline
+mae & 5 & 2.487 & 2.850 & 2.689 & 0.151 & 0.188 \\ \hline
+smape & 5 & 11.886 & 12.905 & 12.372 & 0.427 & 0.530 \\ \hline
+m & 5 & 78.000 & 78.000 & 78.000 & 0.000 & 0.000 \\ \hline
+dfr & 5 & 6.000 & 6.000 & 6.000 & 0.000 & 0.000 \\ \hline
+df & 5 & 385.000 & 385.000 & 385.000 & 0.000 & 0.000 \\ \hline
+fStat & 5 & 239.054 & 298.034 & 254.430 & 24.517 & 30.448 \\ \hline
+aic & 5 & -205.110 & -188.647 & -194.539 & 6.676 & 8.291 \\ \hline
+bic & 5 & -188.613 & -172.150 & -178.042 & 6.676 & 8.291 \\ \hline
+\end{tabular}
+\end{table}
+
+\begin{table}[h]
+\centering
+\caption{Statsmodels - Auto MPG Linear Regression CV}
+\label{tab:Statsmodels - Auto MPG Linear Regression CV}
+\begin{tabular}{|c|c|c|c|c|c|}\hline
+Name & In-num folds & min & max & mean & stdev \\ \hline \hline
+rSq & 5 & 0.8029 & 0.8223 & 0.8102 & 0.0067 \\ \hline
+rSqBar & 5 & 0.7990 & 0.8188 & 0.8065 & 0.0068 \\ \hline
+sst & 5 & 18025.6506 & 19750.2199 & 19045.3459 & 599.2336 \\ \hline
+sse & 5 & 3202.8151 & 3813.1275 & 3617.5551 & 214.7409 \\ \hline
+sde & 5 & 3.2300 & 3.5243 & 3.4334 & 0.1050 \\ \hline
+mse0 & 5 & 10.4326 & 12.4206 & 11.7994 & 0.7068 \\ \hline
+rmse & 5 & 3.2300 & 3.5243 & 3.4334 & 0.1050 \\ \hline
+mae & 5 & 2.5039 & 3.1904 & 2.6786 & 0.2601 \\ \hline
+smape & 5 & 11.2379 & 14.1325 & 12.3805 & 0.9795 \\ \hline
+m & 5 & 78.0000 & 79.0000 & 78.4000 & 0.4899 \\ \hline
+dfr & 5 & 6.0000 & 6.0000 & 6.0000 & 0.0000 \\ \hline
+df & 5 & 306.0000 & 307.0000 & 306.6000 & 0.4899 \\ \hline
+fStat & 5 & 208.4306 & 236.8026 & 218.4653 & 9.8041 \\ \hline
+aic & 5 & 1634.3246 & 1689.0924 & 1670.2523 & 18.7268 \\ \hline
+bic & 5 & 1660.5704 & 1715.3381 & 1696.4892 & 18.7239 \\ \hline
+\end{tabular}
+\end{table}
+
+\begin{figure}[h]
+    \centering
+    \captionsetup{justification=centering}
+    \begin{subfigure}[b]{0.45\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{Auto_MPG/scalation_reg_FS_R2.png} 
+        %\caption{Description of left image}
+        %\label{fig:left}
+    \end{subfigure}
+    \hfill % Adds flexible space between the images
+    \begin{subfigure}[b]{0.45\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{Auto_MPG/scalation_reg_FS_aic.png}
+        %\caption{Description of right image}
+        %\label{fig:right}
+    \end{subfigure}
+    \caption{Scalation - Auto MPG Regression Forward Selection\\ Left: $R^2$ vs. $n$\\ Right: aic vs. $n$}
+    \label{fig:Scalation - AutoMPG reg FS}
+\end{figure}
+
+Forward Selection:\\
+(0.00000,       4.00000,        6.00000,        1.00000,        5.00000,        3.00000,        2.00000,\\
+-1359.19,       -1125.97,       -1031.56,       -1029.34,       -1027.03,       -1025.01,       -1022.45)
+
+
+\begin{figure}[h]
+    \centering
+    \captionsetup{justification=centering}
+    \begin{subfigure}[b]{0.45\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{Auto_MPG/scalation_reg_BE_R2.png} 
+        %\caption{Description of left image}
+        %\label{fig:left}
+    \end{subfigure}
+    \hfill % Adds flexible space between the images
+    \begin{subfigure}[b]{0.45\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{Auto_MPG/scalation_reg_BE_aic.png}
+        %\caption{Description of right image}
+        %\label{fig:right}
+    \end{subfigure}
+    \caption{Scalation - Auto MPG Regression Backward Elimination\\ Left: $R^2$ vs. $n$\\ Right: aic vs. $n$}
+    \label{fig:Scalation - AutoMPG reg BE}
+\end{figure}
+
+Backward Elimination:\\
+(0.00000,       4.00000,        6.00000,        1.00000,        5.00000,        3.00000,        2.00000,\\
+-1359.19,       -1125.97,       -1031.56,       -1029.34,       -1027.03,       -1025.01,       -1022.45)
+
+
+\begin{figure}[h]
+    \centering
+    \captionsetup{justification=centering}
+    \begin{subfigure}[b]{0.45\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{Auto_MPG/scalation_reg_SS_R2.png} 
+        %\caption{Description of left image}
+        %\label{fig:left}
+    \end{subfigure}
+    \hfill % Adds flexible space between the images
+    \begin{subfigure}[b]{0.45\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{Auto_MPG/scalation_reg_SS_aic.png}
+        %\caption{Description of right image}
+        %\label{fig:right}
+    \end{subfigure}
+    \caption{Scalation - Auto MPG Regression Stepwise Selection\\ Left: $R^2$ vs. $n$\\ Right: aic vs. $n$}
+    \label{fig:Scalation - AutoMPG reg SS}
+\end{figure}
+
+Stepwise Selection:\\
+(0.00000,       4.00000,        6.00000,        1.00000,        5.00000,        3.00000,\\
+-1.00000,       -1.00000,       -1.00000,       -1.00000,       -1.00000,       -1.00000)
+
+\subsection{House Prices}
+
+\begin{table}[h]
+\centering
+\caption{Scalation - House Price Linear Regression}
+\label{tab:Scalation - Linear Regression}
+\begin{tabular}{|c|c|c|} \hline 
+Metric & In-Sample & 80-20 Split \\ \hline \hline 
+rSq &0.998516 & 0.998649 \\ \hline 
+rSqBar &0.998507 &      0.998641 \\ \hline 
+sst &6.42325e+13 &      1.33700e+13 \\ \hline 
+sse &9.53030e+10 &      1.80638e+10 \\ \hline 
+sde &9767.21 &  9501.56 \\ \hline 
+mse0 &9.53030e+07 &     9.03190e+07 \\ \hline 
+rmse &9762.32 & 9503.63 \\ \hline 
+mae &7747.66 &  7484.48 \\ \hline 
+smape &1.57791 &        1.60847 \\ \hline 
+m &1000.00 &    200.000 \\ \hline 
+dfr &6.00000 &  6.00000 \\ \hline 
+df &993.000 &   993.000 \\ \hline 
+fStat &111378 & 122330 \\ \hline 
+aic &-10591.2 & -2101.67 \\ \hline 
+bic &-10556.9 & -2078.59 \\ \hline 
+\end{tabular}
+\end{table}
+
+
+\begin{table}[h]
+\centering
+\caption{Statsmodels - House Price Linear Regression}
+\label{tab:Statsmodels - House Price Linear Regression}
+\begin{tabular}{|c|c|c|}\hline
+Metric & In-Sample & 80-20 Split \\ \hline \hline
+rSq & 0.9985 & 0.9985 \\ \hline
+rSqBar & 0.9985 & 0.9984 \\ \hline
+sst & 64232463468052.5469 & 12891771417242.6445 \\ \hline
+sse & 95249090298.3967 & 19682384464.0853 \\ \hline
+sde & 9798.8381 & 10124.8417 \\ \hline
+mse0 & 96017228.1234 & 102512419.0838 \\ \hline
+rmse & 9798.8381 & 10124.8417 \\ \hline
+mae & 7740.4301 & 7898.0257 \\ \hline
+smape & 1.5774 & 1.6060 \\ \hline
+m & 1000.0000 & 200.0000 \\ \hline
+dfr & 7.0000 & 7.0000 \\ \hline
+df & 992.0000 & 192.0000 \\ \hline
+fStat & 95425.1583 & 17938.0204 \\ \hline
+aic & 21225.8831 & 4264.5099 \\ \hline
+bic & 21265.1451 & 4290.8965 \\ \hline
+\end{tabular}
+\end{table}
+
+
+\begin{figure}[h]
+    \centering
+    \captionsetup{justification=centering}
+    \begin{subfigure}[b]{0.45\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{Housing/scalation_reg_In_Sample.png} 
+        %\caption{Description of left image}
+        %\label{fig:left}
+    \end{subfigure}
+    \hfill % Adds flexible space between the images
+    \begin{subfigure}[b]{0.45\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{Housing/scalation_reg_80_20.png}
+        %\caption{Description of right image}
+        %\label{fig:right}
+    \end{subfigure}
+    \caption{Scalation - House Price Regression\\ Left: In Sample Predictions\\ Right: 80-20 Out of Sample Predictions\\ yy black/actual vs. yp red/predicted}
+    \label{fig:Scalation - Housing reg}
+\end{figure}
+
+\begin{figure}[h]
+    \centering
+    \captionsetup{justification=centering}
+    \begin{subfigure}[b]{0.45\textwidth}
+        \centering
+        \includegraphics[width=1.1\textwidth]{Housing/statsmodels_reg_In_Sample.png} 
+        %\caption{Description of left image}
+        %\label{fig:left}
+    \end{subfigure}
+    \hfill % Adds flexible space between the images
+    \begin{subfigure}[b]{0.45\textwidth}
+        \centering
+        \includegraphics[width=1.1\textwidth]{Housing/statsmodels_reg_80_20.png}
+        %\caption{Description of right image}
+        %\label{fig:right}
+    \end{subfigure}
+    \caption{Statsmodels - House Price Regression\\ Left: In Sample Predictions\\ Right: 80-20 Out of Sample Predictions\\ yy black/actual vs. yp red/predicted}
+    \label{fig:Statsmodels - Housing reg}
+\end{figure}
+
+
+\begin{table}[h]
+\centering
+\caption{Scalation - House Price Linear Regression CV}
+\label{tab: Scalation - House Price Linear Regression CV}
+\begin{tabular}{|c|c|c|c|c|c|c|} \hline 
+Name &  num folds & min & max & mean & stdev & interval \\ \hline \hline 
+rSq & 5 & 0.998 & 0.999 & 0.998 & 0.000 & 0.000 \\ \hline 
+rSqBar & 5 & 0.998 & 0.999 & 0.998 & 0.000 & 0.000 \\ \hline 
+sst & 5 & 11805100457351.200 &13369989427686.710 & 12829460198984.865 & 606159535374.424 & 752793908917.133 \\ \hline 
+sse & 5 & 17790794374.705 & 22663619750.593 & 19394433560.564 & 2117948592.845 & 2630295668.134 \\ \hline 
+sde & 5 &   9365.942 &  10608.530 &   9818.348 &    533.068 &    662.021 \\ \hline 
+mse0 & 5 & 88953971.874 & 113318098.753 & 96972167.803 & 10589742.964 & 13151478.341 \\ \hline 
+rmse & 5 &   9431.541 &  10645.097 &   9836.093 &    528.486 &    656.330 \\ \hline 
+mae & 5 &   7418.536 &   8609.308 &   7817.189 &    534.033 &    663.219 \\ \hline 
+smape & 5 & 1.408 &      1.804 &      1.592 &      0.141 &      0.176 \\ \hline 
+m & 5 & 200.000 &    200.000 &    200.000 &      0.000 &      0.000 \\ \hline 
+dfr & 5 & 6.000 &      6.000 &      6.000 &      0.000 &      0.000 \\ \hline 
+df & 5 & 993.000 &    993.000 &    993.000 &      0.000 &      0.000 \\ \hline 
+fStat & 5 & 96001.466 & 122329.999 & 110142.703 &  10843.190 &  13466.236 \\ \hline 
+aic & 5 & -2127.278 &  -2100.155 &  -2109.082 &     11.789 &     14.641 \\ \hline 
+bic & 5 & -2104.190 &  -2077.067 &  -2085.993 &     11.789 &     14.641 \\ \hline 
+\end{tabular}
+\end{table}
+
+\begin{table}[h]
+\centering
+\caption{Statsmodels - House Price Linear Regression CV}
+\label{tab:Statsmodels - House Price Linear Regression CV}
+\begin{tabular}{|c|c|c|c|c|c|}\hline
+Name & In-num folds & min & max & mean & stdev \\ \hline \hline
+rSq & 5 & 0.9985 & 0.9985 & 0.9985 & 0.0000 \\ \hline
+rSqBar & 5 & 0.9985 & 0.9985 & 0.9985 & 0.0000 \\ \hline
+sst & 5 & 50658229578994.8281 & 51833647639647.2656 & 51384861663931.4844 & 395867464990.6846 \\ \hline
+sse & 5 & 74379785928.0215 & 78081632373.2809 & 76098283299.9349 & 1285733275.0049 \\ \hline
+sde & 5 & 9690.9169 & 9929.1450 & 9801.8796 & 82.7530 \\ \hline
+mse0 & 5 & 93913871.1212 & 98587919.6632 & 96083691.0353 & 1623400.5998 \\ \hline
+rmse & 5 & 9690.9169 & 9929.1450 & 9801.8796 & 82.7530 \\ \hline
+mae & 5 & 7516.9137 & 8174.5836 & 7794.6342 & 224.6310 \\ \hline
+smape & 5 & 1.5104 & 1.6620 & 1.5879 & 0.0540 \\ \hline
+m & 5 & 200.0000 & 200.0000 & 200.0000 & 0.0000 \\ \hline
+dfr & 5 & 7.0000 & 7.0000 & 7.0000 & 0.0000 \\ \hline
+df & 5 & 792.0000 & 792.0000 & 792.0000 & 0.0000 \\ \hline
+fStat & 5 & 74563.5320 & 77254.5038 & 76300.5459 & 963.0215 \\ \hline
+aic & 5 & 16964.5723 & 17003.4288 & 16982.7315 & 13.4995 \\ \hline
+bic & 5 & 17002.0492 & 17040.9057 & 17020.2084 & 13.4995 \\ \hline
+\end{tabular}
+\end{table}
+
+\begin{figure}[h]
+    \centering
+    \captionsetup{justification=centering}
+    \begin{subfigure}[b]{0.45\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{Housing/scalation_reg_FS_R2.png} 
+        %\caption{Description of left image}
+        %\label{fig:left}
+    \end{subfigure}
+    \hfill % Adds flexible space between the images
+    \begin{subfigure}[b]{0.45\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{Housing/scalation_reg_FS_aic.png}
+        %\caption{Description of right image}
+        %\label{fig:right}
+    \end{subfigure}
+    \caption{Scalation - House Prices Regression Forward Selection\\ Left: $R^2$ vs. $n$\\ Right: aic vs. $n$}
+    \label{fig:Scalation - Housing reg FS}
+\end{figure}
+
+Forward Selection:\\
+(0.00000,       1.00000,        4.00000,        5.00000,        2.00000,        3.00000,        6.00000,\\
+-13859.8,       -11832.2,       -11640.1,       -11299.1,       -10853.0,       -10676.9,       -10591.2)
+
+
+\begin{figure}[h]
+    \centering
+    \captionsetup{justification=centering}
+    \begin{subfigure}[b]{0.45\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{Housing/scalation_reg_BE_R2.png} 
+        %\caption{Description of left image}
+        %\label{fig:left}
+    \end{subfigure}
+    \hfill % Adds flexible space between the images
+    \begin{subfigure}[b]{0.45\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{Housing/scalation_reg_BE_aic.png}
+        %\caption{Description of right image}
+        %\label{fig:right}
+    \end{subfigure}
+    \caption{Scalation - House Prices Regression Backward Elimination\\ Left: $R^2$ vs. $n$\\ Right: aic vs. $n$}
+    \label{fig:Scalation - Housing reg BE}
+\end{figure}
+
+Backward Elimination:\\
+(0.00000,       1.00000,        4.00000,        5.00000,        2.00000,        3.00000,        6.00000,\\
+-13859.8,       -11832.2,       -11640.1,       -11299.1,       -10853.0,       -10676.9,       -10591.2)
+
+
+\begin{figure}[h]
+    \centering
+    \captionsetup{justification=centering}
+    \begin{subfigure}[b]{0.45\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{Housing/scalation_reg_SS_R2.png} 
+        %\caption{Description of left image}
+        %\label{fig:left}
+    \end{subfigure}
+    \hfill % Adds flexible space between the images
+    \begin{subfigure}[b]{0.45\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{Housing/scalation_reg_SS_aic.png}
+        %\caption{Description of right image}
+        %\label{fig:right}
+    \end{subfigure}
+    \caption{Scalation - House Prices Regression Stepwise Selection\\ Left: $R^2$ vs. $n$\\ Right: aic vs. $n$}
+    \label{fig:Scalation - Housing reg SS}
+\end{figure}
+
+Stepwise Selection:\\
+(0.00000,       1.00000,        4.00000,        5.00000,        2.00000,        3.00000,\\
+-1.00000,       -1.00000,       -1.00000,       -1.00000,       -1.00000,       -1.00000)
+
+
+
+
+\subsection{Insurance Charges}
+
+\begin{table}[h]
+\centering
+\caption{Scalation - Insurance Charges Linear Regression}
+\label{tab:Scalation - Linear Regression}
+\begin{tabular}{|c|c|c|} \hline 
+Metric & In-Sample & 80-20 Split \\ \hline \hline 
+rSq &0.750157 & 0.720005 \\ \hline 
+rSqBar &0.748842 &      0.718531 \\ \hline 
+sst &1.96074e+11 &      4.06432e+10 \\ \hline 
+sse &4.89878e+10 &      1.13799e+10 \\ \hline 
+sde &6053.11 &  6540.46 \\ \hline 
+mse0 &3.66127e+07 &     4.26213e+07 \\ \hline 
+rmse &6050.84 & 6528.50 \\ \hline 
+mae &4179.54 &  4430.66 \\ \hline 
+smape &37.9722 &        40.0602 \\ \hline 
+m &1338.00 &    267.000 \\ \hline 
+dfr &7.00000 &  7.00000 \\ \hline 
+df &1330.00 &   1330.00 \\ \hline 
+fStat &570.477 &        488.584 \\ \hline 
+aic &-13533.8 & -2708.17 \\ \hline 
+bic &-13492.2 & -2679.47 \\ \hline 
+\end{tabular}
+\end{table}
+
+
+\begin{table}[h]
+\centering
+\caption{Statsmodels - Insurance Charges Linear Regression}
+\label{tab:Statsmodels - Insurance Charges Linear Regression}
+\begin{tabular}{|c|c|c|}\hline
+Metric & In-Sample & 80-20 Split \\ \hline \hline
+rSq & 0.7509 & 0.7898 \\ \hline
+rSqBar & 0.7494 & 0.7833 \\ \hline
+sst & 196074221568.3671 & 41606660039.7953 \\ \hline
+sse & 48839532843.9219 & 8744084438.2470 \\ \hline
+sde & 6062.1023 & 5810.4168 \\ \hline
+mse0 & 36749084.1564 & 33760943.7770 \\ \hline
+rmse & 6062.1023 & 5810.4168 \\ \hline
+mae & 4170.8869 & 3959.0670 \\ \hline
+smape & 37.8059 & 37.7432 \\ \hline
+m & 1338.0000 & 268.0000 \\ \hline
+dfr & 8.0000 & 8.0000 \\ \hline
+df & 1329.0000 & 259.0000 \\ \hline
+fStat & 500.8107 & 121.6738 \\ \hline
+aic & 27113.5058 & 5415.1269 \\ \hline
+bic & 27160.2962 & 5447.4458 \\ \hline
+\end{tabular}
+\end{table}
+
+
+\begin{figure}[h]
+    \centering
+    \captionsetup{justification=centering}
+    \begin{subfigure}[b]{0.45\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{Insurance/scalation_reg_In_Sample.png} 
+        %\caption{Description of left image}
+        %\label{fig:left}
+    \end{subfigure}
+    \hfill % Adds flexible space between the images
+    \begin{subfigure}[b]{0.45\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{Insurance/scalation_reg_80_20.png}
+        %\caption{Description of right image}
+        %\label{fig:right}
+    \end{subfigure}
+    \caption{Scalation - Insurance Charges Regression\\ Left: In Sample Predictions\\ Right: 80-20 Out of Sample Predictions\\ yy black/actual vs. yp red/predicted}
+    \label{fig:Scalation - Insurance reg}
+\end{figure}
+
+\begin{figure}[h]
+    \centering
+    \captionsetup{justification=centering}
+    \begin{subfigure}[b]{0.45\textwidth}
+        \centering
+        \includegraphics[width=1.1\textwidth]{Insurance/statsmodels_reg_In_Sample.png} 
+        %\caption{Description of left image}
+        %\label{fig:left}
+    \end{subfigure}
+    \hfill % Adds flexible space between the images
+    \begin{subfigure}[b]{0.45\textwidth}
+        \centering
+        \includegraphics[width=1.1\textwidth]{Insurance/statsmodels_reg_80_20.png}
+        %\caption{Description of right image}
+        %\label{fig:right}
+    \end{subfigure}
+    \caption{Statsmodels - Insurance Charges Regression\\ Left: In Sample Predictions\\ Right: 80-20 Out of Sample Predictions\\ yy black/actual vs. yp red/predicted}
+    \label{fig:Statsmodels - Insurance reg}
+\end{figure}
+
+
+
+\begin{table}[h]
+\centering
+\caption{Scalation - Insurance Charges Linear Regression CV}
+\label{tab: Scalation - Insurance Charges Linear Regression CV}
+\begin{tabular}{|c|c|c|c|c|c|c|} \hline 
+Name &  num & min & max & mean & stdev & interval \\ \hline \hline 
+rSq & 5 & 0.701 &      0.814 &      0.743 &      0.046 &      0.057 \\ \hline 
+rSqBar & 5 & 0.699 &      0.813 &      0.742 &      0.046 &      0.057 \\ \hline 
+sst & 5 & 31902777173.848 & 43430486230.657 & 38949749086.422 & 4343029725.651 & 5393640012.108 \\ \hline 
+sse & 5 & 7539480548.420 & 11454966761.392 & 9918152392.401 & 1670500799.560 & 2074607019.047 \\ \hline 
+sde & 5 & 5320.957 &   6562.018 &   6084.654 &    526.821 &    654.263 \\ \hline 
+mse0 & 5 & 28237754.863 & 42902497.234 & 37146638.174 & 6256557.302 & 7770063.742 \\ \hline 
+rmse & 5 & 5313.921 &   6550.000 &   6076.688 &    525.006 &    652.009 \\ \hline 
+mae & 5 & 3810.754 &   4511.498 &   4216.703 &    292.688 &    363.491 \\ \hline 
+smape & 5 & 36.128 &     40.060 &     38.143 &      1.833 &      2.277 \\ \hline 
+m & 5 & 267.000 &    267.000 &    267.000 &      0.000 &      0.000 \\ \hline 
+dfr & 5 & 7.000 &      7.000 &      7.000 &      0.000 &      0.000 \\ \hline 
+df & 5 & 1330.000 &   1330.000 &   1330.000 &     0.000 &      0.000 \\ \hline 
+fStat & 5 & 444.882 &    830.519 &    573.015 &    157.534 &    195.643 \\ \hline 
+aic & 5 & -2709.047 &  -2663.110 &  -2691.017 &     19.599 &     24.340 \\ \hline 
+bic & 5 & -2680.349 &  -2634.412 &  -2662.319 &     19.599 &     24.340 \\ \hline 
+\end{tabular}
+\end{table}
+
+\begin{table}[h]
+\centering
+\caption{Statsmodels - Insurance Charges Linear Regression CV}
+\label{tab:Statsmodels - Insurance Charges Linear Regression CV}
+\begin{tabular}{|c|c|c|c|c|c|}\hline
+Name & In-num folds & min & max & mean & stdev \\ \hline \hline
+rSq & 5 & 0.7372 & 0.7714 & 0.7509 & 0.0118 \\ \hline
+rSqBar & 5 & 0.7352 & 0.7697 & 0.7490 & 0.0119 \\ \hline
+sst & 5 & 152000096476.0009 & 165778288756.8451 & 156844205919.5975 & 4829672803.3539 \\ \hline
+sse & 5 & 37889563873.8970 & 39941665228.4872 & 39013173504.6473 & 798799753.1118 \\ \hline
+sde & 5 & 5973.0692 & 6135.5767 & 6062.3950 & 63.2693 \\ \hline
+mse0 & 5 & 35677555.4368 & 37645301.8176 & 36756635.6629 & 766907.3866 \\ \hline
+rmse & 5 & 5973.0692 & 6135.5767 & 6062.3950 & 63.2693 \\ \hline
+mae & 5 & 4054.1099 & 4427.9335 & 4203.4121 & 129.0554 \\ \hline
+smape & 5 & 35.6194 & 40.0220 & 38.1279 & 1.5723 \\ \hline
+m & 5 & 267.0000 & 268.0000 & 267.6000 & 0.4899 \\ \hline
+dfr & 5 & 8.0000 & 8.0000 & 8.0000 & 0.0000 \\ \hline
+df & 5 & 1061.0000 & 1062.0000 & 1061.4000 & 0.4899 \\ \hline
+fStat & 5 & 372.0864 & 448.0714 & 401.2199 & 26.3875 \\ \hline
+aic & 5 & 21673.0530 & 21710.2694 & 21692.5689 & 14.8342 \\ \hline
+bic & 5 & 21717.8401 & 21755.0482 & 21737.3510 & 14.8317 \\ \hline
+\end{tabular}
+\end{table}
+
+
+\begin{figure}[h]
+    \centering
+    \captionsetup{justification=centering}
+    \begin{subfigure}[b]{0.45\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{Insurance/scalation_reg_FS_R2.png} 
+        %\caption{Description of left image}
+        %\label{fig:left}
+    \end{subfigure}
+    \hfill % Adds flexible space between the images
+    \begin{subfigure}[b]{0.45\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{Insurance/scalation_reg_FS_aic.png}
+        %\caption{Description of right image}
+        %\label{fig:right}
+    \end{subfigure}
+    \caption{Scalation - Insurance Charges Regression Forward Selection\\ Left: $R^2$ vs. $n$\\ Right: aic vs. $n$}
+    \label{fig:Scalation - Insurance reg FS}
+\end{figure}
+
+Forward Selection:\\
+(0.00000,       5.00000,        1.00000,        2.00000,        3.00000,        7.00000,        4.00000,   6.00000,\\
+-14475.6,       -13826.7,       -13616.7,       -13548.9,       -13541.0,       -13537.9,       -13535.8,  -13533.8)
+
+
+\begin{figure}[h]
+    \centering
+    \captionsetup{justification=centering}
+    \begin{subfigure}[b]{0.45\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{Insurance/scalation_reg_BE_R2.png} 
+        %\caption{Description of left image}
+        %\label{fig:left}
+    \end{subfigure}
+    \hfill % Adds flexible space between the images
+    \begin{subfigure}[b]{0.45\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{Insurance/scalation_reg_BE_aic.png}
+        %\caption{Description of right image}
+        %\label{fig:right}
+    \end{subfigure}
+    \caption{Scalation - Insurance Charges Regression Backward Elimination\\ Left: $R^2$ vs. $n$\\ Right: aic vs. $n$}
+    \label{fig:Scalation - Insurance reg BE}
+\end{figure}
+
+Backward Elimination:\\
+(0.00000,       5.00000,        1.00000,        2.00000,        3.00000,        7.00000,        4.00000,   6.00000,\\
+-14475.6,       -13826.7,       -13616.7,       -13548.9,       -13541.0,       -13537.9,       -13535.8,  -13533.8)
+
+
+\begin{figure}[h]
+    \centering
+    \captionsetup{justification=centering}
+    \begin{subfigure}[b]{0.45\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{Insurance/scalation_reg_SS_R2.png} 
+        %\caption{Description of left image}
+        %\label{fig:left}
+    \end{subfigure}
+    \hfill % Adds flexible space between the images
+    \begin{subfigure}[b]{0.45\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{Insurance/scalation_reg_SS_aic.png}
+        %\caption{Description of right image}
+        %\label{fig:right}
+    \end{subfigure}
+    \caption{Scalation - Insurance Charges Regression Stepwise Selection\\ Left: $R^2$ vs. $n$\\ Right: aic vs. $n$}
+    \label{fig:Scalation - Insurance reg SS}
+\end{figure}
+
+Stepwise Selection:\\
+(0.00000,       5.00000,        1.00000,        2.00000,        3.00000,        7.00000,        4.00000,\\
+-1.00000,       -1.00000,       -1.00000,       -1.00000,       -1.00000,       -1.00000,       -1.00000)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
