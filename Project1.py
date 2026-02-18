@@ -298,7 +298,7 @@ def OutOfSample(X, y, data_name, testp=0.2, random_state=42):
     print("\\end{tabular}")
     print("\\end{table}")
 
-    return (regyp, ridgeyp, lassoyp, Sqrtfyp, log1pyp)
+    return (regyp, ridgeyp, lassoyp, Sqrtfyp, log1pyp, y_test)
 
 
 
@@ -311,11 +311,11 @@ def P1_AutoMPG_OOS():
     y = Auto_MPG['mpg']
     X = sm.add_constant(X)
     yp = OutOfSample(X, y, "Auto MPG", testp=0.2, random_state=42)
-    save_sorted_plot(y, yp[0], "Auto MPG", "reg", validate=True)
-    save_sorted_plot(y, yp[1], "Auto MPG", "ridge", validate=True)
-    save_sorted_plot(y, yp[2], "Auto MPG", "lasso", validate=True)
-    save_sorted_plot(y, yp[3], "Auto MPG", "sqrt", validate=True)
-    save_sorted_plot(y, yp[4], "Auto MPG", "log1p", validate=True)
+    save_sorted_plot(yp[5], yp[0], "Auto MPG", "reg", validate=True)
+    save_sorted_plot(yp[5], yp[1], "Auto MPG", "ridge", validate=True)
+    save_sorted_plot(yp[5], yp[2], "Auto MPG", "lasso", validate=True)
+    save_sorted_plot(yp[5], yp[3], "Auto MPG", "sqrt", validate=True)
+    save_sorted_plot(yp[5], yp[4], "Auto MPG", "log1p", validate=True)
 
 
 
@@ -325,11 +325,11 @@ def P1_Housing_OOS():
     y = House_Price['House_Price']
     X = sm.add_constant(X)
     yp = OutOfSample(X, y, "House Price", testp=0.2, random_state=42)
-    save_sorted_plot(y, yp[0], "House Price", "reg", validate=True)
-    save_sorted_plot(y, yp[1], "House Price", "ridge", validate=True)
-    save_sorted_plot(y, yp[2], "House Price", "lasso", validate=True)
-    save_sorted_plot(y, yp[3], "House Price", "sqrt", validate=True)
-    save_sorted_plot(y, yp[4], "House Price", "log1p", validate=True)
+    save_sorted_plot(yp[5], yp[0], "House Price", "reg", validate=True)
+    save_sorted_plot(yp[5], yp[1], "House Price", "ridge", validate=True)
+    save_sorted_plot(yp[5], yp[2], "House Price", "lasso", validate=True)
+    save_sorted_plot(yp[5], yp[3], "House Price", "sqrt", validate=True)
+    save_sorted_plot(yp[5], yp[4], "House Price", "log1p", validate=True)
 
 
 
@@ -338,11 +338,11 @@ def P1_Insuarance_OOS():
     X = Insurance_Charges[['intercept', 'age', 'bmi', 'children', 'sex_male', 'smoker_yes', 'region_northwest', 'region_southeast', 'region_southwest']]
     y = Insurance_Charges['charges']
     yp = OutOfSample(X, y, "Insurance Charges", testp=0.2, random_state=42)
-    save_sorted_plot(y, yp[0], "Insurance Charges", "reg", validate=True)
-    save_sorted_plot(y, yp[1], "Insurance Charges", "ridge", validate=True)
-    save_sorted_plot(y, yp[2], "Insurance Charges", "lasso", validate=True)
-    save_sorted_plot(y, yp[3], "Insurance Charges", "sqrt", validate=True)
-    save_sorted_plot(y, yp[4], "Insurance Charges", "log1p", validate=True)
+    save_sorted_plot(yp[5], yp[0], "Insurance Charges", "reg", validate=True)
+    save_sorted_plot(yp[5], yp[1], "Insurance Charges", "ridge", validate=True)
+    save_sorted_plot(yp[5], yp[2], "Insurance Charges", "lasso", validate=True)
+    save_sorted_plot(yp[5], yp[3], "Insurance Charges", "sqrt", validate=True)
+    save_sorted_plot(yp[5], yp[4], "Insurance Charges", "log1p", validate=True)
 
 
 
