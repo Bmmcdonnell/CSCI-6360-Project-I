@@ -86,7 +86,7 @@ def LatexTable(y_actual, y_test, y_pred_in_sample, y_pred_split_test, k, data_na
     print("\\end{table}")
 
 
-def sorted_plot(y_actual, y_pred, data_name, validate=False):
+def sorted_plot(y_actual, y_pred, data_name, model_name, validate=False):
     # Create a DataFrame with actual and predicted values
     df = pd.DataFrame({'Actual': y_actual, 'Predicted': y_pred})
     # Sort the DataFrame by actual values
@@ -108,8 +108,7 @@ def sorted_plot(y_actual, y_pred, data_name, validate=False):
     plt.legend()
     plt.ylim(y_start, y_end)
     plt.xlim(x_start, x_end_2)
-    plt.savefig(f'statsmodels_{"80_20" if validate else "In_Sample"}.png')
-    plt.show()
+    plt.savefig(f'statsmodels_{model_name}_{"80_20" if validate else "In_Sample"}.png')
 
 
 def CV_Latex_Table(X, y, k, data_name):

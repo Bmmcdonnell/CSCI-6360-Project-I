@@ -193,6 +193,54 @@ bic &-172.787 & -173.646 &      -172.774 &      -167.203 &      -165.551 \\ \hli
 \end{tabular}
 \end{table}
 
+\begin{table}[h]
+\centering
+\caption{Statsmodels - Auto MPG In-Sample QoF Comparison}
+\label{tab:Statsmodels - Auto MPG In-Sample QoF Comparison}
+\begin{tabular}{|c|c|c|c|c|c|}\hline
+Metric & Regression & Ridge & Lasso & Sqrt & Log1p \\ \hline \hline
+rSq & 0.8093 & 0.8037 & 0.6416 & 0.8477 & 0.8725 \\ \hline
+rSqBar & 0.8063 & 0.8012 & 0.6369 & 0.8453 & 0.8705 \\ \hline
+sst & 23818.9935 & 23818.9935 & 23818.9935 & 252.1610 & 41.1728 \\ \hline
+sse & 4543.3470 & 4675.2421 & 8537.0473 & 38.4071 & 5.2483 \\ \hline
+sde & 3.4352 & 3.4802 & 4.7028 & 0.3158 & 0.1168 \\ \hline
+mse0 & 11.8009 & 11.9266 & 21.7782 & 0.0998 & 0.0136 \\ \hline
+rmse & 3.4352 & 3.4535 & 4.6667 & 0.3158 & 0.1168 \\ \hline
+mae & 2.6183 & 2.6269 & 3.6246 & 2.3467 & 2.1842 \\ \hline
+smape & 12.0589 & 12.0433 & 16.2905 & 10.2046 & 9.3200 \\ \hline
+m & 392.0000 & 392.0000 & 392.0000 & 392.0000 & 392.0000 \\ \hline
+dfr & 6.0000 & 6.0000 & 6.0000 & 6.0000 & 6.0000\\ \hline
+df & 385.0000 & 386.0000 & 386.0000 & 385.0000 & 385.0000\\ \hline
+fStat & 272.2341 & 263.4262 & 115.1614 & 357.1178 &439.2179\\ \hline
+aic &2086.9095 &983.6796 & 1219.7162 & 215.8245 & -564.3874\\ \hline
+bic & 2114.7083 & 1007.5071 & 1243.5438 & 243.6234 & -536.5886\\ \hline
+\end{tabular}
+\end{table}
+
+\begin{table}[h]
+\centering
+\caption{Statsmodels - Auto MPG Out-of-Sample QoF Comparison}
+\label{tab:Statsmodels - Auto MPG Out-of-Sample QoF Comparison}
+\begin{tabular}{|c|c|c|c|c|c|}\hline
+Metric & Regression & Ridge & Lasso & Sqrt & Log1p \\ \hline \hline
+rSq & 0.8107 & 0.7854 & 0.5925 & 0.8482 & 0.8720 \\ \hline
+rSqBar & 0.8070 & 0.7707 & 0.5646 & 0.8452 & 0.8695 \\ \hline
+sst & 19750.2199 & 4032.2061 & 4032.2061 & 208.0819 & 33.8141 \\ \hline
+sse & 3738.2664 & 865.2680 & 1643.1024 & 31.5951 & 4.3287 \\ \hline
+sde & 3.4952 & 3.4428 & 4.7443 & 0.3213 & 0.1189 \\ \hline
+mse0 & 12.2166 & 10.9528 & 20.7988 & 0.1033 & 0.0141 \\ \hline
+rmse & 3.4952 & 3.3095 & 4.5606 & 0.3213 & 0.1189 \\ \hline
+mae & 2.5039 & 2.5877 & 3.7495 & 2.1509 & 1.9533 \\ \hline
+smape & 12.3880 & 12.5974 & 17.6830 & 9.8913 & 8.7248 \\ \hline
+m & 79.0000 & 79.0000 & 79.0000 & 79.0000 & 79.0000 \\ \hline
+dfr & 6.0000 & 6.0000 & 6.0000 & 6.0000 & 6.0000\\ \hline
+df & 306.0000 & 73.0000 & 73.0000 & 306.0000 & 306.0000\\ \hline
+fStat & 218.4461 & 44.5308 & 17.6906 & 284.8805 &347.3956\\ \hline
+aic &1678.5500 &201.0937 & 251.7566 & 184.4835 & -437.6799\\ \hline
+bic & 1704.7734 & 215.3104 & 265.9733 & 210.7069 & -411.4565\\ \hline
+\end{tabular}
+\end{table}
+
 \subsection{Regression}
 
 
@@ -301,6 +349,26 @@ smape & 5 & 11.2379 & 14.1325 & 12.3805 & 0.9795 \\ \hline
     \label{fig:Scalation - AutoMPG ridge}
 \end{figure}
 
+\begin{figure}[h]
+    \centering
+    \captionsetup{justification=centering}
+    \begin{subfigure}[b]{0.45\textwidth}
+        \centering
+        \includegraphics[width=1.1\textwidth]{Auto_MPG/statsmodels_ridge_In_Sample.png} 
+        %\caption{Description of left image}
+        %\label{fig:left}
+    \end{subfigure}
+    \hfill % Adds flexible space between the images
+    \begin{subfigure}[b]{0.45\textwidth}
+        \centering
+        \includegraphics[width=1.1\textwidth]{Auto_MPG/statsmodels_ridge_80_20.png}
+        %\caption{Description of right image}
+        %\label{fig:right}
+    \end{subfigure}
+    \caption{Statsmodels - Auto MPG Ridge\\ Left: In Sample Predictions\\ Right: 80-20 Out of Sample Predictions\\ yy black/actual vs. yp red/predicted}
+    \label{fig:Statsmodels - AutoMPG ridge}
+\end{figure}
+
 \subsection{Lasso}
 
 \begin{figure}[h]
@@ -321,6 +389,26 @@ smape & 5 & 11.2379 & 14.1325 & 12.3805 & 0.9795 \\ \hline
     \end{subfigure}
     \caption{Scalation - Auto MPG Lasso\\ Left: In Sample Predictions\\ Right: 80-20 Out of Sample Predictions\\ yy black/actual vs. yp red/predicted}
     \label{fig:Scalation - AutoMPG lasso}
+\end{figure}
+
+\begin{figure}[h]
+    \centering
+    \captionsetup{justification=centering}
+    \begin{subfigure}[b]{0.45\textwidth}
+        \centering
+        \includegraphics[width=1.1\textwidth]{Auto_MPG/statsmodels_lasso_In_Sample.png} 
+        %\caption{Description of left image}
+        %\label{fig:left}
+    \end{subfigure}
+    \hfill % Adds flexible space between the images
+    \begin{subfigure}[b]{0.45\textwidth}
+        \centering
+        \includegraphics[width=1.1\textwidth]{Auto_MPG/statsmodels_lasso_80_20.png}
+        %\caption{Description of right image}
+        %\label{fig:right}
+    \end{subfigure}
+    \caption{Statsmodels - Auto MPG Lasso\\ Left: In Sample Predictions\\ Right: 80-20 Out of Sample Predictions\\ yy black/actual vs. yp red/predicted}
+    \label{fig:Statsmodels - AutoMPG lasso}
 \end{figure}
 
 \subsection{Sqrt}
@@ -345,6 +433,26 @@ smape & 5 & 11.2379 & 14.1325 & 12.3805 & 0.9795 \\ \hline
     \label{fig:Scalation - AutoMPG sqrt}
 \end{figure}
 
+\begin{figure}[h]
+    \centering
+    \captionsetup{justification=centering}
+    \begin{subfigure}[b]{0.45\textwidth}
+        \centering
+        \includegraphics[width=1.1\textwidth]{Auto_MPG/statsmodels_sqrt_In_Sample.png} 
+        %\caption{Description of left image}
+        %\label{fig:left}
+    \end{subfigure}
+    \hfill % Adds flexible space between the images
+    \begin{subfigure}[b]{0.45\textwidth}
+        \centering
+        \includegraphics[width=1.1\textwidth]{Auto_MPG/statsmodels_sqrt_80_20.png}
+        %\caption{Description of right image}
+        %\label{fig:right}
+    \end{subfigure}
+    \caption{Statsmodels - Auto MPG Sqrt\\ Left: In Sample Predictions\\ Right: 80-20 Out of Sample Predictions\\ yy black/actual vs. yp red/predicted}
+    \label{fig:Statsmodels - AutoMPG sqrt}
+\end{figure}
+
 \subsection{log1p}
 
 \begin{figure}[h]
@@ -365,6 +473,26 @@ smape & 5 & 11.2379 & 14.1325 & 12.3805 & 0.9795 \\ \hline
     \end{subfigure}
     \caption{Scalation - Auto MPG log1p\\ Left: In Sample Predictions\\ Right: 80-20 Out of Sample Predictions\\ yy black/actual vs. yp red/predicted}
     \label{fig:Scalation - AutoMPG log1p}
+\end{figure}
+
+\begin{figure}[h]
+    \centering
+    \captionsetup{justification=centering}
+    \begin{subfigure}[b]{0.45\textwidth}
+        \centering
+        \includegraphics[width=1.1\textwidth]{Auto_MPG/statsmodels_log1p_In_Sample.png} 
+        %\caption{Description of left image}
+        %\label{fig:left}
+    \end{subfigure}
+    \hfill % Adds flexible space between the images
+    \begin{subfigure}[b]{0.45\textwidth}
+        \centering
+        \includegraphics[width=1.1\textwidth]{Auto_MPG/statsmodels_log1p_80_20.png}
+        %\caption{Description of right image}
+        %\label{fig:right}
+    \end{subfigure}
+    \caption{Statsmodels - Auto MPG log1p\\ Left: In Sample Predictions\\ Right: 80-20 Out of Sample Predictions\\ yy black/actual vs. yp red/predicted}
+    \label{fig:Statsmodels - AutoMPG log1p}
 \end{figure}
 
 
@@ -420,6 +548,54 @@ df &993.000 &   992.000 &       993.000 &       993.000 &       993.000 \\ \hlin
 fStat &122330 & 12971.9 &       122330 &        10189.9 &       1611.39 \\ \hline 
 aic &-2101.67 & -2307.60 &      -2101.67 &      -2348.73 &      -2525.00 \\ \hline 
 bic &-2078.59 & -2281.21 &      -2078.59 &      -2325.64 &      -2501.91 \\ \hline 
+\end{tabular}
+\end{table}
+
+\begin{table}[h]
+\centering
+\caption{Statsmodels - House Price In-Sample QoF Comparison}
+\label{tab:Statsmodels - House Price In-Sample QoF Comparison}
+\begin{tabular}{|c|c|c|c|c|c|}\hline
+Metric & Regression & Ridge & Lasso & Sqrt & Log1p \\ \hline \hline
+rSq & 0.9985 & 0.9906 & 0.9875 & 0.9855 & 0.9415 \\ \hline
+rSqBar & 0.9985 & 0.9905 & 0.9875 & 0.9854 & 0.9411 \\ \hline
+sst & 64232463468052.5469 & 64232463468052.5469 & 64232463468052.5469 & 29445342.0661 & 241.7492 \\ \hline
+sse & 95249090298.3967 & 604344645977.1542 & 800169699033.4265 & 425598.9981 & 14.1461 \\ \hline
+sde & 9798.8381 & 24669.9185 & 28386.7992 & 20.7131 & 0.1194 \\ \hline
+mse0 & 96017228.1234 & 604344645.9772 & 800169699.0334 & 429.0312 & 0.0143 \\ \hline
+rmse & 9798.8381 & 24583.4222 & 28287.2710 & 20.7131 & 0.1194 \\ \hline
+mae & 7740.4301 & 20205.2499 & 24002.5173 & 24296.4685 & 52989.2927 \\ \hline
+smape & 1.5774 & 4.1035 & 4.9163 & 4.8579 & 9.2122 \\ \hline
+m & 1000.0000 & 1000.0000 & 1000.0000 & 1000.0000 & 1000.0000 \\ \hline
+dfr & 7.0000 & 7.0000 & 7.0000 & 7.0000 & 7.0000\\ \hline
+df & 992.0000 & 993.0000 & 993.0000 & 992.0000 & 992.0000\\ \hline
+fStat & 95425.1583 & 14935.3572 & 11245.5195 & 9662.8803 &2280.1137\\ \hline
+aic &21225.8831 &20233.6552 & 20514.3344 & 8907.3747 & -1404.4424\\ \hline
+bic & 21265.1451 & 20268.0095 & 20548.6887 & 8946.6367 & -1365.1804\\ \hline
+\end{tabular}
+\end{table}
+
+\begin{table}[h]
+\centering
+\caption{Statsmodels - House Price Out-of-Sample QoF Comparison}
+\label{tab:Statsmodels - House Price Out-of-Sample QoF Comparison}
+\begin{tabular}{|c|c|c|c|c|c|}\hline
+Metric & Regression & Ridge & Lasso & Sqrt & Log1p \\ \hline \hline
+rSq & 0.9985 & 0.9913 & 0.9884 & 0.9852 & 0.9402 \\ \hline
+rSqBar & 0.9985 & 0.9910 & 0.9880 & 0.9851 & 0.9397 \\ \hline
+sst & 51340367232368.6250 & 12891771417242.6445 & 12891771417242.6445 & 23544096.3448 & 193.6629 \\ \hline
+sse & 75080425564.8099 & 112341107192.6465 & 149469076702.9745 & 347277.4580 & 11.5792 \\ \hline
+sde & 9736.4530 & 24126.2984 & 27828.9629 & 20.9400 & 0.1209 \\ \hline
+mse0 & 94798517.1273 & 561705535.9632 & 747345383.5149 & 438.4816 & 0.0146 \\ \hline
+rmse & 9736.4530 & 23700.3278 & 27337.6185 & 20.9400 & 0.1209 \\ \hline
+mae & 8174.5836 & 19629.7981 & 23012.0161 & 23553.0274 & 51521.6937 \\ \hline
+smape & 1.6620 & 3.9691 & 4.6112 & 4.7594 & 9.0567 \\ \hline
+m & 200.0000 & 200.0000 & 200.0000 & 200.0000 & 200.0000 \\ \hline
+dfr & 7.0000 & 7.0000 & 7.0000 & 7.0000 & 7.0000\\ \hline
+df & 792.0000 & 193.0000 & 193.0000 & 792.0000 & 792.0000\\ \hline
+fStat & 77254.5038 & 3136.4045 & 2350.4760 & 7557.5143 &1779.1786\\ \hline
+aic &16972.0728 &4043.2977 & 4100.4076 & 7144.9157 & -1102.0191\\ \hline
+bic & 17009.5497 & 4066.3859 & 4123.4958 & 7182.3926 & -1064.5422\\ \hline
 \end{tabular}
 \end{table}
 
@@ -529,6 +705,26 @@ smape & 5 & 1.5104 & 1.6620 & 1.5879 & 0.0540 \\ \hline
     \label{fig:Scalation - Housing ridge}
 \end{figure}
 
+\begin{figure}[h]
+    \centering
+    \captionsetup{justification=centering}
+    \begin{subfigure}[b]{0.45\textwidth}
+        \centering
+        \includegraphics[width=1.1\textwidth]{Housing/statsmodels_ridge_In_Sample.png} 
+        %\caption{Description of left image}
+        %\label{fig:left}
+    \end{subfigure}
+    \hfill % Adds flexible space between the images
+    \begin{subfigure}[b]{0.45\textwidth}
+        \centering
+        \includegraphics[width=1.1\textwidth]{Housing/statsmodels_ridge_80_20.png}
+        %\caption{Description of right image}
+        %\label{fig:right}
+    \end{subfigure}
+    \caption{Statsmodels - House Price Ridge\\ Left: In Sample Predictions\\ Right: 80-20 Out of Sample Predictions\\ yy black/actual vs. yp red/predicted}
+    \label{fig:Statsmodels - Housing ridge}
+\end{figure}
+
 \subsection{Lasso}
 
 \begin{figure}[h]
@@ -549,6 +745,26 @@ smape & 5 & 1.5104 & 1.6620 & 1.5879 & 0.0540 \\ \hline
     \end{subfigure}
     \caption{Scalation - House Price Lasso\\ Left: In Sample Predictions\\ Right: 80-20 Out of Sample Predictions\\ yy black/actual vs. yp red/predicted}
     \label{fig:Scalation - Housing lasso}
+\end{figure}
+
+\begin{figure}[h]
+    \centering
+    \captionsetup{justification=centering}
+    \begin{subfigure}[b]{0.45\textwidth}
+        \centering
+        \includegraphics[width=1.1\textwidth]{Housing/statsmodels_lasso_In_Sample.png} 
+        %\caption{Description of left image}
+        %\label{fig:left}
+    \end{subfigure}
+    \hfill % Adds flexible space between the images
+    \begin{subfigure}[b]{0.45\textwidth}
+        \centering
+        \includegraphics[width=1.1\textwidth]{Housing/statsmodels_lasso_80_20.png}
+        %\caption{Description of right image}
+        %\label{fig:right}
+    \end{subfigure}
+    \caption{Statsmodels - House Price Lasso\\ Left: In Sample Predictions\\ Right: 80-20 Out of Sample Predictions\\ yy black/actual vs. yp red/predicted}
+    \label{fig:Statsmodels - Housing lasso}
 \end{figure}
 
 \subsection{Sqrt}
@@ -573,6 +789,26 @@ smape & 5 & 1.5104 & 1.6620 & 1.5879 & 0.0540 \\ \hline
     \label{fig:Scalation - Housing sqrt}
 \end{figure}
 
+\begin{figure}[h]
+    \centering
+    \captionsetup{justification=centering}
+    \begin{subfigure}[b]{0.45\textwidth}
+        \centering
+        \includegraphics[width=1.1\textwidth]{Housing/statsmodels_sqrt_In_Sample.png} 
+        %\caption{Description of left image}
+        %\label{fig:left}
+    \end{subfigure}
+    \hfill % Adds flexible space between the images
+    \begin{subfigure}[b]{0.45\textwidth}
+        \centering
+        \includegraphics[width=1.1\textwidth]{Housing/statsmodels_sqrt_80_20.png}
+        %\caption{Description of right image}
+        %\label{fig:right}
+    \end{subfigure}
+    \caption{Statsmodels - House Price Sqrt\\ Left: In Sample Predictions\\ Right: 80-20 Out of Sample Predictions\\ yy black/actual vs. yp red/predicted}
+    \label{fig:Statsmodels - Housing sqrt}
+\end{figure}
+
 \subsection{log1p}
 
 \begin{figure}[h]
@@ -593,6 +829,26 @@ smape & 5 & 1.5104 & 1.6620 & 1.5879 & 0.0540 \\ \hline
     \end{subfigure}
     \caption{Scalation - House Price log1p\\ Left: In Sample Predictions\\ Right: 80-20 Out of Sample Predictions\\ yy black/actual vs. yp red/predicted}
     \label{fig:Scalation - Housing log1p}
+\end{figure}
+
+\begin{figure}[h]
+    \centering
+    \captionsetup{justification=centering}
+    \begin{subfigure}[b]{0.45\textwidth}
+        \centering
+        \includegraphics[width=1.1\textwidth]{Housing/statsmodels_log1p_In_Sample.png} 
+        %\caption{Description of left image}
+        %\label{fig:left}
+    \end{subfigure}
+    \hfill % Adds flexible space between the images
+    \begin{subfigure}[b]{0.45\textwidth}
+        \centering
+        \includegraphics[width=1.1\textwidth]{Housing/statsmodels_log1p_80_20.png}
+        %\caption{Description of right image}
+        %\label{fig:right}
+    \end{subfigure}
+    \caption{Statsmodels - House Price log1p\\ Left: In Sample Predictions\\ Right: 80-20 Out of Sample Predictions\\ yy black/actual vs. yp red/predicted}
+    \label{fig:Statsmodels - Housing log1p}
 \end{figure}
 
 
@@ -651,31 +907,55 @@ bic &-2679.47 & -2674.02 &      -2679.47 &      -2674.16 &      -2732.61 \\ \hli
 \end{tabular}
 \end{table}
 
-\subsection{Regression}
+\begin{table}[h]
+\centering
+\caption{Statsmodels - Insurance Charges In-Sample QoF Comparison}
+\label{tab:Statsmodels - Insurance Charges In-Sample QoF Comparison}
+\begin{tabular}{|c|c|c|c|c|c|}\hline
+Metric & Regression & Ridge & Lasso & Sqrt & Log1p \\ \hline \hline
+rSq & 0.7509 & 0.2718 & 0.7469 & 0.7795 & 0.7680 \\ \hline
+rSqBar & 0.7494 & 0.2680 & 0.7456 & 0.7782 & 0.7666 \\ \hline
+sst & 196074221568.3671 & 196074221568.3671 & 196074221568.3671 & 3051091.5131 & 1130.1100 \\ \hline
+sse & 48839532843.9219 & 142780871945.3538 & 49623455821.6671 & 672635.9707 & 262.2315 \\ \hline
+sde & 6062.1023 & 10361.1794 & 6108.2624 & 22.4972 & 0.4442 \\ \hline
+mse0 & 36749084.1564 & 106712161.3941 & 37087784.6201 & 506.1219 & 0.1973 \\ \hline
+rmse & 6062.1023 & 10330.1579 & 6089.9741 & 22.4972 & 0.4442 \\ \hline
+mae & 4170.8869 & 8134.7714 & 4115.6884 & 3613.8958 & 4219.5115 \\ \hline
+smape & 37.8059 & 66.1576 & 34.1997 & 27.6903 & 26.2889 \\ \hline
+m & 1338.0000 & 1338.0000 & 1338.0000 & 1338.0000 & 1338.0000 \\ \hline
+dfr & 8.0000 & 8.0000 & 8.0000 & 8.0000 & 8.0000\\ \hline
+df & 1329.0000 & 1330.0000 & 1330.0000 & 1329.0000 & 1329.0000\\ \hline
+fStat & 500.8107 & 62.0533 & 490.6438 & 587.4216 &549.8054\\ \hline
+aic &27113.5058 &24749.7939 & 23335.7320 & 12137.4774 & 1634.5362\\ \hline
+bic & 27160.2962 & 24791.3854 & 23377.3235 & 12184.2678 & 1681.3266\\ \hline
+\end{tabular}
+\end{table}
 
 \begin{table}[h]
 \centering
-\caption{Scalation - Insurance Charges Linear Regression}
-\label{tab: Scalation - Insurance Charges Linear Regression}
-\begin{tabular}{|c|c|c|} \hline 
-Regression & In-Sample & 80-20 Split \\ \hline \hline 
-rSq &0.750157 & 0.720005 \\ \hline 
-rSqBar &0.748842 &      0.718531 \\ \hline 
-sst &1.96074e+11 &      4.06432e+10 \\ \hline 
-sse &4.89878e+10 &      1.13799e+10 \\ \hline 
-sde &6053.11 &  6540.46 \\ \hline 
-mse0 &3.66127e+07 &     4.26213e+07 \\ \hline 
-rmse &6050.84 & 6528.50 \\ \hline 
-mae &4179.54 &  4430.66 \\ \hline 
-smape &37.9722 &        40.0602 \\ \hline 
-m &1338.00 &    267.000 \\ \hline 
-dfr &7.00000 &  7.00000 \\ \hline 
-df &1330.00 &   1330.00 \\ \hline 
-fStat &570.477 &        488.584 \\ \hline 
-aic &-13533.8 & -2708.17 \\ \hline 
-bic &-13492.2 & -2679.47 \\ \hline 
+\caption{Statsmodels - Insurance Charges Out-of-Sample QoF Comparison}
+\label{tab:Statsmodels - Insurance Charges Out-of-Sample QoF Comparison}
+\begin{tabular}{|c|c|c|c|c|c|}\hline
+Metric & Regression & Ridge & Lasso & Sqrt & Log1p \\ \hline \hline
+rSq & 0.7417 & 0.2951 & 0.7797 & 0.7701 & 0.7572 \\ \hline
+rSqBar & 0.7398 & 0.2761 & 0.7738 & 0.7684 & 0.7554 \\ \hline
+sst & 154436975468.4681 & 41606660039.7953 & 41606660039.7953 & 2399231.6774 & 888.0691 \\ \hline
+sse & 39887119421.1600 & 29328394351.2134 & 9164643207.2381 & 551569.9183 & 215.5882 \\ \hline
+sde & 6131.3858 & 10620.8058 & 5937.0555 & 22.8004 & 0.4508 \\ \hline
+mse0 & 37593892.0086 & 109434307.2806 & 34196429.8778 & 519.8585 & 0.2032 \\ \hline
+rmse & 6131.3858 & 10461.0854 & 5847.7714 & 22.8004 & 0.4508 \\ \hline
+mae & 4181.1945 & 8328.6585 & 4069.5309 & 3556.9640 & 3888.4432 \\ \hline
+smape & 40.0220 & 69.4557 & 35.5690 & 29.1245 & 25.7136 \\ \hline
+m & 268.0000 & 268.0000 & 268.0000 & 268.0000 & 268.0000 \\ \hline
+dfr & 8.0000 & 8.0000 & 8.0000 & 8.0000 & 8.0000\\ \hline
+df & 1061.0000 & 260.0000 & 260.0000 & 1061.0000 & 1061.0000\\ \hline
+fStat & 380.8792 & 13.6061 & 115.0471 & 444.2703 &413.6950\\ \hline
+aic &21708.8072 &4976.9038 & 4665.1653 & 9736.7961 & 1340.3418\\ \hline
+bic & 21753.5859 & 5005.6317 & 4693.8932 & 9781.5748 & 1385.1205\\ \hline
 \end{tabular}
 \end{table}
+
+\subsection{Regression}
 
 \begin{table}[h]
 \centering
@@ -781,6 +1061,26 @@ smape & 5 & 35.6194 & 40.0220 & 38.1279 & 1.5723 \\ \hline
     \label{fig:Scalation - Insurance ridge}
 \end{figure}
 
+\begin{figure}[h]
+    \centering
+    \captionsetup{justification=centering}
+    \begin{subfigure}[b]{0.45\textwidth}
+        \centering
+        \includegraphics[width=1.1\textwidth]{Insurance/statsmodels_ridge_In_Sample.png} 
+        %\caption{Description of left image}
+        %\label{fig:left}
+    \end{subfigure}
+    \hfill % Adds flexible space between the images
+    \begin{subfigure}[b]{0.45\textwidth}
+        \centering
+        \includegraphics[width=1.1\textwidth]{Insurance/statsmodels_ridge_80_20.png}
+        %\caption{Description of right image}
+        %\label{fig:right}
+    \end{subfigure}
+    \caption{Statsmodels - Insurance Charges Ridge\\ Left: In Sample Predictions\\ Right: 80-20 Out of Sample Predictions\\ yy black/actual vs. yp red/predicted}
+    \label{fig:Statsmodels - Insurance ridge}
+\end{figure}
+
 \subsection{Lasso}
 
 \begin{figure}[h]
@@ -801,6 +1101,26 @@ smape & 5 & 35.6194 & 40.0220 & 38.1279 & 1.5723 \\ \hline
     \end{subfigure}
     \caption{Scalation - Insurance Charges Lasso\\ Left: In Sample Predictions\\ Right: 80-20 Out of Sample Predictions\\ yy black/actual vs. yp red/predicted}
     \label{fig:Scalation - Insurance lasso}
+\end{figure}
+
+\begin{figure}[h]
+    \centering
+    \captionsetup{justification=centering}
+    \begin{subfigure}[b]{0.45\textwidth}
+        \centering
+        \includegraphics[width=1.1\textwidth]{Insurance/statsmodels_lasso_In_Sample.png} 
+        %\caption{Description of left image}
+        %\label{fig:left}
+    \end{subfigure}
+    \hfill % Adds flexible space between the images
+    \begin{subfigure}[b]{0.45\textwidth}
+        \centering
+        \includegraphics[width=1.1\textwidth]{Insurance/statsmodels_lasso_80_20.png}
+        %\caption{Description of right image}
+        %\label{fig:right}
+    \end{subfigure}
+    \caption{Statsmodels - Insurance Charges Lasso\\ Left: In Sample Predictions\\ Right: 80-20 Out of Sample Predictions\\ yy black/actual vs. yp red/predicted}
+    \label{fig:Statsmodels - Insurance lasso}
 \end{figure}
 
 \subsection{Sqrt}
@@ -825,6 +1145,26 @@ smape & 5 & 35.6194 & 40.0220 & 38.1279 & 1.5723 \\ \hline
     \label{fig:Scalation - Insurance sqrt}
 \end{figure}
 
+\begin{figure}[h]
+    \centering
+    \captionsetup{justification=centering}
+    \begin{subfigure}[b]{0.45\textwidth}
+        \centering
+        \includegraphics[width=1.1\textwidth]{Insurance/statsmodels_sqrt_In_Sample.png} 
+        %\caption{Description of left image}
+        %\label{fig:left}
+    \end{subfigure}
+    \hfill % Adds flexible space between the images
+    \begin{subfigure}[b]{0.45\textwidth}
+        \centering
+        \includegraphics[width=1.1\textwidth]{Insurance/statsmodels_sqrt_80_20.png}
+        %\caption{Description of right image}
+        %\label{fig:right}
+    \end{subfigure}
+    \caption{Statsmodels - Insurance Charges Sqrt\\ Left: In Sample Predictions\\ Right: 80-20 Out of Sample Predictions\\ yy black/actual vs. yp red/predicted}
+    \label{fig:Statsmodels - Insurance sqrt}
+\end{figure}
+
 \subsection{log1p}
 
 \begin{figure}[h]
@@ -847,6 +1187,24 @@ smape & 5 & 35.6194 & 40.0220 & 38.1279 & 1.5723 \\ \hline
     \label{fig:Scalation - Insurance log1p}
 \end{figure}
 
-
+\begin{figure}[h]
+    \centering
+    \captionsetup{justification=centering}
+    \begin{subfigure}[b]{0.45\textwidth}
+        \centering
+        \includegraphics[width=1.1\textwidth]{Insurance/statsmodels_log1p_In_Sample.png} 
+        %\caption{Description of left image}
+        %\label{fig:left}
+    \end{subfigure}
+    \hfill % Adds flexible space between the images
+    \begin{subfigure}[b]{0.45\textwidth}
+        \centering
+        \includegraphics[width=1.1\textwidth]{Insurance/statsmodels_log1p_80_20.png}
+        %\caption{Description of right image}
+        %\label{fig:right}
+    \end{subfigure}
+    \caption{Statsmodels - Insurance Charges log1p\\ Left: In Sample Predictions\\ Right: 80-20 Out of Sample Predictions\\ yy black/actual vs. yp red/predicted}
+    \label{fig:Statsmodels - Insurance log1p}
+\end{figure}
 
 \end{document}
