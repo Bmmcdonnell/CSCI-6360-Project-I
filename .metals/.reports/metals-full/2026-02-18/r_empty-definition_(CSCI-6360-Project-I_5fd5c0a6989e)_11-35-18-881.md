@@ -1,3 +1,24 @@
+file://<HOME>/Library/Mobile%20Documents/com~apple~CloudDocs/CSCI-6360-Project-I/Project1.scala
+empty definition using pc, found symbol in pc: 
+semanticdb not found
+empty definition using fallback
+non-local guesses:
+	 -scalation/mathstat/latex.
+	 -scalation/mathstat/latex#
+	 -scalation/mathstat/latex().
+	 -scalation/mathstat/Scala2LaTeX.latex.
+	 -scalation/mathstat/Scala2LaTeX.latex#
+	 -scalation/mathstat/Scala2LaTeX.latex().
+	 -latex.
+	 -latex#
+	 -latex().
+	 -scala/Predef.latex.
+	 -scala/Predef.latex#
+	 -scala/Predef.latex().
+offset: 1651
+uri: file://<HOME>/Library/Mobile%20Documents/com~apple~CloudDocs/CSCI-6360-Project-I/Project1.scala
+text:
+```scala
 package scalation
 package modeling
 
@@ -38,7 +59,7 @@ def InSample (ox: MatrixD,  y: VectorD, ox_fname: Array[String], data_name: Stri
     val qof_matrix = MatrixD (qof1, qof2, qof3, qof4, qof5).transpose // transpose to get metrics as rows and models as columns
 
     val latex   = make_doc (make_table (caption, name, qof_matrix, colName, rowName))
-    println (latex)
+    println (late@@x)
 
 end InSample
 
@@ -143,3 +164,9 @@ end P1_Housing_OOS
     val y = oxy(?, 9)                                        // get the 9th column as the response vector
     OutOfSample(ox, y, ox_fname, "Insurance Charges", 0.2)
 end P1_Insurance_OOS
+```
+
+
+#### Short summary: 
+
+empty definition using pc, found symbol in pc: 

@@ -1255,3 +1255,11 @@ Feb 18, 2026 11:17:50 AM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint noti
 INFO: Unsupported notification method: $/setTrace
 2026.02.18 11:33:27 INFO  compiling csci-6360-project-i_d5c0a6989e (5 scala sources)
 2026.02.18 11:33:27 INFO  time: compiled CSCI-6360-Project-I_d5c0a6989e in 0.89s
+Feb 18, 2026 11:35:02 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 133
+Feb 18, 2026 11:35:04 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 151
+2026.02.18 11:35:17 INFO  compiling csci-6360-project-i_d5c0a6989e (5 scala sources)
+2026.02.18 11:35:18 INFO  Created report: Optional[file:///Users/gabriel/Library/Mobile%20Documents/com~apple~CloudDocs/CSCI-6360-Project-I/Project1.scala]
+2026.02.18 11:35:18 INFO  empty definition using pc, found symbol in pc:  (full report at: "/Users/gabriel/Library/Mobile Documents/com~apple~CloudDocs/CSCI-6360-Project-I/.metals/.reports/metals-full/2026-02-18/r_empty-definition_(CSCI-6360-Project-I_5fd5c0a6989e)_11-35-18-881.md")
+2026.02.18 11:35:19 INFO  time: compiled CSCI-6360-Project-I_d5c0a6989e in 1.14s
