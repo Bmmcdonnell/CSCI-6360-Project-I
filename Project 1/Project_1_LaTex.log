@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.5.10)  18 FEB 2026 11:15
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.5.10)  18 FEB 2026 11:37
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -939,7 +939,7 @@ Package: blx-case-expl3 2023/03/05 v3.19 expl3 case changing code for biblatex
 \@quotelevel=\count446
 \@quotereset=\count447
 
-No file Project_1_LaTex.aux.
+(./Project_1_LaTex.aux)
 \openout1 = `Project_1_LaTex.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 134.
@@ -956,6 +956,7 @@ LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 134.
 LaTeX Font Info:    ... okay on input line 134.
 LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 134.
 LaTeX Font Info:    ... okay on input line 134.
+
 (/usr/local/texlive/2024/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count448
@@ -1425,25 +1426,17 @@ L3 programming layer <2024-02-20>
  ***********
 
 
-LaTeX Warning: There were undefined references.
-
-
 LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
-
-Package biblatex Warning: Please (re)run BibTeX on the file(s):
-(biblatex)                Project_1_LaTex
-(biblatex)                and rerun LaTeX afterwards.
 
 Package logreq Info: Writing requests to 'Project_1_LaTex.run.xml'.
 \openout1 = `Project_1_LaTex.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 28513 strings out of 474116
- 583992 string characters out of 5743682
+ 28528 strings out of 474116
+ 584742 string characters out of 5743682
  2042187 words of memory out of 5000000
- 50446 multiletter control sequences out of 15000+600000
+ 50459 multiletter control sequences out of 15000+600000
  566613 words of font info for 72 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  84i,8n,97p,1861b,852s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -1451,7 +1444,7 @@ Here is how much of TeX's memory you used:
 ></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><
 /usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></u
 sr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb>
-Output written on Project_1_LaTex.pdf (15 pages, 1746035 bytes).
+Output written on Project_1_LaTex.pdf (15 pages, 1746060 bytes).
 PDF statistics:
  149 PDF objects out of 1000 (max. 8388607)
  51 compressed objects within 1 object stream
