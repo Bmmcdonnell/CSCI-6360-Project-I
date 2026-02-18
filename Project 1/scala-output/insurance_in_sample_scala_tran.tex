@@ -1,0 +1,30 @@
+\documentclass{article}
+\usepackage{amsmath} % For advanced math features like \text, \frac, etc.
+\usepackage[utf8]{inputenc} % To handle various characters
+\begin{document}
+
+\begin{table}[H]
+\centering
+\caption{Medical Cost (In-Sample): Sqrt, Log1p, and Box–Cox($\lambda$ = 0.04)}
+\label{tab:Medical_Cost_(In-Sample)}
+\begin{tabular}{|c|c|c|c|} \hline 
+Metric & sqrt & log1p & box-cox($\lambda$=0.04) \\ \hline \hline 
+rSq &0.752657 & 0.522782 &      0.576265 \\ \hline 
+rSqBar &0.751168 &      0.519909 &      0.573715 \\ \hline 
+sst &1.96074e+11 &      1.96074e+11 &   1.96074e+11 \\ \hline 
+sse &4.84975e+10 &      9.35702e+10 &   8.30835e+10 \\ \hline 
+sde &6001.71 &  8358.44 &       7870.39 \\ \hline 
+mse0 &3.62463e+07 &     6.99329e+07 &   6.20953e+07 \\ \hline 
+rmse &6020.49 & 8362.59 &       7880.06 \\ \hline 
+mae &3613.90 &  4219.51 &       4052.90 \\ \hline 
+smape &27.6903 &        26.2889 &       26.0851 \\ \hline 
+m &1338.00 &    1338.00 &       1338.00 \\ \hline 
+dfr &8.00000 &  8.00000 &       8.00000 \\ \hline 
+df &1329.00 &   1329.00 &       1329.00 \\ \hline 
+fStat &505.514 &        181.986 &       225.924 \\ \hline 
+aic &-13525.1 & -13964.7 &      -13885.2 \\ \hline 
+bic &-13478.3 & -13917.9 &      -13838.4 \\ \hline 
+\end{tabular}
+\end{table}
+
+\end{document}

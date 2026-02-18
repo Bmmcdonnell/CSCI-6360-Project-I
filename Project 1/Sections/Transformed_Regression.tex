@@ -14,7 +14,7 @@ val mod = new modeling.TranRegression (ox, y, ox_fname,
 \subsection*{Transformed Regression on the Auto MPG Dataset using Scala: In-Sample and Validation Results}
 Tables 1 and 2 present the quality of fit for the in-sample and validation (80-20\% split) evaluations using the Auto MPG data. For the in-sample case, the models utilized all available data. The results indicate that the log1p and Box-Cox transformations outperform the sqrt transformation, which is further confirmed by the adjusted $R^{2}$ values. The Mean Square Error (MSE) for the sqrt, log1p, and Box-Cox transformations reached 10.02, 9.17, and 9.40, respectively, with the log1p transformation achieving the lowest error. Similarly, in the validation accuracy results, where 80\% of the data was randomly used for model training and 20\% for testing, the log1p transformation achieved the highest $R^{2}$ and adjusted $R^{2}$ values, as well as the lowest MSE.
 
-\begin{table}[h]
+\begin{table}[H]
 \centering
 \caption{Auto MPG (In-Sample): Sqrt, Log1p, and Box–Cox($\lambda$ = 0.19)}
 \label{tab:Auto_MPG_(In-Sample)}
@@ -38,7 +38,7 @@ bic &-966.074 & -948.728 &      -953.521 \\ \hline
 \end{tabular}
 \end{table}
 
-\begin{table}[h]
+\begin{table}[H]
 \centering
 \caption{Auto MPG (Validation): Sqrt, Log1p, and Box–Cox($\lambda$ = 0.19)}
 \label{tab:Auto_MPG_(Validation)}
@@ -62,7 +62,7 @@ bic &-167.203 & -165.551 &      -165.825 \\ \hline
 \end{tabular}
 \end{table}
 
-\begin{figure}[h]
+\begin{figure}[H]
     \centering
     \captionsetup{justification=centering}
     \begin{subfigure}[b]{0.45\textwidth}
@@ -82,7 +82,7 @@ bic &-167.203 & -165.551 &      -165.825 \\ \hline
     \label{fig:Scalation - AutoMPG sqrt}
 \end{figure}
 
-\begin{figure}[h]
+\begin{figure}[H]
     \centering
     \captionsetup{justification=centering}
     \begin{subfigure}[b]{0.45\textwidth}
@@ -102,7 +102,7 @@ bic &-167.203 & -165.551 &      -165.825 \\ \hline
     \label{fig:Statsmodels - AutoMPG sqrt}
 \end{figure}
 
-\begin{figure}[h]
+\begin{figure}[H]
     \centering
     \captionsetup{justification=centering}
     \begin{subfigure}[b]{0.45\textwidth}
@@ -122,7 +122,7 @@ bic &-167.203 & -165.551 &      -165.825 \\ \hline
     \label{fig:Scalation - AutoMPG log1p}
 \end{figure}
 
-\begin{figure}[h]
+\begin{figure}[H]
     \centering
     \captionsetup{justification=centering}
     \begin{subfigure}[b]{0.45\textwidth}
@@ -145,7 +145,7 @@ bic &-167.203 & -165.551 &      -165.825 \\ \hline
 \subsection*{Transformed Regression on the Boston House Price Dataset: In-Sample and Validation Results}
 For the house price prediction, the log1p transformed model performed significantly worse than the sqrt and Box-Cox transformations. The Box-Cox and sqrt models performed similarly, although Box-Cox achieved highest $R^{2}$ and adjusted $R^{2}$ of 0.998 in the in-sample evaluation. A similar trend was observed in the validation, where Box-Cox and sqrt outperformed the log1p transformation, with Box-Cox achieving the highest $R^{2}$ and adjusted $R^{2}$.
 
-\begin{table}[h]
+\begin{table}[H]
 \centering
 \caption{House Price (In-Sample): Sqrt, Log1p, and Box–Cox($\lambda$ = 0.85)}
 \label{tab:House_Price_(In-Sample)}
@@ -169,7 +169,7 @@ bic &-11666.3 & -12528.6 &      -10801.0 \\ \hline
 \end{tabular}
 \end{table}
 
-\begin{table}[h]
+\begin{table}[H]
 \centering
 \caption{House Price (Validation): Sqrt, Log1p, and Box–Cox($\lambda$ = 0.85)}
 \label{tab:House_Price_(Validation)}
@@ -193,7 +193,7 @@ bic &-2320.35 & -2497.04 &      -2138.81 \\ \hline
 \end{tabular}
 \end{table}
 
-\begin{figure}[h]
+\begin{figure}[H]
     \centering
     \captionsetup{justification=centering}
     \begin{subfigure}[b]{0.45\textwidth}
@@ -213,7 +213,7 @@ bic &-2320.35 & -2497.04 &      -2138.81 \\ \hline
     \label{fig:Scalation - Housing sqrt}
 \end{figure}
 
-\begin{figure}[h]
+\begin{figure}[H]
     \centering
     \captionsetup{justification=centering}
     \begin{subfigure}[b]{0.45\textwidth}
@@ -233,7 +233,7 @@ bic &-2320.35 & -2497.04 &      -2138.81 \\ \hline
     \label{fig:Statsmodels - Housing sqrt}
 \end{figure}
 
-\begin{figure}[h]
+\begin{figure}[H]
     \centering
     \captionsetup{justification=centering}
     \begin{subfigure}[b]{0.45\textwidth}
@@ -253,7 +253,7 @@ bic &-2320.35 & -2497.04 &      -2138.81 \\ \hline
     \label{fig:Scalation - Housing log1p}
 \end{figure}
 
-\begin{figure}[h]
+\begin{figure}[H]
     \centering
     \captionsetup{justification=centering}
     \begin{subfigure}[b]{0.45\textwidth}
@@ -276,7 +276,7 @@ bic &-2320.35 & -2497.04 &      -2138.81 \\ \hline
 \subsection*{Transformed Regression on the Medical Cost Dataset: In-Sample and Validation Results}
 In the Medical Cost dataset, the sqrt transformation performed significantly better than the log1p and Box-Cox transformations. The sqrt transformation achieved an $R^{2}$ of 0.753 and an adjusted $R^{2}$ of 0.751 in the in-sample evaluation, compared to 0.730 and 0.729, respectively, for the validation set. The adjusted $R^{2}$ also shows a similar trend, where sqrt, log1p, and Box-Cox achieved 0.751, 0.520, and 0.574 for in-sample evaluation and 0.729, 0.569, and 0.607 for validation, respectively.
 
-\begin{table}[h]
+\begin{table}[H]
 \centering
 \caption{Medical Cost (In-Sample): Sqrt, Log1p, and Box–Cox($\lambda$ = 0.04)}
 \label{tab:Medical_Cost_(In-Sample)}
@@ -300,7 +300,7 @@ bic &-13478.3 & -13917.9 &      -13838.4 \\ \hline
 \end{tabular}
 \end{table}
 
-\begin{table}[h]
+\begin{table}[H]
 \centering
 \caption{Medical Cost (Validation): Sqrt, Log1p, and Box–Cox($\lambda$ = 0.04)}
 \label{tab:Medical_Cost_(Validation)}
@@ -324,7 +324,7 @@ bic &-2668.95 & -2730.83 &      -2718.42 \\ \hline
 \end{tabular}
 \end{table}
 
-\begin{figure}[h]
+\begin{figure}[H]
     \centering
     \captionsetup{justification=centering}
     \begin{subfigure}[b]{0.45\textwidth}
@@ -344,7 +344,7 @@ bic &-2668.95 & -2730.83 &      -2718.42 \\ \hline
     \label{fig:Scalation - Insurance sqrt}
 \end{figure}
 
-\begin{figure}[h]
+\begin{figure}[H]
     \centering
     \captionsetup{justification=centering}
     \begin{subfigure}[b]{0.45\textwidth}
@@ -364,7 +364,7 @@ bic &-2668.95 & -2730.83 &      -2718.42 \\ \hline
     \label{fig:Statsmodels - Insurance sqrt}
 \end{figure}
 
-\begin{figure}[h]
+\begin{figure}[H]
     \centering
     \captionsetup{justification=centering}
     \begin{subfigure}[b]{0.45\textwidth}
@@ -384,7 +384,7 @@ bic &-2668.95 & -2730.83 &      -2718.42 \\ \hline
     \label{fig:Scalation - Insurance log1p}
 \end{figure}
 
-\begin{figure}[h]
+\begin{figure}[H]
     \centering
     \captionsetup{justification=centering}
     \begin{subfigure}[b]{0.45\textwidth}
@@ -415,21 +415,21 @@ Here, we used Python statsmodels library to reproduce all results generated by t
 \subsection*{Transformed Regression with Sqrt, Log1p, and Box--Cox Transformations on the Auto MPG Dataset: In-Sample, Validation, Forward, and Backward Results}
 
 The following three tables present the results for the sqrt, log1p, and Box-Cox transformations, including in-sample evaluation, validation, and forward and backward feature selection. From these tables, we can see that, similar to the Scala results, the log1p and Box-Cox transformations perform similarly, with log1p being slightly better than Box-Cox. For the in-sample case, the sqrt, log1p, and Box-Cox transformations achieved $R^{2}$ values of 0.835, 0.849, and 0.845, respectively, with adjusted $R^{2}$ values of 0.833, 0.847, and 0.843. Similarly, for the validation case, the $R^{2}$ values were 0.822, 0.832, and 0.830, with adjusted $R^{2}$ values of 0.807, 0.818, and 0.816.
-\begin{table}[h]
+\begin{table}[H]
 \centering
 \caption{Auto MPG Regression with Square-Root Transformation}
 \label{tab:auto_mpg_sqrt}
 \input{statsmodels/df_sqrt_autoMPG}
 \end{table}
 
-\begin{table}[h]
+\begin{table}[H]
 \centering
 \caption{Auto MPG Regression with Log1p Transformation}
 \label{tab:auto_mpg_Log1p}
 \input{statsmodels/df_log1p_autoMPG}
 \end{table}
 
-\begin{table}[h]
+\begin{table}[H]
 \centering
 \caption{Auto MPG Regression with Box-Cox Transformation}
 \label{tab:auto_mpg_box_cox}
@@ -443,21 +443,21 @@ The following three tables present the results for the sqrt, log1p, and Box-Cox 
 For the house price prediction dataset, the ScalaTion and statsmodels summaries are consistent, as the Box–Cox transformation was identified as the best-performing model under both approaches.
 
 
-\begin{table}[h]
+\begin{table}[H]
 \centering
 \caption{Boston House Price Regression with Square-Root Transformation}
 \label{tab:house_price_sqrt}
 \input{statsmodels/df_sqrt_housePrice}
 \end{table}
 
-\begin{table}[h]
+\begin{table}[H]
 \centering
 \caption{Boston House Price Regression with Log1p Transformation}
 \label{tab:house_price_log1p}
 \input{statsmodels/df_log1p_housePrice}
 \end{table}
 
-\begin{table}[h]
+\begin{table}[H]
 \centering
 \caption{Boston House Price Regression with Box-Cox Transformation}
 \label{tab:house_price_box-cox}
@@ -469,21 +469,21 @@ For the house price prediction dataset, the ScalaTion and statsmodels summaries 
 
 Finally, for the medical cost dataset, the sqrt transformation explained the insurance costs better than the other methods, despite the relatively lower $R^{2}$ values. For the in-sample case, the $R^{2}$ values were 0.753, 0.523, and 0.576 for the sqrt, log1p, and Box-Cox transformations, respectively, with adjusted $R^{2}$ values of 0.751, 0.520, and 0.574. These results were verified by the validation set, where the sqrt transformation achieved an $R^{2}$ of 0.706 and an adjusted $R^{2}$ of 0.697, outperforming the log1p ($R^{2}$ of 0.505, Adjusted $R^{2}$ of 0.490) and Box-Cox (($R^{2}$ of 0.546, Adjusted $R^{2}$ of 0.532) models.
 
-\begin{table}[h]
+\begin{table}[H]
 \centering
 \caption{Medical Cost  Regression with Square-Root Transformation}
 \label{tab:medical_cost_sqrt}
 \input{statsmodels/df_sqrt_medicalCost}
 \end{table}
 
-\begin{table}[h]
+\begin{table}[H]
 \centering
 \caption{Medical Cost  Regression with Log1p Transformation}
 \label{tab:medical_cost_log1p}
 \input{statsmodels/df_log1p_medicalCost}
 \end{table}
 
-\begin{table}[h]
+\begin{table}[H]
 \centering
 \caption{Medical Cost  Regression with Box-Cox Transformation}
 \label{tab:medical_cost_box_cox}

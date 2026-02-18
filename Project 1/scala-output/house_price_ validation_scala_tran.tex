@@ -1,0 +1,30 @@
+\documentclass{article}
+\usepackage{amsmath} % For advanced math features like \text, \frac, etc.
+\usepackage[utf8]{inputenc} % To handle various characters
+\begin{document}
+
+\begin{table}[H]
+\centering
+\caption{House Price (Validation): Sqrt, Log1p, and Box–Cox($\lambda$ = 0.85)}
+\label{tab:House_Price_(Validation)}
+\begin{tabular}{|c|c|c|c|} \hline 
+Metric & sqrt & log1p & box-cox($\lambda$=0.85) \\ \hline \hline 
+rSq &0.984017 & 0.906459 &      0.997398 \\ \hline 
+rSqBar &0.983904 &      0.905799 &      0.997380 \\ \hline 
+sst &1.33700e+13 &      1.33700e+13 &   1.33700e+13 \\ \hline 
+sse &2.13694e+11 &      1.25064e+12 &   3.47839e+10 \\ \hline 
+sde &32755.5 &  78812.3 &       13217.8 \\ \hline 
+mse0 &1.06847e+09 &     6.25321e+09 &   1.73920e+08 \\ \hline 
+rmse &32687.5 & 79077.2 &       13187.9 \\ \hline 
+mae &26140.1 &  58024.9 &       10655.9 \\ \hline 
+smape &5.18595 &        9.88665 &       2.22264 \\ \hline 
+m &200.000 &    200.000 &       200.000 \\ \hline 
+dfr &7.00000 &  7.00000 &       7.00000 \\ \hline 
+df &992.000 &   992.000 &       992.000 \\ \hline 
+fStat &8724.77 &        1373.28 &       54329.4 \\ \hline 
+aic &-2346.74 & -2523.43 &      -2165.20 \\ \hline 
+bic &-2320.35 & -2497.04 &      -2138.81 \\ \hline 
+\end{tabular}
+\end{table}
+
+\end{document}
