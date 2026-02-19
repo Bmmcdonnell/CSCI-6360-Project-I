@@ -146,17 +146,23 @@ Roshan Ravichandran}
 
 \section{Introduction}
 
-In this project, we will explore three different data sets using multiple linear regression, ridge regression, lasso, and transformed regression (specifically sqrt, log1p, and Box-Cox). The three data sets we will be using are 
+In this project, we will explore three different data sets using multiple linear regression, ridge regression, lasso, and transformed regression (specifically sqrt, log1p, and Box-Cox). The three data sets we will be using are:
 
 \begin{itemize}
-	\item \textbf{Auto MPG:} This data set contains information about different cars. The goal is predict the miles per gallon (MPG) given the other characteristics of the car. The data set can be found at \url{https://archive.ics.uci.edu/dataset}
-	\item \textbf{House Prices:} This data set contains information about different houses. The goal is to predict the price of the house given the other characteristics. The data set can be found at \url{https://www.kaggle.com/datasets/prokshitha/home-value-insights}
-	\item \textbf{Insurance Charges:} This data set contains information about different people. The goal is to predict a persons insurance charges given their other characteristics. The data set can be found at \url{https://www.kaggle.com/datasets/mirichoi0218/insurance}
+	\item \textbf{Auto MPG:} This data set contains information about different cars. The goal is predict the miles per gallon (MPG) given the other characteristics of the car. The data set can be found at \url{https://archive.ics.uci.edu/dataset}.
+	\item \textbf{House Prices:} This data set contains information about different houses. The goal is to predict the price of the house given the other characteristics. The data set can be found at \url{https://www.kaggle.com/datasets/prokshitha/home-value-insights}.
+	\item \textbf{Insurance Charges:} This data set contains information about different people. The goal is to predict a persons insurance charges given their other characteristics. The data set can be found at \url{https://www.kaggle.com/datasets/mirichoi0218/insurance}.
 \end{itemize}
+
+The report will be organized as follows, \Cref{Linear Regression} will be focused on linear regression, \Cref{Ridge Regression} ridge regression, \Cref{Lasso} lasso, \Cref{Transformed Regression} transformed regression, and \Cref{Comp_mods} will be comparing all of the models.
+
+In \Cref{Linear Regression}, in-sample, out-of-sample, 5-fold cross validation, and feature selection results are given for multiple linear regression on all three data sets. The results come from both scalation in scala and statsmodels in python. 
 
 \input{Sections/Linear_Regression}
 
 \input{Sections/Ridge_Regression}
+
+\input{Sections/Lasso_Regression}
 
 \input{Sections/Transformed_Regression}
 

@@ -1,4 +1,4 @@
-\section*{Transformed Regression: Sqrt, Log1p, Box-Cox}
+\section{Transformed Regression: Sqrt, Log1p, Box-Cox}\label{Transformed Regression}
 In this section, we applied three different transformation techniques to the response variables (mpg, house price, and insurance charge) across the Auto MPG, Boston House Price, and Medical Cost datasets. The distributions for mpg, house price, and medical charge exhibit right-skewed patterns. Therefore, these transformations could significantly improved model accuracy. To measure and compare the quality of fit for the different transformation models, we extracted 15 metrics, including $R^{2}$, adjusted $R^{2}$, MSE, and MAE. Each model was evaluated using both in-sample validation and a validation set with an 80-20\% split. Finally, we applied feature selection to identify the optimal set of features that best describe the response variable. For box-cox transformation we reqired a optimal lamda parameter which was 0.19, 0.85, and 0.04 for mpg, house price, and insurance cost respectively. 
 
 \subsection*{Transformed Regression using Scala}
@@ -12,12 +12,12 @@ val mod = new modeling.TranRegression (ox, y, ox_fname,
 \end{verbatim}
 
 \subsection*{Transformed Regression on the Auto MPG Dataset using Scala: In-Sample and Validation Results}
-Tables 1 and 2 present the quality of fit for the in-sample and validation (80-20\% split) evaluations using the Auto MPG data. For the in-sample case, the models utilized all available data. The results indicate that the log1p and Box-Cox transformations outperform the sqrt transformation, which is further confirmed by the adjusted $R^{2}$ values. The Mean Square Error (MSE) for the sqrt, log1p, and Box-Cox transformations reached 10.02, 9.17, and 9.40, respectively, with the log1p transformation achieving the lowest error. Similarly, in the validation accuracy results, where 80\% of the data was randomly used for model training and 20\% for testing, the log1p transformation achieved the highest $R^{2}$ and adjusted $R^{2}$ values, as well as the lowest MSE.
+\Cref{tab:Auto_MPG_(In-Sample)_Transformed,tab:Auto_MPG_(Validation)_Transformed} present the quality of fit for the in-sample and validation (80-20\% split) evaluations using the Auto MPG data. For the in-sample case, the models utilized all available data. The results indicate that the log1p and Box-Cox transformations outperform the sqrt transformation, which is further confirmed by the adjusted $R^{2}$ values. The Mean Square Error (MSE) for the sqrt, log1p, and Box-Cox transformations reached 10.02, 9.17, and 9.40, respectively, with the log1p transformation achieving the lowest error. Similarly, in the validation accuracy results, where 80\% of the data was randomly used for model training and 20\% for testing, the log1p transformation achieved the highest $R^{2}$ and adjusted $R^{2}$ values, as well as the lowest MSE.
 
 \begin{table}[H]
 \centering
 \caption{Auto MPG (In-Sample): Sqrt, Log1p, and Box–Cox($\lambda$ = 0.19)}
-\label{tab:Auto_MPG_(In-Sample)}
+\label{tab:Auto_MPG_(In-Sample)_Transformed}
 \begin{tabular}{|c|c|c|c|} \hline 
 Metric & sqrt & log1p & box-cox($\lambda$=0.19) \\ \hline \hline 
 rSq &0.835138 & 0.849102 &      0.845366 \\ \hline 
@@ -41,7 +41,7 @@ bic &-966.074 & -948.728 &      -953.521 \\ \hline
 \begin{table}[H]
 \centering
 \caption{Auto MPG (Validation): Sqrt, Log1p, and Box–Cox($\lambda$ = 0.19)}
-\label{tab:Auto_MPG_(Validation)}
+\label{tab:Auto_MPG_(Validation)_Transformed}
 \begin{tabular}{|c|c|c|c|} \hline 
 Metric & sqrt & log1p & box-cox($\lambda$=0.19) \\ \hline \hline 
 rSq &0.846480 & 0.852864 &      0.851819 \\ \hline 

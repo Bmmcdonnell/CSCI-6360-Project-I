@@ -1,11 +1,15 @@
-\section{Linear Regression}
+\section{Linear Regression} \label{Linear Regression}
+
+In this section, multiple linear regression is applied to the Auto MPG, House Prices, and Insurance Charges data sets. We evaluated the model using in-sample, out-of-sample, and cross validation. Finally, we applied forward selection, backward elimination, and stepwise selection to identify which features are optimal for explanation of the response variable.
 
 \subsection{Auto MPG}
+
+\Cref{tab:Scalation - AutoMPG Linear Regression} presents the quality of fit metrics for the in-sample and out-of-sample evaluations using scalation, while \Cref{tab:Statsmodels - Auto MPG Linear Regression} presents the same metrics using statsmodels. We can see that regression is performing decently, and that the main statistics are similar for both scalation and mathstats.
 
 \begin{table}[H]
 \centering
 \caption{Scalation - AutoMPG Linear Regression}
-\label{tab:Scalation - Linear Regression}
+\label{tab:Scalation - AutoMPG Linear Regression}
 \begin{tabular}{|c|c|c|} \hline 
 Metric & In-Sample & 80-20 Split \\ \hline \hline 
 rSq &0.809255 & 0.822842 \\ \hline 
@@ -50,6 +54,7 @@ bic & 2114.7083 & 428.9560 \\ \hline
 \end{tabular}
 \end{table}
 
+\Cref{fig:Scalation - AutoMPG reg} shows that plots for the predicted $y$-values vs. the actual $y$-values from scalation, while \Cref{fig:Statsmodels - AutoMPG reg} show the same from mathstats. Again the results are very similar.
 
 \begin{figure}[H]
     \centering
@@ -91,6 +96,7 @@ bic & 2114.7083 & 428.9560 \\ \hline
     \label{fig:Statsmodels - AutoMPG reg}
 \end{figure}
 
+Next, we performed 5 fold cross validation. \Cref{tab: Scalation - Auto MPG Linear Regression CV,tab:Statsmodels - Auto MPG Linear Regression CV} show the resulting quality of fit metrics from scalation and statsmodels respectively. Again we see that the results are similar.
 
 \begin{table}[H]
 \centering
@@ -140,6 +146,10 @@ bic & 5 & 1660.5704 & 1715.3381 & 1696.4892 & 18.7239 \\ \hline
 \end{tabular}
 \end{table}
 
+Finally, we apply forward selection, backward elimination, and stepwise selection to determine which variables best explain response variable. \Cref{fig:Scalation - AutoMPG reg FS} shows plots for $R^2$, $\overline{R^2}$, sMAPE, $R^2$ cv, and AIC vs. $n$ (the number of variables selected) when utilizing forward selection. From the left plot, it is clear that only $2$ variables are needed to explain the response variable (even just $1$ variable is not too bad either). Those variables $2$ variables are weight and modelyear. The order in which the variables were chosen was 1. weight, 2. modelyear, 3. cylinders, 4. acceleration, 5. horsepower, and 6. displacment.
+
+One interesting thing to note is how the graph of AIC vs. $n$ is always increasing.
+
 \begin{figure}[H]
     \centering
     \captionsetup{justification=centering}
@@ -160,10 +170,7 @@ bic & 5 & 1660.5704 & 1715.3381 & 1696.4892 & 18.7239 \\ \hline
     \label{fig:Scalation - AutoMPG reg FS}
 \end{figure}
 
-Forward Selection:\\
-(0.00000,       4.00000,        6.00000,        1.00000,        5.00000,        3.00000,        2.00000,\\
--1359.19,       -1125.97,       -1031.56,       -1029.34,       -1027.03,       -1025.01,       -1022.45)
-
+\Cref{fig:Scalation - AutoMPG reg BE} shows plots for $R^2$, $\overline{R^2}$, sMAPE, $R^2$ cv, and AIC vs. $n$ (the number of variables selected) when utilizing backward elimination. From the left plot, it is again clear that only $2$ variables are needed to explain the response variable (and again even just $1$ variable is not too bad either). Here, both backward and forward selection agree with each other in their selection of variables, so if you were to remove one variable at a time, in order you would remove 1. displacment, 2. horsepower, 3. acceleration, 4. cylinders, 5. modelyear, and 6. weight. This is the reverse order of forward selection, meaning that they agree.
 
 \begin{figure}[H]
     \centering
@@ -185,10 +192,7 @@ Forward Selection:\\
     \label{fig:Scalation - AutoMPG reg BE}
 \end{figure}
 
-Backward Elimination:\\
-(0.00000,       4.00000,        6.00000,        1.00000,        5.00000,        3.00000,        2.00000,\\
--1359.19,       -1125.97,       -1031.56,       -1029.34,       -1027.03,       -1025.01,       -1022.45)
-
+Last, \Cref{fig:Scalation - AutoMPG reg SS} shows plots for $R^2$, $\overline{R^2}$, sMAPE, $R^2$ cv, and AIC vs. $n$ (the number of variables selected) when utilizing stepwise selection. Here, since stepwise can move forward and backwards which results in multiple different metric evaluations for models that use the same number of variables, (I believe) the evaluation that is plotted for $n$ variables is the best evaluation that stepwise selection found for all the models with $n$ variables that it tested. Despite this, we still find that if we want to get the best models recommended from stepwise, we should add in the following order, 1. weight, 2. modelyear, 3. cylinders, 4. acceleration, and 5. horsepower. Note that this almost agrees with forward selection and backward elimination, but we do not add displacement as stepwise decided that moving was not worthwhile.
 
 \begin{figure}[H]
     \centering
@@ -210,16 +214,14 @@ Backward Elimination:\\
     \label{fig:Scalation - AutoMPG reg SS}
 \end{figure}
 
-Stepwise Selection:\\
-(0.00000,       4.00000,        6.00000,        1.00000,        5.00000,        3.00000,\\
--1.00000,       -1.00000,       -1.00000,       -1.00000,       -1.00000,       -1.00000)
-
 \subsection{House Prices}
+
+\Cref{tab:Scalation - House Price Linear Regression} presents the quality of fit metrics for the in-sample and out-of-sample evaluations using scalation, while \Cref{tab:Statsmodels - House Price Linear Regression} presents the same metrics using statsmodels. We can see that regression is performing extremely well, almost perfectly capturing the data. The main statistics are similar for both scalation and mathstats.
 
 \begin{table}[H]
 \centering
 \caption{Scalation - House Price Linear Regression}
-\label{tab:Scalation - Linear Regression}
+\label{tab:Scalation - House Price Linear Regression}
 \begin{tabular}{|c|c|c|} \hline 
 Metric & In-Sample & 80-20 Split \\ \hline \hline 
 rSq &0.998516 & 0.998649 \\ \hline 
@@ -265,6 +267,7 @@ bic & 21265.1451 & 4290.8965 \\ \hline
 \end{tabular}
 \end{table}
 
+\Cref{fig:Scalation - Housing reg} shows that plots for the predicted $y$-values vs. the actual $y$-values from scalation, while \Cref{fig:Statsmodels - Housing reg} show the same from mathstats. Again the results are very similar.
 
 \begin{figure}[H]
     \centering
@@ -306,6 +309,7 @@ bic & 21265.1451 & 4290.8965 \\ \hline
     \label{fig:Statsmodels - Housing reg}
 \end{figure}
 
+Next, we performed 5 fold cross validation. \Cref{tab: Scalation - House Price Linear Regression CV,tab:Statsmodels - House Price Linear Regression CV} show the resulting quality of fit metrics from scalation and statsmodels respectively. Again we see that the results are similar.
 
 \begin{table}[H]
 \centering
@@ -355,6 +359,8 @@ bic & 5 & 17002.0492 & 17040.9057 & 17020.2084 & 13.4995 \\ \hline
 \end{tabular}
 \end{table}
 
+Finally, we apply forward selection, backward elimination, and stepwise selection to determine which variables best explain response variable. \Cref{fig:Scalation - Housing reg FS} shows plots for $R^2$, $\overline{R^2}$, sMAPE, $R^2$ cv, and AIC vs. $n$ (the number of variables selected) when utilizing forward selection. From the left plot, it is clear that only $1$ variable is needed to explain the response variable. The order in which the variables were chosen was 1. Square Footage, 2. Year Built, 3. Lot Size, 4. Num Bedrooms, 5. Num Bathrooms, and 6. Garage Size.
+
 \begin{figure}[H]
     \centering
     \captionsetup{justification=centering}
@@ -375,10 +381,7 @@ bic & 5 & 17002.0492 & 17040.9057 & 17020.2084 & 13.4995 \\ \hline
     \label{fig:Scalation - Housing reg FS}
 \end{figure}
 
-Forward Selection:\\
-(0.00000,       1.00000,        4.00000,        5.00000,        2.00000,        3.00000,        6.00000,\\
--13859.8,       -11832.2,       -11640.1,       -11299.1,       -10853.0,       -10676.9,       -10591.2)
-
+\Cref{fig:Scalation - Housing reg BE} shows plots for $R^2$, $\overline{R^2}$, sMAPE, $R^2$ cv, and AIC vs. $n$ (the number of variables selected) when utilizing backward elimination. From the left plot, it is again clear that only $1$ variable is needed to explain the response variable. Here, both backward and forward selection agree with each other in their selection of variables, so if you were to remove one variable at a time, in order you would remove 1. Garage Size, 2. Num Bathrooms, 3. Num Bedrooms, 4. Lot Size, 5. Year Built, and 6. Square Footage. This is the reverse order of forward selection, meaning that they agree.
 
 \begin{figure}[H]
     \centering
@@ -400,10 +403,7 @@ Forward Selection:\\
     \label{fig:Scalation - Housing reg BE}
 \end{figure}
 
-Backward Elimination:\\
-(0.00000,       1.00000,        4.00000,        5.00000,        2.00000,        3.00000,        6.00000,\\
--13859.8,       -11832.2,       -11640.1,       -11299.1,       -10853.0,       -10676.9,       -10591.2)
-
+Last, \Cref{fig:Scalation - Housing reg SS} shows plots for $R^2$, $\overline{R^2}$, sMAPE, $R^2$ cv, and AIC vs. $n$ (the number of variables selected) when utilizing stepwise selection. We still find that if we want to get the best models recommended from stepwise, we should add in the following order, 1. Square Footage, 2. Year Built, 3. Lot Size, 4. Num Bedrooms, and 5. Num Bathrooms. Note that this almost agrees with forward selection and backward elimination, but we do not add Garage Size as stepwise decided that moving was not worthwhile.
 
 \begin{figure}[H]
     \centering
@@ -425,19 +425,14 @@ Backward Elimination:\\
     \label{fig:Scalation - Housing reg SS}
 \end{figure}
 
-Stepwise Selection:\\
-(0.00000,       1.00000,        4.00000,        5.00000,        2.00000,        3.00000,\\
--1.00000,       -1.00000,       -1.00000,       -1.00000,       -1.00000,       -1.00000)
-
-
-
-
 \subsection{Insurance Charges}
+
+\Cref{tab:Scalation - Insurance Charges Linear Regression} presents the quality of fit metrics for the in-sample and out-of-sample evaluations using scalation, while \Cref{tab:Statsmodels - Insurance Charges Linear Regression} presents the same metrics using statsmodels. We can see that regression is performing okay, and that the main statistics are similar for both scalation and mathstats.
 
 \begin{table}[H]
 \centering
 \caption{Scalation - Insurance Charges Linear Regression}
-\label{tab:Scalation - Linear Regression}
+\label{tab:Scalation - Insurance Charges Linear Regression}
 \begin{tabular}{|c|c|c|} \hline 
 Metric & In-Sample & 80-20 Split \\ \hline \hline 
 rSq &0.750157 & 0.720005 \\ \hline 
@@ -483,6 +478,8 @@ bic & 27160.2962 & 5447.4458 \\ \hline
 \end{tabular}
 \end{table}
 
+\Cref{fig:Scalation - Insurance reg} shows that plots for the predicted $y$-values vs. the actual $y$-values from scalation, while \Cref{fig:Statsmodels - Insurance reg} show the same from mathstats. Again the results are very similar.
+
 
 \begin{figure}[H]
     \centering
@@ -524,7 +521,7 @@ bic & 27160.2962 & 5447.4458 \\ \hline
     \label{fig:Statsmodels - Insurance reg}
 \end{figure}
 
-
+Next, we performed 5 fold cross validation. \Cref{tab: Scalation - Insurance Charges Linear Regression CV,tab:Statsmodels - Insurance Charges Linear Regression CV} show the resulting quality of fit metrics from scalation and statsmodels respectively. Again we see that the results are similar.
 
 \begin{table}[H]
 \centering
@@ -574,6 +571,7 @@ bic & 5 & 21717.8401 & 21755.0482 & 21737.3510 & 14.8317 \\ \hline
 \end{tabular}
 \end{table}
 
+Finally, we apply forward selection, backward elimination, and stepwise selection to determine which variables best explain response variable. \Cref{fig:Scalation - Insurance reg FS} shows plots for $R^2$, $\overline{R^2}$, sMAPE, $R^2$ cv, and AIC vs. $n$ (the number of variables selected) when utilizing forward selection. From the left plot, it is clear that only $s$ variables are needed to explain the response variable. The order in which the variables were chosen was 1. smoker\_yes, 2. age, 3. bmi, 4. children, 5. region\_southeast, 6. sex\_male, and 7. region\_northwest
 
 \begin{figure}[H]
     \centering
@@ -595,10 +593,7 @@ bic & 5 & 21717.8401 & 21755.0482 & 21737.3510 & 14.8317 \\ \hline
     \label{fig:Scalation - Insurance reg FS}
 \end{figure}
 
-Forward Selection:\\
-(0.00000,       5.00000,        1.00000,        2.00000,        3.00000,        7.00000,        4.00000,   6.00000,\\
--14475.6,       -13826.7,       -13616.7,       -13548.9,       -13541.0,       -13537.9,       -13535.8,  -13533.8)
-
+\Cref{fig:Scalation - Insurance reg BE} shows plots for $R^2$, $\overline{R^2}$, sMAPE, $R^2$ cv, and AIC vs. $n$ (the number of variables selected) when utilizing backward elimination. From the left plot, it is again clear that only $2$ variables are needed to explain the response variable. Here, both backward and forward selection agree with each other in their selection of variables, so if you were to remove one variable at a time, in order you would remove 1. region\_northwest, 2. sex\_male, 3. region\_southeast, 4. children, 5. bmi, 6. age, and 7. smoker\_yes. This is the reverse order of forward selection, meaning that they agree.
 
 \begin{figure}[H]
     \centering
@@ -620,10 +615,7 @@ Forward Selection:\\
     \label{fig:Scalation - Insurance reg BE}
 \end{figure}
 
-Backward Elimination:\\
-(0.00000,       5.00000,        1.00000,        2.00000,        3.00000,        7.00000,        4.00000,   6.00000,\\
--14475.6,       -13826.7,       -13616.7,       -13548.9,       -13541.0,       -13537.9,       -13535.8,  -13533.8)
-
+Last, \Cref{fig:Scalation - Insurance reg SS} shows plots for $R^2$, $\overline{R^2}$, sMAPE, $R^2$ cv, and AIC vs. $n$ (the number of variables selected) when utilizing stepwise selection. We still find that if we want to get the best models recommended from stepwise, we should add in the following order, 1. smoker\_yes, 2. age, 3. bmi, 4. children, 5. region\_southeast, and 6. sex\_male. Note that this almost agrees with forward selection and backward elimination, but we do not add region\_northwest as stepwise decided that moving was not worthwhile.
 
 \begin{figure}[H]
     \centering
@@ -644,10 +636,6 @@ Backward Elimination:\\
     \caption{Scalation - Insurance Charges Regression Stepwise Selection\\ Left: $R^2$ vs. $n$\\ Right: aic vs. $n$}
     \label{fig:Scalation - Insurance reg SS}
 \end{figure}
-
-Stepwise Selection:\\
-(0.00000,       5.00000,        1.00000,        2.00000,        3.00000,        7.00000,        4.00000,\\
--1.00000,       -1.00000,       -1.00000,       -1.00000,       -1.00000,       -1.00000,       -1.00000)
 
 
 
