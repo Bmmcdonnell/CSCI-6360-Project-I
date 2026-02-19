@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.5.10)  19 FEB 2026 18:21
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.5.10)  19 FEB 2026 18:36
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1213,33 +1213,33 @@ File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
 
 {/usr/local/texlive/2024/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{/usr/loc
 al/texlive/2024/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}]
-<EDA/Auto_Mpg/correlation_heatmap.png, id=233, 682.9515pt x 570.6921pt>
+<EDA/Auto_Mpg/correlation_heatmap.png, id=237, 682.9515pt x 570.6921pt>
 File: EDA/Auto_Mpg/correlation_heatmap.png Graphic file (type png)
 <use EDA/Auto_Mpg/correlation_heatmap.png>
 Package pdftex.def Info: EDA/Auto_Mpg/correlation_heatmap.png  used on input li
 ne 64.
 (pdftex.def)             Requested size: 278.69475pt x 232.88805pt.
  [2]
-<EDA/Auto_Mpg/boxplots.png, id=253, 1109.52518pt x 676.80855pt>
+<EDA/Auto_Mpg/boxplots.png, id=257, 1109.52518pt x 676.80855pt>
 File: EDA/Auto_Mpg/boxplots.png Graphic file (type png)
 <use EDA/Auto_Mpg/boxplots.png>
 Package pdftex.def Info: EDA/Auto_Mpg/boxplots.png  used on input line 76.
 (pdftex.def)             Requested size: 557.38951pt x 340.00417pt.
  [3 <./EDA/Auto_Mpg/correlation_heatmap.png>]
-<EDA/Auto_Mpg/cylinders_countplot.png, id=260, 390.7398pt x 283.2984pt>
+<EDA/Auto_Mpg/cylinders_countplot.png, id=264, 390.7398pt x 283.2984pt>
 File: EDA/Auto_Mpg/cylinders_countplot.png Graphic file (type png)
 <use EDA/Auto_Mpg/cylinders_countplot.png>
 Package pdftex.def Info: EDA/Auto_Mpg/cylinders_countplot.png  used on input li
 ne 96.
 (pdftex.def)             Requested size: 250.82358pt x 181.85501pt.
-<EDA/Auto_Mpg/origin_countplot.png, id=261, 390.7398pt x 283.2984pt>
+<EDA/Auto_Mpg/origin_countplot.png, id=265, 390.7398pt x 283.2984pt>
 File: EDA/Auto_Mpg/origin_countplot.png Graphic file (type png)
 <use EDA/Auto_Mpg/origin_countplot.png>
 Package pdftex.def Info: EDA/Auto_Mpg/origin_countplot.png  used on input line 
 103.
 (pdftex.def)             Requested size: 250.82358pt x 181.85501pt.
  [4 <./EDA/Auto_Mpg/boxplots.png>]
-<EDA/Auto_Mpg/scatterplots.png, id=268, 1110.0672pt x 820.08383pt>
+<EDA/Auto_Mpg/scatterplots.png, id=272, 1110.0672pt x 820.08383pt>
 File: EDA/Auto_Mpg/scatterplots.png Graphic file (type png)
 <use EDA/Auto_Mpg/scatterplots.png>
 Package pdftex.def Info: EDA/Auto_Mpg/scatterplots.png  used on input line 124.
@@ -1247,13 +1247,13 @@ Package pdftex.def Info: EDA/Auto_Mpg/scatterplots.png  used on input line 124.
 (pdftex.def)             Requested size: 557.38951pt x 411.78027pt.
  [5 <./EDA/Auto_Mpg/cylinders_countplot.png> <./EDA/Auto_Mpg/origin_countplot.p
 ng>] [6 <./EDA/Auto_Mpg/scatterplots.png>]
-<EDA/Housing_Price_Regression/heatmap.png, id=282, 672.3519pt x 570.4512pt>
+<EDA/Housing_Price_Regression/heatmap.png, id=286, 672.3519pt x 570.4512pt>
 File: EDA/Housing_Price_Regression/heatmap.png Graphic file (type png)
 <use EDA/Housing_Price_Regression/heatmap.png>
 Package pdftex.def Info: EDA/Housing_Price_Regression/heatmap.png  used on inpu
 t line 167.
 (pdftex.def)             Requested size: 278.69475pt x 236.45428pt.
-<EDA/Housing_Price_Regression/historgram_Continous.png, id=283, 1004.553pt x 71
+<EDA/Housing_Price_Regression/historgram_Continous.png, id=287, 1004.553pt x 71
 4.5094pt>
 File: EDA/Housing_Price_Regression/historgram_Continous.png Graphic file (type 
 png)
@@ -1262,7 +1262,7 @@ Package pdftex.def Info: EDA/Housing_Price_Regression/historgram_Continous.png
  used on input line 187.
 (pdftex.def)             Requested size: 557.38951pt x 396.4702pt.
  [7 <./EDA/Housing_Price_Regression/heatmap.png>]
-<EDA/Housing_Price_Regression/historgram_group2.png, id=291, 1004.553pt x 714.5
+<EDA/Housing_Price_Regression/historgram_group2.png, id=295, 1004.553pt x 714.5
 094pt>
 File: EDA/Housing_Price_Regression/historgram_group2.png Graphic file (type png
 )
@@ -1271,7 +1271,7 @@ Package pdftex.def Info: EDA/Housing_Price_Regression/historgram_group2.png  us
 ed on input line 207.
 (pdftex.def)             Requested size: 557.38951pt x 396.4702pt.
  [8 <./EDA/Housing_Price_Regression/historgram_Continous.png>]
-<EDA/Housing_Price_Regression/scatter_group1.png, id=298, 1004.553pt x 714.5094
+<EDA/Housing_Price_Regression/scatter_group1.png, id=302, 1004.553pt x 714.5094
 pt>
 File: EDA/Housing_Price_Regression/scatter_group1.png Graphic file (type png)
 <use EDA/Housing_Price_Regression/scatter_group1.png>
@@ -1279,7 +1279,7 @@ Package pdftex.def Info: EDA/Housing_Price_Regression/scatter_group1.png  used
 on input line 228.
 (pdftex.def)             Requested size: 557.38951pt x 396.4702pt.
  [9 <./EDA/Housing_Price_Regression/historgram_group2.png>]
-<EDA/Housing_Price_Regression/scatter_group2.png, id=305, 1004.553pt x 714.5094
+<EDA/Housing_Price_Regression/scatter_group2.png, id=309, 1004.553pt x 714.5094
 pt>
 File: EDA/Housing_Price_Regression/scatter_group2.png Graphic file (type png)
 <use EDA/Housing_Price_Regression/scatter_group2.png>
@@ -1289,27 +1289,27 @@ on input line 248.
 
 [10 <./EDA/Housing_Price_Regression/scatter_group1.png>] [11 <./EDA/Housing_Pri
 ce_Regression/scatter_group2.png>]
-<EDA/Insurance_EDA/hist_continuous.png, id=319, 1076.823pt x 280.8894pt>
+<EDA/Insurance_EDA/hist_continuous.png, id=323, 1076.823pt x 280.8894pt>
 File: EDA/Insurance_EDA/hist_continuous.png Graphic file (type png)
 <use EDA/Insurance_EDA/hist_continuous.png>
 Package pdftex.def Info: EDA/Insurance_EDA/hist_continuous.png  used on input l
 ine 300.
 (pdftex.def)             Requested size: 557.38951pt x 145.3947pt.
-<EDA/Insurance_EDA/boxplots_continuous.png, id=320, 1076.823pt x 280.8894pt>
+<EDA/Insurance_EDA/boxplots_continuous.png, id=324, 1076.823pt x 280.8894pt>
 File: EDA/Insurance_EDA/boxplots_continuous.png Graphic file (type png)
 <use EDA/Insurance_EDA/boxplots_continuous.png>
 Package pdftex.def Info: EDA/Insurance_EDA/boxplots_continuous.png  used on inp
 ut line 310.
 (pdftex.def)             Requested size: 557.38951pt x 145.3947pt.
  [12 <./EDA/Insurance_EDA/hist_continuous.png>]
-<EDA/Insurance_EDA/countplots_categorical.png, id=328, 1076.823pt x 280.8894pt>
+<EDA/Insurance_EDA/countplots_categorical.png, id=332, 1076.823pt x 280.8894pt>
 
 File: EDA/Insurance_EDA/countplots_categorical.png Graphic file (type png)
 <use EDA/Insurance_EDA/countplots_categorical.png>
 Package pdftex.def Info: EDA/Insurance_EDA/countplots_categorical.png  used on 
 input line 320.
 (pdftex.def)             Requested size: 557.38951pt x 145.3947pt.
-<EDA/Insurance_EDA/children_distribution.png, id=329, 426.393pt x 280.8894pt>
+<EDA/Insurance_EDA/children_distribution.png, id=333, 426.393pt x 280.8894pt>
 File: EDA/Insurance_EDA/children_distribution.png Graphic file (type png)
 <use EDA/Insurance_EDA/children_distribution.png>
 Package pdftex.def Info: EDA/Insurance_EDA/children_distribution.png  used on i
@@ -1317,7 +1317,7 @@ nput line 330.
 (pdftex.def)             Requested size: 278.69475pt x 183.59602pt.
  [13 <./EDA/Insurance_EDA/boxplots_continuous.png> <./EDA/Insurance_EDA/countpl
 ots_categorical.png>]
-<EDA/Insurance_EDA/scatter_continuous_vs_target.png, id=339, 1077.0639pt x 280.
+<EDA/Insurance_EDA/scatter_continuous_vs_target.png, id=343, 1077.0639pt x 280.
 8894pt>
 File: EDA/Insurance_EDA/scatter_continuous_vs_target.png Graphic file (type png
 )
@@ -1325,7 +1325,7 @@ File: EDA/Insurance_EDA/scatter_continuous_vs_target.png Graphic file (type png
 Package pdftex.def Info: EDA/Insurance_EDA/scatter_continuous_vs_target.png  us
 ed on input line 340.
 (pdftex.def)             Requested size: 557.38951pt x 145.36899pt.
-<EDA/Insurance_EDA/categorical_vs_target.png, id=340, 1077.0639pt x 280.8894pt>
+<EDA/Insurance_EDA/categorical_vs_target.png, id=344, 1077.0639pt x 280.8894pt>
 
 File: EDA/Insurance_EDA/categorical_vs_target.png Graphic file (type png)
 <use EDA/Insurance_EDA/categorical_vs_target.png>
@@ -1334,7 +1334,7 @@ nput line 350.
 (pdftex.def)             Requested size: 557.38951pt x 145.36899pt.
  [14 <./EDA/Insurance_EDA/children_distribution.png> <./EDA/Insurance_EDA/scatt
 er_continuous_vs_target.png>]
-<EDA/Insurance_EDA/correlation_heatmap.png, id=349, 531.9072pt x 425.4294pt>
+<EDA/Insurance_EDA/correlation_heatmap.png, id=353, 531.9072pt x 425.4294pt>
 File: EDA/Insurance_EDA/correlation_heatmap.png Graphic file (type png)
 <use EDA/Insurance_EDA/correlation_heatmap.png>
 Package pdftex.def Info: EDA/Insurance_EDA/correlation_heatmap.png  used on inp
@@ -1343,20 +1343,20 @@ ut line 360.
 )
 (./Sections/Linear_Regression.tex [15 <./EDA/Insurance_EDA/categorical_vs_targe
 t.png> <./EDA/Insurance_EDA/correlation_heatmap.png>]
-<Auto_MPG/scalation_reg_In_Sample.png, id=362, 686.565pt x 590.205pt>
+<Auto_MPG/scalation_reg_In_Sample.png, id=366, 686.565pt x 590.205pt>
 File: Auto_MPG/scalation_reg_In_Sample.png Graphic file (type png)
 <use Auto_MPG/scalation_reg_In_Sample.png>
 Package pdftex.def Info: Auto_MPG/scalation_reg_In_Sample.png  used on input li
 ne 64.
 (pdftex.def)             Requested size: 250.82358pt x 215.61665pt.
-<Auto_MPG/scalation_reg_80_20.png, id=363, 709.65125pt x 613.29124pt>
+<Auto_MPG/scalation_reg_80_20.png, id=367, 709.65125pt x 613.29124pt>
 File: Auto_MPG/scalation_reg_80_20.png Graphic file (type png)
 <use Auto_MPG/scalation_reg_80_20.png>
 Package pdftex.def Info: Auto_MPG/scalation_reg_80_20.png  used on input line 7
 1.
 (pdftex.def)             Requested size: 250.82358pt x 216.76071pt.
  [16]
-<Auto_MPG/statsmodels_reg_In_Sample.png, id=372, 722.7pt x 433.62pt>
+<Auto_MPG/statsmodels_reg_In_Sample.png, id=376, 722.7pt x 433.62pt>
 File: Auto_MPG/statsmodels_reg_In_Sample.png Graphic file (type png)
 <use Auto_MPG/statsmodels_reg_In_Sample.png>
 Package pdftex.def Info: Auto_MPG/statsmodels_reg_In_Sample.png  used on input 
@@ -1367,7 +1367,7 @@ Overfull \hbox (25.08388pt too wide) in paragraph at lines 84--87
  [][] 
  []
 
-<Auto_MPG/statsmodels_reg_80_20.png, id=373, 722.7pt x 433.62pt>
+<Auto_MPG/statsmodels_reg_80_20.png, id=377, 722.7pt x 433.62pt>
 File: Auto_MPG/statsmodels_reg_80_20.png Graphic file (type png)
 <use Auto_MPG/statsmodels_reg_80_20.png>
 Package pdftex.def Info: Auto_MPG/statsmodels_reg_80_20.png  used on input line
@@ -1381,26 +1381,26 @@ Overfull \hbox (25.08388pt too wide) in paragraph at lines 91--94
 [17 <./Auto_MPG/scalation_reg_In_Sample.png> <./Auto_MPG/scalation_reg_80_20.pn
 g> <./Auto_MPG/statsmodels_reg_In_Sample.png> <./Auto_MPG/statsmodels_reg_80_20
 .png>]
-<Auto_MPG/scalation_reg_FS_R2.png, id=387, 662.475pt x 573.14125pt>
+<Auto_MPG/scalation_reg_FS_R2.png, id=391, 662.475pt x 573.14125pt>
 File: Auto_MPG/scalation_reg_FS_R2.png Graphic file (type png)
 <use Auto_MPG/scalation_reg_FS_R2.png>
 Package pdftex.def Info: Auto_MPG/scalation_reg_FS_R2.png  used on input line 1
 58.
 (pdftex.def)             Requested size: 250.82358pt x 217.0001pt.
-<Auto_MPG/scalation_reg_FS_aic.png, id=388, 656.4525pt x 572.1375pt>
+<Auto_MPG/scalation_reg_FS_aic.png, id=392, 656.4525pt x 572.1375pt>
 File: Auto_MPG/scalation_reg_FS_aic.png Graphic file (type png)
 <use Auto_MPG/scalation_reg_FS_aic.png>
 Package pdftex.def Info: Auto_MPG/scalation_reg_FS_aic.png  used on input line 
 165.
 (pdftex.def)             Requested size: 250.82358pt x 218.61052pt.
  [18]
-<Auto_MPG/scalation_reg_BE_R2.png, id=396, 687.56876pt x 601.24625pt>
+<Auto_MPG/scalation_reg_BE_R2.png, id=400, 687.56876pt x 601.24625pt>
 File: Auto_MPG/scalation_reg_BE_R2.png Graphic file (type png)
 <use Auto_MPG/scalation_reg_BE_R2.png>
 Package pdftex.def Info: Auto_MPG/scalation_reg_BE_R2.png  used on input line 1
 80.
 (pdftex.def)             Requested size: 250.82358pt x 219.3292pt.
-<Auto_MPG/scalation_reg_BE_aic.png, id=397, 688.5725pt x 599.23875pt>
+<Auto_MPG/scalation_reg_BE_aic.png, id=401, 688.5725pt x 599.23875pt>
 File: Auto_MPG/scalation_reg_BE_aic.png Graphic file (type png)
 <use Auto_MPG/scalation_reg_BE_aic.png>
 Package pdftex.def Info: Auto_MPG/scalation_reg_BE_aic.png  used on input line 
@@ -1408,13 +1408,13 @@ Package pdftex.def Info: Auto_MPG/scalation_reg_BE_aic.png  used on input line
 (pdftex.def)             Requested size: 250.82358pt x 218.27686pt.
  [19 <./Auto_MPG/scalation_reg_FS_R2.png> <./Auto_MPG/scalation_reg_FS_aic.png>
  <./Auto_MPG/scalation_reg_BE_R2.png> <./Auto_MPG/scalation_reg_BE_aic.png>]
-<Auto_MPG/scalation_reg_SS_R2.png, id=410, 689.57625pt x 594.22pt>
+<Auto_MPG/scalation_reg_SS_R2.png, id=414, 689.57625pt x 594.22pt>
 File: Auto_MPG/scalation_reg_SS_R2.png Graphic file (type png)
 <use Auto_MPG/scalation_reg_SS_R2.png>
 Package pdftex.def Info: Auto_MPG/scalation_reg_SS_R2.png  used on input line 2
 02.
 (pdftex.def)             Requested size: 250.82358pt x 216.14046pt.
-<Auto_MPG/scalation_reg_SS_aic.png, id=411, 688.5725pt x 597.23125pt>
+<Auto_MPG/scalation_reg_SS_aic.png, id=415, 688.5725pt x 597.23125pt>
 File: Auto_MPG/scalation_reg_SS_aic.png Graphic file (type png)
 <use Auto_MPG/scalation_reg_SS_aic.png>
 Package pdftex.def Info: Auto_MPG/scalation_reg_SS_aic.png  used on input line 
@@ -1422,19 +1422,19 @@ Package pdftex.def Info: Auto_MPG/scalation_reg_SS_aic.png  used on input line
 (pdftex.def)             Requested size: 250.82358pt x 217.54561pt.
  [20 <./Auto_MPG/scalation_reg_SS_R2.png> <./Auto_MPG/scalation_reg_SS_aic.png>
 ]
-<Housing/scalation_reg_In_Sample.png, id=424, 720.6925pt x 581.17125pt>
+<Housing/scalation_reg_In_Sample.png, id=428, 720.6925pt x 581.17125pt>
 File: Housing/scalation_reg_In_Sample.png Graphic file (type png)
 <use Housing/scalation_reg_In_Sample.png>
 Package pdftex.def Info: Housing/scalation_reg_In_Sample.png  used on input lin
 e 277.
 (pdftex.def)             Requested size: 250.82358pt x 202.26015pt.
-<Housing/scalation_reg_80_20.png, id=425, 715.67375pt x 576.1525pt>
+<Housing/scalation_reg_80_20.png, id=429, 715.67375pt x 576.1525pt>
 File: Housing/scalation_reg_80_20.png Graphic file (type png)
 <use Housing/scalation_reg_80_20.png>
 Package pdftex.def Info: Housing/scalation_reg_80_20.png  used on input line 28
 4.
 (pdftex.def)             Requested size: 250.82358pt x 201.92012pt.
-<Housing/statsmodels_reg_In_Sample.png, id=426, 722.7pt x 433.62pt>
+<Housing/statsmodels_reg_In_Sample.png, id=430, 722.7pt x 433.62pt>
 File: Housing/statsmodels_reg_In_Sample.png Graphic file (type png)
 <use Housing/statsmodels_reg_In_Sample.png>
 Package pdftex.def Info: Housing/statsmodels_reg_In_Sample.png  used on input l
@@ -1445,7 +1445,7 @@ Overfull \hbox (25.08388pt too wide) in paragraph at lines 297--300
  [][] 
  []
 
-<Housing/statsmodels_reg_80_20.png, id=427, 722.7pt x 433.62pt>
+<Housing/statsmodels_reg_80_20.png, id=431, 722.7pt x 433.62pt>
 File: Housing/statsmodels_reg_80_20.png Graphic file (type png)
 <use Housing/statsmodels_reg_80_20.png>
 Package pdftex.def Info: Housing/statsmodels_reg_80_20.png  used on input line 
@@ -1464,38 +1464,38 @@ Overfull \hbox (19.08427pt too wide) in paragraph at lines 318--336
 
 [22 <./Housing/statsmodels_reg_In_Sample.png> <./Housing/statsmodels_reg_80_20.
 png>]
-<Housing/scalation_reg_FS_R2.png, id=447, 688.5725pt x 595.22375pt>
+<Housing/scalation_reg_FS_R2.png, id=451, 688.5725pt x 595.22375pt>
 File: Housing/scalation_reg_FS_R2.png Graphic file (type png)
 <use Housing/scalation_reg_FS_R2.png>
 Package pdftex.def Info: Housing/scalation_reg_FS_R2.png  used on input line 36
 9.
 (pdftex.def)             Requested size: 250.82358pt x 216.81436pt.
-<Housing/scalation_reg_FS_aic.png, id=448, 689.57625pt x 601.24625pt>
+<Housing/scalation_reg_FS_aic.png, id=452, 689.57625pt x 601.24625pt>
 File: Housing/scalation_reg_FS_aic.png Graphic file (type png)
 <use Housing/scalation_reg_FS_aic.png>
 Package pdftex.def Info: Housing/scalation_reg_FS_aic.png  used on input line 3
 76.
 (pdftex.def)             Requested size: 250.82358pt x 218.69617pt.
-<Housing/scalation_reg_BE_R2.png, id=450, 691.58376pt x 599.23875pt>
+<Housing/scalation_reg_BE_R2.png, id=454, 691.58376pt x 599.23875pt>
 File: Housing/scalation_reg_BE_R2.png Graphic file (type png)
 <use Housing/scalation_reg_BE_R2.png>
 Package pdftex.def Info: Housing/scalation_reg_BE_R2.png  used on input line 39
 1.
 (pdftex.def)             Requested size: 250.82358pt x 217.32591pt.
-<Housing/scalation_reg_BE_aic.png, id=451, 689.57625pt x 598.235pt>
+<Housing/scalation_reg_BE_aic.png, id=455, 689.57625pt x 598.235pt>
 File: Housing/scalation_reg_BE_aic.png Graphic file (type png)
 <use Housing/scalation_reg_BE_aic.png>
 Package pdftex.def Info: Housing/scalation_reg_BE_aic.png  used on input line 3
 98.
 (pdftex.def)             Requested size: 250.82358pt x 217.60088pt.
  [23 <./Housing/scalation_reg_FS_R2.png> <./Housing/scalation_reg_FS_aic.png>]
-<Housing/scalation_reg_SS_R2.png, id=461, 688.5725pt x 596.2275pt>
+<Housing/scalation_reg_SS_R2.png, id=465, 688.5725pt x 596.2275pt>
 File: Housing/scalation_reg_SS_R2.png Graphic file (type png)
 <use Housing/scalation_reg_SS_R2.png>
 Package pdftex.def Info: Housing/scalation_reg_SS_R2.png  used on input line 41
 3.
 (pdftex.def)             Requested size: 250.82358pt x 217.18pt.
-<Housing/scalation_reg_SS_aic.png, id=462, 690.58pt x 597.23125pt>
+<Housing/scalation_reg_SS_aic.png, id=466, 690.58pt x 597.23125pt>
 File: Housing/scalation_reg_SS_aic.png Graphic file (type png)
 <use Housing/scalation_reg_SS_aic.png>
 Package pdftex.def Info: Housing/scalation_reg_SS_aic.png  used on input line 4
@@ -1503,13 +1503,13 @@ Package pdftex.def Info: Housing/scalation_reg_SS_aic.png  used on input line 4
 (pdftex.def)             Requested size: 250.82358pt x 216.91681pt.
  [24 <./Housing/scalation_reg_BE_R2.png> <./Housing/scalation_reg_BE_aic.png> <
 ./Housing/scalation_reg_SS_R2.png> <./Housing/scalation_reg_SS_aic.png>]
-<Insurance/scalation_reg_In_Sample.png, id=478, 716.6775pt x 596.2275pt>
+<Insurance/scalation_reg_In_Sample.png, id=482, 716.6775pt x 596.2275pt>
 File: Insurance/scalation_reg_In_Sample.png Graphic file (type png)
 <use Insurance/scalation_reg_In_Sample.png>
 Package pdftex.def Info: Insurance/scalation_reg_In_Sample.png  used on input l
 ine 489.
 (pdftex.def)             Requested size: 250.82358pt x 208.66455pt.
-<Insurance/scalation_reg_80_20.png, id=479, 722.7pt x 583.17876pt>
+<Insurance/scalation_reg_80_20.png, id=483, 722.7pt x 583.17876pt>
 File: Insurance/scalation_reg_80_20.png Graphic file (type png)
 <use Insurance/scalation_reg_80_20.png>
 Package pdftex.def Info: Insurance/scalation_reg_80_20.png  used on input line 
@@ -1517,7 +1517,7 @@ Package pdftex.def Info: Insurance/scalation_reg_80_20.png  used on input line
 (pdftex.def)             Requested size: 250.82358pt x 202.3982pt.
 
 [25]
-<Insurance/statsmodels_reg_In_Sample.png, id=488, 722.7pt x 433.62pt>
+<Insurance/statsmodels_reg_In_Sample.png, id=492, 722.7pt x 433.62pt>
 File: Insurance/statsmodels_reg_In_Sample.png Graphic file (type png)
 <use Insurance/statsmodels_reg_In_Sample.png>
 Package pdftex.def Info: Insurance/statsmodels_reg_In_Sample.png  used on input
@@ -1528,7 +1528,7 @@ Overfull \hbox (25.08388pt too wide) in paragraph at lines 509--512
  [][] 
  []
 
-<Insurance/statsmodels_reg_80_20.png, id=489, 722.7pt x 433.62pt>
+<Insurance/statsmodels_reg_80_20.png, id=493, 722.7pt x 433.62pt>
 File: Insurance/statsmodels_reg_80_20.png Graphic file (type png)
 <use Insurance/statsmodels_reg_80_20.png>
 Package pdftex.def Info: Insurance/statsmodels_reg_80_20.png  used on input lin
@@ -1542,38 +1542,38 @@ Overfull \hbox (25.08388pt too wide) in paragraph at lines 516--519
 [26 <./Insurance/scalation_reg_In_Sample.png> <./Insurance/scalation_reg_80_20.
 png> <./Insurance/statsmodels_reg_In_Sample.png> <./Insurance/statsmodels_reg_8
 0_20.png>]
-<Insurance/scalation_reg_FS_R2.png, id=503, 688.5725pt x 596.2275pt>
+<Insurance/scalation_reg_FS_R2.png, id=507, 688.5725pt x 596.2275pt>
 File: Insurance/scalation_reg_FS_R2.png Graphic file (type png)
 <use Insurance/scalation_reg_FS_R2.png>
 Package pdftex.def Info: Insurance/scalation_reg_FS_R2.png  used on input line 
 581.
 (pdftex.def)             Requested size: 250.82358pt x 217.18pt.
-<Insurance/scalation_reg_FS_aic.png, id=504, 688.5725pt x 596.2275pt>
+<Insurance/scalation_reg_FS_aic.png, id=508, 688.5725pt x 596.2275pt>
 File: Insurance/scalation_reg_FS_aic.png Graphic file (type png)
 <use Insurance/scalation_reg_FS_aic.png>
 Package pdftex.def Info: Insurance/scalation_reg_FS_aic.png  used on input line
  588.
 (pdftex.def)             Requested size: 250.82358pt x 217.18pt.
  [27]
-<Insurance/scalation_reg_BE_R2.png, id=511, 685.56125pt x 598.235pt>
+<Insurance/scalation_reg_BE_R2.png, id=515, 685.56125pt x 598.235pt>
 File: Insurance/scalation_reg_BE_R2.png Graphic file (type png)
 <use Insurance/scalation_reg_BE_R2.png>
 Package pdftex.def Info: Insurance/scalation_reg_BE_R2.png  used on input line 
 603.
 (pdftex.def)             Requested size: 250.82358pt x 218.8697pt.
-<Insurance/scalation_reg_BE_aic.png, id=512, 687.56876pt x 597.23125pt>
+<Insurance/scalation_reg_BE_aic.png, id=516, 687.56876pt x 597.23125pt>
 File: Insurance/scalation_reg_BE_aic.png Graphic file (type png)
 <use Insurance/scalation_reg_BE_aic.png>
 Package pdftex.def Info: Insurance/scalation_reg_BE_aic.png  used on input line
  610.
 (pdftex.def)             Requested size: 250.82358pt x 217.86456pt.
-<Insurance/scalation_reg_SS_R2.png, id=514, 685.56125pt x 594.22pt>
+<Insurance/scalation_reg_SS_R2.png, id=518, 685.56125pt x 594.22pt>
 File: Insurance/scalation_reg_SS_R2.png Graphic file (type png)
 <use Insurance/scalation_reg_SS_R2.png>
 Package pdftex.def Info: Insurance/scalation_reg_SS_R2.png  used on input line 
 625.
 (pdftex.def)             Requested size: 250.82358pt x 217.40079pt.
-<Insurance/scalation_reg_SS_aic.png, id=515, 685.56125pt x 595.22375pt>
+<Insurance/scalation_reg_SS_aic.png, id=519, 685.56125pt x 595.22375pt>
 File: Insurance/scalation_reg_SS_aic.png Graphic file (type png)
 <use Insurance/scalation_reg_SS_aic.png>
 Package pdftex.def Info: Insurance/scalation_reg_SS_aic.png  used on input line
@@ -1582,13 +1582,13 @@ Package pdftex.def Info: Insurance/scalation_reg_SS_aic.png  used on input line
  [28 <./Insurance/scalation_reg_FS_R2.png> <./Insurance/scalation_reg_FS_aic.pn
 g> <./Insurance/scalation_reg_BE_R2.png> <./Insurance/scalation_reg_BE_aic.png>
 ]) (./Sections/Regularized_Regression.tex
-<Auto_MPG/scalation_ridge_In_Sample.png, id=526, 720.6925pt x 631.35875pt>
+<Auto_MPG/scalation_ridge_In_Sample.png, id=530, 720.6925pt x 631.35875pt>
 File: Auto_MPG/scalation_ridge_In_Sample.png Graphic file (type png)
 <use Auto_MPG/scalation_ridge_In_Sample.png>
 Package pdftex.def Info: Auto_MPG/scalation_ridge_In_Sample.png  used on input 
 line 36.
 (pdftex.def)             Requested size: 250.82358pt x 219.72649pt.
-<Auto_MPG/scalation_ridge_80_20.png, id=527, 644.4075pt x 589.20125pt>
+<Auto_MPG/scalation_ridge_80_20.png, id=531, 644.4075pt x 589.20125pt>
 File: Auto_MPG/scalation_ridge_80_20.png Graphic file (type png)
 <use Auto_MPG/scalation_ridge_80_20.png>
 Package pdftex.def Info: Auto_MPG/scalation_ridge_80_20.png  used on input line
@@ -1596,7 +1596,7 @@ Package pdftex.def Info: Auto_MPG/scalation_ridge_80_20.png  used on input line
 (pdftex.def)             Requested size: 250.82358pt x 229.33803pt.
  [29 <./Insurance/scalation_reg_SS_R2.png> <./Insurance/scalation_reg_SS_aic.pn
 g>]
-<Auto_MPG/statsmodels_ridge_In_Sample.png, id=535, 722.7pt x 433.62pt>
+<Auto_MPG/statsmodels_ridge_In_Sample.png, id=539, 722.7pt x 433.62pt>
 File: Auto_MPG/statsmodels_ridge_In_Sample.png Graphic file (type png)
 <use Auto_MPG/statsmodels_ridge_In_Sample.png>
 Package pdftex.def Info: Auto_MPG/statsmodels_ridge_In_Sample.png  used on inpu
@@ -1607,7 +1607,7 @@ Overfull \hbox (25.08388pt too wide) in paragraph at lines 56--59
  [][] 
  []
 
-<Auto_MPG/statsmodels_ridge_80_20.png, id=536, 722.7pt x 433.62pt>
+<Auto_MPG/statsmodels_ridge_80_20.png, id=540, 722.7pt x 433.62pt>
 File: Auto_MPG/statsmodels_ridge_80_20.png Graphic file (type png)
 <use Auto_MPG/statsmodels_ridge_80_20.png>
 Package pdftex.def Info: Auto_MPG/statsmodels_ridge_80_20.png  used on input li
@@ -1618,13 +1618,13 @@ Overfull \hbox (25.08388pt too wide) in paragraph at lines 63--66
  [][] 
  []
 
-<Auto_MPG/scalation_lasso_In_Sample.png, id=537, 654.445pt x 562.1pt>
+<Auto_MPG/scalation_lasso_In_Sample.png, id=541, 654.445pt x 562.1pt>
 File: Auto_MPG/scalation_lasso_In_Sample.png Graphic file (type png)
 <use Auto_MPG/scalation_lasso_In_Sample.png>
 Package pdftex.def Info: Auto_MPG/scalation_lasso_In_Sample.png  used on input 
 line 76.
 (pdftex.def)             Requested size: 250.82358pt x 215.42711pt.
-<Auto_MPG/scalation_lasso_80_20.png, id=538, 708.6475pt x 612.2875pt>
+<Auto_MPG/scalation_lasso_80_20.png, id=542, 708.6475pt x 612.2875pt>
 File: Auto_MPG/scalation_lasso_80_20.png Graphic file (type png)
 <use Auto_MPG/scalation_lasso_80_20.png>
 Package pdftex.def Info: Auto_MPG/scalation_lasso_80_20.png  used on input line
@@ -1633,7 +1633,7 @@ Package pdftex.def Info: Auto_MPG/scalation_lasso_80_20.png  used on input line
 [30 <./Auto_MPG/scalation_ridge_In_Sample.png> <./Auto_MPG/scalation_ridge_80_2
 0.png> <./Auto_MPG/statsmodels_ridge_In_Sample.png> <./Auto_MPG/statsmodels_rid
 ge_80_20.png>]
-<Auto_MPG/statsmodels_lasso_In_Sample.png, id=549, 722.7pt x 433.62pt>
+<Auto_MPG/statsmodels_lasso_In_Sample.png, id=553, 722.7pt x 433.62pt>
 File: Auto_MPG/statsmodels_lasso_In_Sample.png Graphic file (type png)
 <use Auto_MPG/statsmodels_lasso_In_Sample.png>
 Package pdftex.def Info: Auto_MPG/statsmodels_lasso_In_Sample.png  used on inpu
@@ -1644,7 +1644,7 @@ Overfull \hbox (25.08388pt too wide) in paragraph at lines 96--99
  [][] 
  []
 
-<Auto_MPG/statsmodels_lasso_80_20.png, id=550, 722.7pt x 433.62pt>
+<Auto_MPG/statsmodels_lasso_80_20.png, id=554, 722.7pt x 433.62pt>
 File: Auto_MPG/statsmodels_lasso_80_20.png Graphic file (type png)
 <use Auto_MPG/statsmodels_lasso_80_20.png>
 Package pdftex.def Info: Auto_MPG/statsmodels_lasso_80_20.png  used on input li
@@ -1658,19 +1658,19 @@ Overfull \hbox (25.08388pt too wide) in paragraph at lines 103--106
 [31 <./Auto_MPG/scalation_lasso_In_Sample.png> <./Auto_MPG/scalation_lasso_80_2
 0.png> <./Auto_MPG/statsmodels_lasso_In_Sample.png> <./Auto_MPG/statsmodels_las
 so_80_20.png>]
-<Housing/scalation_ridge_In_Sample.png, id=562, 716.6775pt x 576.1525pt>
+<Housing/scalation_ridge_In_Sample.png, id=566, 716.6775pt x 576.1525pt>
 File: Housing/scalation_ridge_In_Sample.png Graphic file (type png)
 <use Housing/scalation_ridge_In_Sample.png>
 Package pdftex.def Info: Housing/scalation_ridge_In_Sample.png  used on input l
 ine 142.
 (pdftex.def)             Requested size: 250.82358pt x 201.63881pt.
-<Housing/scalation_ridge_80_20.png, id=563, 717.68124pt x 579.16376pt>
+<Housing/scalation_ridge_80_20.png, id=567, 717.68124pt x 579.16376pt>
 File: Housing/scalation_ridge_80_20.png Graphic file (type png)
 <use Housing/scalation_ridge_80_20.png>
 Package pdftex.def Info: Housing/scalation_ridge_80_20.png  used on input line 
 149.
 (pdftex.def)             Requested size: 250.82358pt x 202.40988pt.
-<Housing/statsmodels_ridge_In_Sample.png, id=564, 722.7pt x 433.62pt>
+<Housing/statsmodels_ridge_In_Sample.png, id=568, 722.7pt x 433.62pt>
 File: Housing/statsmodels_ridge_In_Sample.png Graphic file (type png)
 <use Housing/statsmodels_ridge_In_Sample.png>
 Package pdftex.def Info: Housing/statsmodels_ridge_In_Sample.png  used on input
@@ -1681,7 +1681,7 @@ Overfull \hbox (25.08388pt too wide) in paragraph at lines 162--165
  [][] 
  []
 
-<Housing/statsmodels_ridge_80_20.png, id=565, 722.7pt x 433.62pt>
+<Housing/statsmodels_ridge_80_20.png, id=569, 722.7pt x 433.62pt>
 File: Housing/statsmodels_ridge_80_20.png Graphic file (type png)
 <use Housing/statsmodels_ridge_80_20.png>
 Package pdftex.def Info: Housing/statsmodels_ridge_80_20.png  used on input lin
@@ -1694,19 +1694,19 @@ Overfull \hbox (25.08388pt too wide) in paragraph at lines 169--172
 
 [32 <./Housing/scalation_ridge_In_Sample.png> <./Housing/scalation_ridge_80_20.
 png>]
-<Housing/scalation_lasso_In_Sample.png, id=574, 715.67375pt x 578.16pt>
+<Housing/scalation_lasso_In_Sample.png, id=578, 715.67375pt x 578.16pt>
 File: Housing/scalation_lasso_In_Sample.png Graphic file (type png)
 <use Housing/scalation_lasso_In_Sample.png>
 Package pdftex.def Info: Housing/scalation_lasso_In_Sample.png  used on input l
 ine 182.
 (pdftex.def)             Requested size: 250.82358pt x 202.62369pt.
-<Housing/scalation_lasso_80_20.png, id=575, 718.685pt x 577.15625pt>
+<Housing/scalation_lasso_80_20.png, id=579, 718.685pt x 577.15625pt>
 File: Housing/scalation_lasso_80_20.png Graphic file (type png)
 <use Housing/scalation_lasso_80_20.png>
 Package pdftex.def Info: Housing/scalation_lasso_80_20.png  used on input line 
 189.
 (pdftex.def)             Requested size: 250.82358pt x 201.42647pt.
-<Housing/statsmodels_lasso_In_Sample.png, id=576, 722.7pt x 433.62pt>
+<Housing/statsmodels_lasso_In_Sample.png, id=580, 722.7pt x 433.62pt>
 File: Housing/statsmodels_lasso_In_Sample.png Graphic file (type png)
 <use Housing/statsmodels_lasso_In_Sample.png>
 Package pdftex.def Info: Housing/statsmodels_lasso_In_Sample.png  used on input
@@ -1717,7 +1717,7 @@ Overfull \hbox (25.08388pt too wide) in paragraph at lines 202--205
  [][] 
  []
 
-<Housing/statsmodels_lasso_80_20.png, id=577, 722.7pt x 433.62pt>
+<Housing/statsmodels_lasso_80_20.png, id=581, 722.7pt x 433.62pt>
 File: Housing/statsmodels_lasso_80_20.png Graphic file (type png)
 <use Housing/statsmodels_lasso_80_20.png>
 Package pdftex.def Info: Housing/statsmodels_lasso_80_20.png  used on input lin
@@ -1731,13 +1731,13 @@ Overfull \hbox (25.08388pt too wide) in paragraph at lines 209--212
 [33 <./Housing/statsmodels_ridge_In_Sample.png> <./Housing/statsmodels_ridge_80
 _20.png> <./Housing/scalation_lasso_In_Sample.png> <./Housing/scalation_lasso_8
 0_20.png>]
-<Insurance/scalation_ridge_In_Sample.png, id=588, 716.6775pt x 592.2125pt>
+<Insurance/scalation_ridge_In_Sample.png, id=592, 716.6775pt x 592.2125pt>
 File: Insurance/scalation_ridge_In_Sample.png Graphic file (type png)
 <use Insurance/scalation_ridge_In_Sample.png>
 Package pdftex.def Info: Insurance/scalation_ridge_In_Sample.png  used on input
  line 248.
 (pdftex.def)             Requested size: 250.82358pt x 207.2594pt.
-<Insurance/scalation_ridge_80_20.png, id=589, 720.6925pt x 581.17125pt>
+<Insurance/scalation_ridge_80_20.png, id=593, 720.6925pt x 581.17125pt>
 File: Insurance/scalation_ridge_80_20.png Graphic file (type png)
 <use Insurance/scalation_ridge_80_20.png>
 Package pdftex.def Info: Insurance/scalation_ridge_80_20.png  used on input lin
@@ -1745,7 +1745,7 @@ e 255.
 (pdftex.def)             Requested size: 250.82358pt x 202.26015pt.
  [34 <./Housing/statsmodels_lasso_In_Sample.png> <./Housing/statsmodels_lasso_8
 0_20.png>]
-<Insurance/statsmodels_ridge_In_Sample.png, id=598, 722.7pt x 433.62pt>
+<Insurance/statsmodels_ridge_In_Sample.png, id=602, 722.7pt x 433.62pt>
 File: Insurance/statsmodels_ridge_In_Sample.png Graphic file (type png)
 <use Insurance/statsmodels_ridge_In_Sample.png>
 Package pdftex.def Info: Insurance/statsmodels_ridge_In_Sample.png  used on inp
@@ -1756,7 +1756,7 @@ Overfull \hbox (25.08388pt too wide) in paragraph at lines 268--271
  [][] 
  []
 
-<Insurance/statsmodels_ridge_80_20.png, id=599, 722.7pt x 433.62pt>
+<Insurance/statsmodels_ridge_80_20.png, id=603, 722.7pt x 433.62pt>
 File: Insurance/statsmodels_ridge_80_20.png Graphic file (type png)
 <use Insurance/statsmodels_ridge_80_20.png>
 Package pdftex.def Info: Insurance/statsmodels_ridge_80_20.png  used on input l
@@ -1767,13 +1767,13 @@ Overfull \hbox (25.08388pt too wide) in paragraph at lines 275--278
  [][] 
  []
 
-<Insurance/scalation_lasso_In_Sample.png, id=600, 716.6775pt x 595.22375pt>
+<Insurance/scalation_lasso_In_Sample.png, id=604, 716.6775pt x 595.22375pt>
 File: Insurance/scalation_lasso_In_Sample.png Graphic file (type png)
 <use Insurance/scalation_lasso_In_Sample.png>
 Package pdftex.def Info: Insurance/scalation_lasso_In_Sample.png  used on input
  line 288.
 (pdftex.def)             Requested size: 250.82358pt x 208.31326pt.
-<Insurance/scalation_lasso_80_20.png, id=601, 717.68124pt x 580.1675pt>
+<Insurance/scalation_lasso_80_20.png, id=605, 717.68124pt x 580.1675pt>
 File: Insurance/scalation_lasso_80_20.png Graphic file (type png)
 <use Insurance/scalation_lasso_80_20.png>
 Package pdftex.def Info: Insurance/scalation_lasso_80_20.png  used on input lin
@@ -1782,7 +1782,7 @@ e 295.
 [35 <./Insurance/scalation_ridge_In_Sample.png> <./Insurance/scalation_ridge_80
 _20.png> <./Insurance/statsmodels_ridge_In_Sample.png> <./Insurance/statsmodels
 _ridge_80_20.png>]
-<Insurance/statsmodels_lasso_In_Sample.png, id=612, 722.7pt x 433.62pt>
+<Insurance/statsmodels_lasso_In_Sample.png, id=616, 722.7pt x 433.62pt>
 File: Insurance/statsmodels_lasso_In_Sample.png Graphic file (type png)
 <use Insurance/statsmodels_lasso_In_Sample.png>
 Package pdftex.def Info: Insurance/statsmodels_lasso_In_Sample.png  used on inp
@@ -1793,7 +1793,7 @@ Overfull \hbox (25.08388pt too wide) in paragraph at lines 308--311
  [][] 
  []
 
-<Insurance/statsmodels_lasso_80_20.png, id=613, 722.7pt x 433.62pt>
+<Insurance/statsmodels_lasso_80_20.png, id=617, 722.7pt x 433.62pt>
 File: Insurance/statsmodels_lasso_80_20.png Graphic file (type png)
 <use Insurance/statsmodels_lasso_80_20.png>
 Package pdftex.def Info: Insurance/statsmodels_lasso_80_20.png  used on input l
@@ -1807,19 +1807,19 @@ Overfull \hbox (25.08388pt too wide) in paragraph at lines 315--318
 ) (./Sections/Transformed_Regression.tex [36 <./Insurance/scalation_lasso_In_Sa
 mple.png> <./Insurance/scalation_lasso_80_20.png> <./Insurance/statsmodels_lass
 o_In_Sample.png> <./Insurance/statsmodels_lasso_80_20.png>] [37]
-<Auto_MPG/scalation_sqrt_In_Sample.png, id=635, 719.68875pt x 583.17876pt>
+<Auto_MPG/scalation_sqrt_In_Sample.png, id=639, 719.68875pt x 583.17876pt>
 File: Auto_MPG/scalation_sqrt_In_Sample.png Graphic file (type png)
 <use Auto_MPG/scalation_sqrt_In_Sample.png>
 Package pdftex.def Info: Auto_MPG/scalation_sqrt_In_Sample.png  used on input l
 ine 70.
 (pdftex.def)             Requested size: 250.82358pt x 203.24356pt.
-<Auto_MPG/scalation_sqrt_80_20.png, id=636, 707.64375pt x 579.16376pt>
+<Auto_MPG/scalation_sqrt_80_20.png, id=640, 707.64375pt x 579.16376pt>
 File: Auto_MPG/scalation_sqrt_80_20.png Graphic file (type png)
 <use Auto_MPG/scalation_sqrt_80_20.png>
 Package pdftex.def Info: Auto_MPG/scalation_sqrt_80_20.png  used on input line 
 77.
 (pdftex.def)             Requested size: 250.82358pt x 205.282pt.
-<Auto_MPG/statsmodels_sqrt_In_Sample.png, id=637, 722.7pt x 433.62pt>
+<Auto_MPG/statsmodels_sqrt_In_Sample.png, id=641, 722.7pt x 433.62pt>
 File: Auto_MPG/statsmodels_sqrt_In_Sample.png Graphic file (type png)
 <use Auto_MPG/statsmodels_sqrt_In_Sample.png>
 Package pdftex.def Info: Auto_MPG/statsmodels_sqrt_In_Sample.png  used on input
@@ -1830,7 +1830,7 @@ Overfull \hbox (25.08388pt too wide) in paragraph at lines 90--93
  [][] 
  []
 
-<Auto_MPG/statsmodels_sqrt_80_20.png, id=638, 722.7pt x 433.62pt>
+<Auto_MPG/statsmodels_sqrt_80_20.png, id=642, 722.7pt x 433.62pt>
 File: Auto_MPG/statsmodels_sqrt_80_20.png Graphic file (type png)
 <use Auto_MPG/statsmodels_sqrt_80_20.png>
 Package pdftex.def Info: Auto_MPG/statsmodels_sqrt_80_20.png  used on input lin
@@ -1843,19 +1843,19 @@ Overfull \hbox (25.08388pt too wide) in paragraph at lines 97--100
 
 [38 <./Auto_MPG/scalation_sqrt_In_Sample.png> <./Auto_MPG/scalation_sqrt_80_20.
 png>]
-<Auto_MPG/scalation_log1p_In_Sample.png, id=646, 754.82pt x 604.2575pt>
+<Auto_MPG/scalation_log1p_In_Sample.png, id=650, 754.82pt x 604.2575pt>
 File: Auto_MPG/scalation_log1p_In_Sample.png Graphic file (type png)
 <use Auto_MPG/scalation_log1p_In_Sample.png>
 Package pdftex.def Info: Auto_MPG/scalation_log1p_In_Sample.png  used on input 
 line 110.
 (pdftex.def)             Requested size: 250.82358pt x 200.78862pt.
-<Auto_MPG/scalation_log1p_80_20.png, id=647, 710.655pt x 578.16pt>
+<Auto_MPG/scalation_log1p_80_20.png, id=651, 710.655pt x 578.16pt>
 File: Auto_MPG/scalation_log1p_80_20.png Graphic file (type png)
 <use Auto_MPG/scalation_log1p_80_20.png>
 Package pdftex.def Info: Auto_MPG/scalation_log1p_80_20.png  used on input line
  117.
 (pdftex.def)             Requested size: 250.82358pt x 204.06168pt.
-<Auto_MPG/statsmodels_log1p_In_Sample.png, id=648, 722.7pt x 433.62pt>
+<Auto_MPG/statsmodels_log1p_In_Sample.png, id=652, 722.7pt x 433.62pt>
 File: Auto_MPG/statsmodels_log1p_In_Sample.png Graphic file (type png)
 <use Auto_MPG/statsmodels_log1p_In_Sample.png>
 Package pdftex.def Info: Auto_MPG/statsmodels_log1p_In_Sample.png  used on inpu
@@ -1866,7 +1866,7 @@ Overfull \hbox (25.08388pt too wide) in paragraph at lines 130--133
  [][] 
  []
 
-<Auto_MPG/statsmodels_log1p_80_20.png, id=649, 722.7pt x 433.62pt>
+<Auto_MPG/statsmodels_log1p_80_20.png, id=653, 722.7pt x 433.62pt>
 File: Auto_MPG/statsmodels_log1p_80_20.png Graphic file (type png)
 <use Auto_MPG/statsmodels_log1p_80_20.png>
 Package pdftex.def Info: Auto_MPG/statsmodels_log1p_80_20.png  used on input li
@@ -1881,19 +1881,19 @@ Overfull \hbox (25.08388pt too wide) in paragraph at lines 137--140
 _20.png> <./Auto_MPG/scalation_log1p_In_Sample.png> <./Auto_MPG/scalation_log1p
 _80_20.png>] [40 <./Auto_MPG/statsmodels_log1p_In_Sample.png> <./Auto_MPG/stats
 models_log1p_80_20.png>]
-<Housing/scalation_sqrt_In_Sample.png, id=669, 716.6775pt x 618.31pt>
+<Housing/scalation_sqrt_In_Sample.png, id=673, 716.6775pt x 618.31pt>
 File: Housing/scalation_sqrt_In_Sample.png Graphic file (type png)
 <use Housing/scalation_sqrt_In_Sample.png>
 Package pdftex.def Info: Housing/scalation_sqrt_In_Sample.png  used on input li
 ne 201.
 (pdftex.def)             Requested size: 250.82358pt x 216.39287pt.
-<Housing/scalation_sqrt_80_20.png, id=670, 717.68124pt x 616.3025pt>
+<Housing/scalation_sqrt_80_20.png, id=674, 717.68124pt x 616.3025pt>
 File: Housing/scalation_sqrt_80_20.png Graphic file (type png)
 <use Housing/scalation_sqrt_80_20.png>
 Package pdftex.def Info: Housing/scalation_sqrt_80_20.png  used on input line 2
 08.
 (pdftex.def)             Requested size: 250.82358pt x 215.38936pt.
-<Housing/statsmodels_sqrt_In_Sample.png, id=671, 722.7pt x 433.62pt>
+<Housing/statsmodels_sqrt_In_Sample.png, id=675, 722.7pt x 433.62pt>
 File: Housing/statsmodels_sqrt_In_Sample.png Graphic file (type png)
 <use Housing/statsmodels_sqrt_In_Sample.png>
 Package pdftex.def Info: Housing/statsmodels_sqrt_In_Sample.png  used on input 
@@ -1904,7 +1904,7 @@ Overfull \hbox (25.08388pt too wide) in paragraph at lines 221--224
  [][] 
  []
 
-<Housing/statsmodels_sqrt_80_20.png, id=672, 722.7pt x 433.62pt>
+<Housing/statsmodels_sqrt_80_20.png, id=676, 722.7pt x 433.62pt>
 File: Housing/statsmodels_sqrt_80_20.png Graphic file (type png)
 <use Housing/statsmodels_sqrt_80_20.png>
 Package pdftex.def Info: Housing/statsmodels_sqrt_80_20.png  used on input line
@@ -1917,19 +1917,19 @@ Overfull \hbox (25.08388pt too wide) in paragraph at lines 228--231
 
 [41 <./Housing/scalation_sqrt_In_Sample.png> <./Housing/scalation_sqrt_80_20.pn
 g>]
-<Housing/scalation_log1p_In_Sample.png, id=681, 654.445pt x 656.4525pt>
+<Housing/scalation_log1p_In_Sample.png, id=685, 654.445pt x 656.4525pt>
 File: Housing/scalation_log1p_In_Sample.png Graphic file (type png)
 <use Housing/scalation_log1p_In_Sample.png>
 Package pdftex.def Info: Housing/scalation_log1p_In_Sample.png  used on input l
 ine 241.
 (pdftex.def)             Requested size: 250.82358pt x 251.58809pt.
-<Housing/scalation_log1p_80_20.png, id=682, 620.3175pt x 632.3625pt>
+<Housing/scalation_log1p_80_20.png, id=686, 620.3175pt x 632.3625pt>
 File: Housing/scalation_log1p_80_20.png Graphic file (type png)
 <use Housing/scalation_log1p_80_20.png>
 Package pdftex.def Info: Housing/scalation_log1p_80_20.png  used on input line 
 248.
 (pdftex.def)             Requested size: 250.82358pt x 255.6905pt.
-<Housing/statsmodels_log1p_In_Sample.png, id=683, 722.7pt x 433.62pt>
+<Housing/statsmodels_log1p_In_Sample.png, id=687, 722.7pt x 433.62pt>
 File: Housing/statsmodels_log1p_In_Sample.png Graphic file (type png)
 <use Housing/statsmodels_log1p_In_Sample.png>
 Package pdftex.def Info: Housing/statsmodels_log1p_In_Sample.png  used on input
@@ -1940,7 +1940,7 @@ Overfull \hbox (25.08388pt too wide) in paragraph at lines 261--264
  [][] 
  []
 
-<Housing/statsmodels_log1p_80_20.png, id=684, 722.7pt x 433.62pt>
+<Housing/statsmodels_log1p_80_20.png, id=688, 722.7pt x 433.62pt>
 File: Housing/statsmodels_log1p_80_20.png Graphic file (type png)
 <use Housing/statsmodels_log1p_80_20.png>
 Package pdftex.def Info: Housing/statsmodels_log1p_80_20.png  used on input lin
@@ -1955,19 +1955,19 @@ Overfull \hbox (25.08388pt too wide) in paragraph at lines 268--271
 0.png> <./Housing/scalation_log1p_In_Sample.png> <./Housing/scalation_log1p_80_
 20.png>] [43 <./Housing/statsmodels_log1p_In_Sample.png> <./Housing/statsmodels
 _log1p_80_20.png>]
-<Insurance/scalation_sqrt_In_Sample.png, id=706, 715.67375pt x 577.15625pt>
+<Insurance/scalation_sqrt_In_Sample.png, id=710, 715.67375pt x 577.15625pt>
 File: Insurance/scalation_sqrt_In_Sample.png Graphic file (type png)
 <use Insurance/scalation_sqrt_In_Sample.png>
 Package pdftex.def Info: Insurance/scalation_sqrt_In_Sample.png  used on input 
 line 332.
 (pdftex.def)             Requested size: 250.82358pt x 202.27191pt.
-<Insurance/scalation_sqrt_80_20.png, id=707, 716.6775pt x 575.14874pt>
+<Insurance/scalation_sqrt_80_20.png, id=711, 716.6775pt x 575.14874pt>
 File: Insurance/scalation_sqrt_80_20.png Graphic file (type png)
 <use Insurance/scalation_sqrt_80_20.png>
 Package pdftex.def Info: Insurance/scalation_sqrt_80_20.png  used on input line
  339.
 (pdftex.def)             Requested size: 250.82358pt x 201.28752pt.
-<Insurance/statsmodels_sqrt_In_Sample.png, id=708, 722.7pt x 433.62pt>
+<Insurance/statsmodels_sqrt_In_Sample.png, id=712, 722.7pt x 433.62pt>
 File: Insurance/statsmodels_sqrt_In_Sample.png Graphic file (type png)
 <use Insurance/statsmodels_sqrt_In_Sample.png>
 Package pdftex.def Info: Insurance/statsmodels_sqrt_In_Sample.png  used on inpu
@@ -1978,7 +1978,7 @@ Overfull \hbox (25.08388pt too wide) in paragraph at lines 352--355
  [][] 
  []
 
-<Insurance/statsmodels_sqrt_80_20.png, id=709, 722.7pt x 433.62pt>
+<Insurance/statsmodels_sqrt_80_20.png, id=713, 722.7pt x 433.62pt>
 File: Insurance/statsmodels_sqrt_80_20.png Graphic file (type png)
 <use Insurance/statsmodels_sqrt_80_20.png>
 Package pdftex.def Info: Insurance/statsmodels_sqrt_80_20.png  used on input li
@@ -1991,19 +1991,19 @@ Overfull \hbox (25.08388pt too wide) in paragraph at lines 359--362
 
 [44 <./Insurance/scalation_sqrt_In_Sample.png> <./Insurance/scalation_sqrt_80_2
 0.png>]
-<Insurance/scalation_log1p_In_Sample.png, id=718, 619.31375pt x 649.42625pt>
+<Insurance/scalation_log1p_In_Sample.png, id=722, 619.31375pt x 649.42625pt>
 File: Insurance/scalation_log1p_In_Sample.png Graphic file (type png)
 <use Insurance/scalation_log1p_In_Sample.png>
 Package pdftex.def Info: Insurance/scalation_log1p_In_Sample.png  used on input
  line 372.
 (pdftex.def)             Requested size: 250.82358pt x 263.01619pt.
-<Insurance/scalation_log1p_80_20.png, id=719, 720.6925pt x 652.4375pt>
+<Insurance/scalation_log1p_80_20.png, id=723, 720.6925pt x 652.4375pt>
 File: Insurance/scalation_log1p_80_20.png Graphic file (type png)
 <use Insurance/scalation_log1p_80_20.png>
 Package pdftex.def Info: Insurance/scalation_log1p_80_20.png  used on input lin
 e 379.
 (pdftex.def)             Requested size: 250.82358pt x 227.06233pt.
-<Insurance/statsmodels_log1p_In_Sample.png, id=720, 722.7pt x 433.62pt>
+<Insurance/statsmodels_log1p_In_Sample.png, id=724, 722.7pt x 433.62pt>
 File: Insurance/statsmodels_log1p_In_Sample.png Graphic file (type png)
 <use Insurance/statsmodels_log1p_In_Sample.png>
 Package pdftex.def Info: Insurance/statsmodels_log1p_In_Sample.png  used on inp
@@ -2014,7 +2014,7 @@ Overfull \hbox (25.08388pt too wide) in paragraph at lines 392--395
  [][] 
  []
 
-<Insurance/statsmodels_log1p_80_20.png, id=721, 722.7pt x 433.62pt>
+<Insurance/statsmodels_log1p_80_20.png, id=725, 722.7pt x 433.62pt>
 File: Insurance/statsmodels_log1p_80_20.png Graphic file (type png)
 <use Insurance/statsmodels_log1p_80_20.png>
 Package pdftex.def Info: Insurance/statsmodels_log1p_80_20.png  used on input l
@@ -2035,44 +2035,55 @@ le.png> <./Insurance/statsmodels_log1p_80_20.png>]
 (./statsmodels/df_boxcox_housePrice.tex) (./statsmodels/df_sqrt_medicalCost.tex
 ) (./statsmodels/df_log1p_medicalCost.tex) [48]
 (./statsmodels/df_boxcox_medicalCost.tex)) (./Sections/Comp_mods.tex [49]
-[50] [51] [52]
-Overfull \hbox (9.25096pt too wide) in paragraph at lines 185--203
+[50] [51]
+Overfull \hbox (9.25096pt too wide) in paragraph at lines 179--197
  [][] 
  []
 
-[53] [54]) [55] (./Project_1_LaTex.aux)
+[52] [53] [54]) [55] (./Project_1_LaTex.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-02-20>
  ***********
-Package rerunfilecheck Info: File `Project_1_LaTex.out' has not changed.
-(rerunfilecheck)             Checksum: 318357207E9A137C6C1D58B4491EC724;8509.
+
+
+Package rerunfilecheck Warning: File `Project_1_LaTex.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `Project_1_LaTex.out':
+(rerunfilecheck)             Before: 7D62BFD353A9E988279F0A1DE50FE85F;8588
+(rerunfilecheck)             After:  2D2F274238C6BDABA10D3D08199856F5;8602.
 Package logreq Info: Writing requests to 'Project_1_LaTex.run.xml'.
 \openout1 = `Project_1_LaTex.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 35530 strings out of 474116
- 709618 string characters out of 5743682
+ 35533 strings out of 474116
+ 709652 string characters out of 5743682
  1964187 words of memory out of 5000000
- 57111 multiletter control sequences out of 15000+600000
+ 57112 multiletter control sequences out of 15000+600000
  567424 words of font info for 75 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  84i,9n,97p,1861b,852s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
-></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb>
-</usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><
-/usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></u
-sr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr
-/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/l
-ocal/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/loca
-l/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local
-/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/
-texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb>
-Output written on Project_1_LaTex.pdf (55 pages, 8820689 bytes).
+
+pdfTeX warning (dest): name{section.7} has been referenced but does not exist, 
+replaced by a fixed one
+
+</usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb><
+/usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></
+usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></u
+sr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr
+/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/l
+ocal/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/loc
+al/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/
+texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/t
+exlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/te
+xlive/2024/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb>
+Output written on Project_1_LaTex.pdf (55 pages, 8821770 bytes).
 PDF statistics:
- 900 PDF objects out of 1000 (max. 8388607)
- 626 compressed objects within 7 object streams
- 223 named destinations out of 1000 (max. 500000)
- 888 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 905 PDF objects out of 1000 (max. 8388607)
+ 631 compressed objects within 7 object streams
+ 225 named destinations out of 1000 (max. 500000)
+ 896 words of extra memory for PDF output out of 10000 (max. 10000000)
 
