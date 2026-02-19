@@ -1,0 +1,343 @@
+\section{Regularized Regression}\label{Regularized Regression}
+
+\subsection{Auto MPG}
+
+\begin{table}[H]
+\centering
+\caption{Lasso and Ridge Regression AutoMPG results}
+\label{tab:Regularized Regression on AutoMPG}
+\begin{tabular}{|c|c|c|} \hline
+Metric & Ridge & Lasso \\ \hline \hline
+rSq &0.809255 &  0.804643 \\ \hline
+rSqBar &0.806283 &       0.802112 \\ \hline
+sst &23819.0 &   23819.0 \\ \hline
+sse &4543.35 &   4653.21 \\ \hline
+sde &3.40878 &   3.44970 \\ \hline
+mse0 &11.5902 &  11.8704 \\ \hline
+rmse &3.40443 &  3.44535 \\ \hline
+mae &2.61826 &   2.62953 \\ \hline
+smape &64.8110 & 12.0246 \\ \hline
+m &392.000 &     392.000 \\ \hline
+dfr &6.00000 &   5.00000 \\ \hline
+df &385.000 &    386.000 \\ \hline
+fStat &272.234 & 317.974 \\ \hline
+aic &-1022.45 &  -1029.14 \\ \hline
+bic &-994.656 &  -1005.31 \\ \hline
+\end{tabular}
+\end{table}
+
+\begin{figure}[H]
+    \centering
+    \captionsetup{justification=centering}
+    \begin{subfigure}[b]{0.45\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{Auto_MPG/scalation_ridge_In_Sample.png} 
+        %\caption{Description of left image}
+        %\label{fig:left}
+    \end{subfigure}
+    \hfill % Adds flexible space between the images
+    \begin{subfigure}[b]{0.45\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{Auto_MPG/scalation_ridge_80_20.png}
+        %\caption{Description of right image}
+        %\label{fig:right}
+    \end{subfigure}
+    \caption{Scalation - Auto MPG Ridge\\ Left: In Sample Predictions\\ Right: 80-20 Out of Sample Predictions\\ yy black/actual vs. yp red/predicted}
+    \label{fig:Scalation - AutoMPG ridge}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \captionsetup{justification=centering}
+    \begin{subfigure}[b]{0.45\textwidth}
+        \centering
+        \includegraphics[width=1.1\textwidth]{Auto_MPG/statsmodels_ridge_In_Sample.png} 
+        %\caption{Description of left image}
+        %\label{fig:left}
+    \end{subfigure}
+    \hfill % Adds flexible space between the images
+    \begin{subfigure}[b]{0.45\textwidth}
+        \centering
+        \includegraphics[width=1.1\textwidth]{Auto_MPG/statsmodels_ridge_80_20.png}
+        %\caption{Description of right image}
+        %\label{fig:right}
+    \end{subfigure}
+    \caption{Statsmodels - Auto MPG Ridge\\ Left: In Sample Predictions\\ Right: 80-20 Out of Sample Predictions\\ yy black/actual vs. yp red/predicted}
+    \label{fig:Statsmodels - AutoMPG ridge}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \captionsetup{justification=centering}
+    \begin{subfigure}[b]{0.45\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{Auto_MPG/scalation_lasso_In_Sample.png} 
+        %\caption{Description of left image}
+        %\label{fig:left}
+    \end{subfigure}
+    \hfill % Adds flexible space between the images
+    \begin{subfigure}[b]{0.45\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{Auto_MPG/scalation_lasso_80_20.png}
+        %\caption{Description of right image}
+        %\label{fig:right}
+    \end{subfigure}
+    \caption{Scalation - Auto MPG Lasso\\ Left: In Sample Predictions\\ Right: 80-20 Out of Sample Predictions\\ yy black/actual vs. yp red/predicted}
+    \label{fig:Scalation - AutoMPG lasso}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \captionsetup{justification=centering}
+    \begin{subfigure}[b]{0.45\textwidth}
+        \centering
+        \includegraphics[width=1.1\textwidth]{Auto_MPG/statsmodels_lasso_In_Sample.png} 
+        %\caption{Description of left image}
+        %\label{fig:left}
+    \end{subfigure}
+    \hfill % Adds flexible space between the images
+    \begin{subfigure}[b]{0.45\textwidth}
+        \centering
+        \includegraphics[width=1.1\textwidth]{Auto_MPG/statsmodels_lasso_80_20.png}
+        %\caption{Description of right image}
+        %\label{fig:right}
+    \end{subfigure}
+    \caption{Statsmodels - Auto MPG Lasso\\ Left: In Sample Predictions\\ Right: 80-20 Out of Sample Predictions\\ yy black/actual vs. yp red/predicted}
+    \label{fig:Statsmodels - AutoMPG lasso}
+\end{figure}
+
+\subsection{House Prices}
+
+\begin{table}[H]
+\centering
+\caption{Lasso and Ridge Regression House Prices results}
+\label{tab:Regularized Regression on House Prices}
+\begin{tabular}{|c|c|c|} \hline
+Metric & Ridge & Lasso \\ \hline \hline
+rSq &0.998517 &  0.981186 \\ \hline
+rSqBar &0.998507 &       0.981072 \\ \hline
+sst &6.42325e+13 &       6.42325e+13 \\ \hline
+sse &9.52491e+10 &       1.20848e+12 \\ \hline
+sde &9764.45 &   22644.0 \\ \hline
+mse0 &9.52491e+07 &      1.20848e+09 \\ \hline
+rmse &9759.56 &  34763.2 \\ \hline
+mae &7740.46 &   28672.9 \\ \hline
+smape &9.75718 & 5.78522 \\ \hline
+m &1000.00 &     1000.00 \\ \hline
+dfr &7.00000 &   6.00000 \\ \hline
+df &992.000 &    993.000 \\ \hline
+fStat &95425.2 & 8631.07 \\ \hline
+aic &-10588.9 &  -12111.7 \\ \hline
+bic &-10549.7 &  -12077.3 \\ \hline
+\end{tabular}
+\end{table}
+
+\begin{figure}[H]
+    \centering
+    \captionsetup{justification=centering}
+    \begin{subfigure}[b]{0.45\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{Housing/scalation_ridge_In_Sample.png} 
+        %\caption{Description of left image}
+        %\label{fig:left}
+    \end{subfigure}
+    \hfill % Adds flexible space between the images
+    \begin{subfigure}[b]{0.45\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{Housing/scalation_ridge_80_20.png}
+        %\caption{Description of right image}
+        %\label{fig:right}
+    \end{subfigure}
+    \caption{Scalation - House Price Ridge\\ Left: In Sample Predictions\\ Right: 80-20 Out of Sample Predictions\\ yy black/actual vs. yp red/predicted}
+    \label{fig:Scalation - Housing ridge}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \captionsetup{justification=centering}
+    \begin{subfigure}[b]{0.45\textwidth}
+        \centering
+        \includegraphics[width=1.1\textwidth]{Housing/statsmodels_ridge_In_Sample.png} 
+        %\caption{Description of left image}
+        %\label{fig:left}
+    \end{subfigure}
+    \hfill % Adds flexible space between the images
+    \begin{subfigure}[b]{0.45\textwidth}
+        \centering
+        \includegraphics[width=1.1\textwidth]{Housing/statsmodels_ridge_80_20.png}
+        %\caption{Description of right image}
+        %\label{fig:right}
+    \end{subfigure}
+    \caption{Statsmodels - House Price Ridge\\ Left: In Sample Predictions\\ Right: 80-20 Out of Sample Predictions\\ yy black/actual vs. yp red/predicted}
+    \label{fig:Statsmodels - Housing ridge}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \captionsetup{justification=centering}
+    \begin{subfigure}[b]{0.45\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{Housing/scalation_lasso_In_Sample.png} 
+        %\caption{Description of left image}
+        %\label{fig:left}
+    \end{subfigure}
+    \hfill % Adds flexible space between the images
+    \begin{subfigure}[b]{0.45\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{Housing/scalation_lasso_80_20.png}
+        %\caption{Description of right image}
+        %\label{fig:right}
+    \end{subfigure}
+    \caption{Scalation - House Price Lasso\\ Left: In Sample Predictions\\ Right: 80-20 Out of Sample Predictions\\ yy black/actual vs. yp red/predicted}
+    \label{fig:Scalation - Housing lasso}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \captionsetup{justification=centering}
+    \begin{subfigure}[b]{0.45\textwidth}
+        \centering
+        \includegraphics[width=1.1\textwidth]{Housing/statsmodels_lasso_In_Sample.png} 
+        %\caption{Description of left image}
+        %\label{fig:left}
+    \end{subfigure}
+    \hfill % Adds flexible space between the images
+    \begin{subfigure}[b]{0.45\textwidth}
+        \centering
+        \includegraphics[width=1.1\textwidth]{Housing/statsmodels_lasso_80_20.png}
+        %\caption{Description of right image}
+        %\label{fig:right}
+    \end{subfigure}
+    \caption{Statsmodels - House Price Lasso\\ Left: In Sample Predictions\\ Right: 80-20 Out of Sample Predictions\\ yy black/actual vs. yp red/predicted}
+    \label{fig:Statsmodels - Housing lasso}
+\end{figure}
+
+\subsection{Insurance Charges}
+
+\begin{table}[H]
+\centering
+\caption{Lasso and Ridge Regression for Insurance Charges results}
+\label{tab:Regularized Regression on Insurance Charges}
+\begin{tabular}{|c|c|c|} \hline
+Metric & Ridge & Lasso \\ \hline \hline
+rSq &0.750913 &  0.723537 \\ \hline
+rSqBar &0.749414 &       0.722082 \\ \hline
+sst &1.96074e+11 &       1.96074e+11 \\ \hline
+sse &4.88396e+10 &       5.42073e+10 \\ \hline
+sde &6043.94 &   6358.54 \\ \hline
+mse0 &3.65019e+07 &      4.05137e+07 \\ \hline
+rmse &6041.68 &  6365.04 \\ \hline
+mae &4171.66 &   4367.97 \\ \hline
+smape &68.9369 & 37.6686 \\ \hline
+m &1338.00 &     1338.00 \\ \hline
+dfr &8.00000 &   7.00000 \\ \hline
+df &1329.00 &    1330.00 \\ \hline
+fStat &500.810 & 497.252 \\ \hline
+aic &-13529.8 &  -13601.5 \\ \hline
+bic &-13483.0 &  -13559.9 \\ \hline
+\end{tabular}
+\end{table}
+
+\begin{figure}[H]
+    \centering
+    \captionsetup{justification=centering}
+    \begin{subfigure}[b]{0.45\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{Insurance/scalation_ridge_In_Sample.png} 
+        %\caption{Description of left image}
+        %\label{fig:left}
+    \end{subfigure}
+    \hfill % Adds flexible space between the images
+    \begin{subfigure}[b]{0.45\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{Insurance/scalation_ridge_80_20.png}
+        %\caption{Description of right image}
+        %\label{fig:right}
+    \end{subfigure}
+    \caption{Scalation - Insurance Charges Ridge\\ Left: In Sample Predictions\\ Right: 80-20 Out of Sample Predictions\\ yy black/actual vs. yp red/predicted}
+    \label{fig:Scalation - Insurance ridge}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \captionsetup{justification=centering}
+    \begin{subfigure}[b]{0.45\textwidth}
+        \centering
+        \includegraphics[width=1.1\textwidth]{Insurance/statsmodels_ridge_In_Sample.png} 
+        %\caption{Description of left image}
+        %\label{fig:left}
+    \end{subfigure}
+    \hfill % Adds flexible space between the images
+    \begin{subfigure}[b]{0.45\textwidth}
+        \centering
+        \includegraphics[width=1.1\textwidth]{Insurance/statsmodels_ridge_80_20.png}
+        %\caption{Description of right image}
+        %\label{fig:right}
+    \end{subfigure}
+    \caption{Statsmodels - Insurance Charges Ridge\\ Left: In Sample Predictions\\ Right: 80-20 Out of Sample Predictions\\ yy black/actual vs. yp red/predicted}
+    \label{fig:Statsmodels - Insurance ridge}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \captionsetup{justification=centering}
+    \begin{subfigure}[b]{0.45\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{Insurance/scalation_lasso_In_Sample.png} 
+        %\caption{Description of left image}
+        %\label{fig:left}
+    \end{subfigure}
+    \hfill % Adds flexible space between the images
+    \begin{subfigure}[b]{0.45\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{Insurance/scalation_lasso_80_20.png}
+        %\caption{Description of right image}
+        %\label{fig:right}
+    \end{subfigure}
+    \caption{Scalation - Insurance Charges Lasso\\ Left: In Sample Predictions\\ Right: 80-20 Out of Sample Predictions\\ yy black/actual vs. yp red/predicted}
+    \label{fig:Scalation - Insurance lasso}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \captionsetup{justification=centering}
+    \begin{subfigure}[b]{0.45\textwidth}
+        \centering
+        \includegraphics[width=1.1\textwidth]{Insurance/statsmodels_lasso_In_Sample.png} 
+        %\caption{Description of left image}
+        %\label{fig:left}
+    \end{subfigure}
+    \hfill % Adds flexible space between the images
+    \begin{subfigure}[b]{0.45\textwidth}
+        \centering
+        \includegraphics[width=1.1\textwidth]{Insurance/statsmodels_lasso_80_20.png}
+        %\caption{Description of right image}
+        %\label{fig:right}
+    \end{subfigure}
+    \caption{Statsmodels - Insurance Charges Lasso\\ Left: In Sample Predictions\\ Right: 80-20 Out of Sample Predictions\\ yy black/actual vs. yp red/predicted}
+    \label{fig:Statsmodels - Insurance lasso}
+\end{figure}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

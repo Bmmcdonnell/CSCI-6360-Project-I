@@ -148,9 +148,9 @@ def Compare_IS_OOS(X, y, data_name, testp=0.2, random_state=42):
 
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=testp, random_state=random_state)
 
-    reg_OOS = sm.OLS(y_test, X_test).fit()
+    reg_OOS = sm.OLS(y_train, X_train).fit()
     reg_OOS_yp = reg_OOS.predict(X_test)
-    reg_OOS_QoF = getQoF(y_test, reg_OOS_yp, k, reg_OOS)
+    reg_OOS_QoF = getQoF(y_test, reg_OOS_yp, k, None)
 
     # Print the results in a LaTeX table format
     print("\\begin{table}[h]")
@@ -278,7 +278,7 @@ def CV_Latex_Table(X, y, num_folds=5, data_name=None):
         y_pred = model.predict(X_test)
         
         # Calculate metrics and append to lists
-        Qof = getQoF(y_test, y_pred, k, model)
+        Qof = getQoF(y_test, y_pred, k, None)
 
         
         rSq_list.append(Qof[0])

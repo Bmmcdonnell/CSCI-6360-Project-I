@@ -254,25 +254,25 @@ def OutOfSample(X, y, data_name, testp=0.2, random_state=42):
 
     reg = sm.OLS(y_train, X_train).fit()
     regyp = reg.predict(X_test)
-    reg_QoF = getQoF(y_test, regyp, k, reg)
+    reg_QoF = getQoF(y_test, regyp, k, None)
 
     ridge = sm.OLS(y_train, X_train).fit_regularized(method='elastic_net', L1_wt=0, alpha=1.0)
     ridgeyp = ridge.predict(X_test)
-    ridge_QoF = getQoF(y_test, ridgeyp, k, ridge)
+    ridge_QoF = getQoF(y_test, ridgeyp, k, None)
 
     lasso = sm.OLS(y_train, X_train).fit_regularized(method='elastic_net', L1_wt=1, alpha=1.0)
     lassoyp = lasso.predict(X_test)
-    lasso_QoF = getQoF(y_test, lassoyp, k, lasso)
+    lasso_QoF = getQoF(y_test, lassoyp, k, None)
 
     Sqrtf = sm.OLS(np.sqrt(y_train), X_train).fit()
     Sqrtfyp_tran = Sqrtf.predict(X_test)
     Sqrtfyp = Sqrtfyp_tran ** 2
-    Sqrtf_QoF = getQoF(y_test, Sqrtfyp, k, Sqrtf)
+    Sqrtf_QoF = getQoF(y_test, Sqrtfyp, k, None)
 
     log1p = sm.OLS(np.log1p(y_train), X_train).fit()
     log1pyp_tran = log1p.predict(X_test)
     log1pyp = np.expm1(log1pyp_tran)
-    log1p_QoF = getQoF(y_test, log1pyp, k, log1p)
+    log1p_QoF = getQoF(y_test, log1pyp, k, None)
 
     print("\\begin{table}[h]")
     print("\\centering")
