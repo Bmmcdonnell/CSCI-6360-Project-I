@@ -133,7 +133,7 @@
 \DeclareFieldFormat{multipostnote}{#1}
 
 \title{Project 1}
-\author{Manager: Brendan McDonnel \phantom{thisisatest}\\
+\author{Manager: Brendan McDonnell \phantom{thisisatest}\\
 Masum Billah\\
 Madhu Chencharapu\\
 Gabriel Loos\\
@@ -154,9 +154,11 @@ In this project, we will explore three different data sets using multiple linear
 	\item \textbf{Insurance Charges:} This data set contains information about different people. The goal is to predict a persons insurance charges given their other characteristics. The data set can be found at \url{https://www.kaggle.com/datasets/mirichoi0218/insurance}.
 \end{itemize}
 
-The report will be organized as follows, \Cref{Linear Regression} will be focused on linear regression, \Cref{Regularized Regression} regularized regression, \Cref{Transformed Regression} transformed regression, and \Cref{Comp_mods} will be comparing all of the models.
+The report will be organized as follows,\Cref{EDA} goes over the EDA, \Cref{Linear Regression} will be focused on linear regression, \Cref{Regularized Regression} regularized regression, \Cref{Transformed Regression} transformed regression, and \Cref{Comp_mods} will be comparing all of the models.
 
-In \Cref{Linear Regression}, in-sample, out-of-sample, 5-fold cross validation, and feature selection results are given for multiple linear regression on all three data sets. The results come from both scalation in scala and statsmodels in python. 
+In \Cref{Linear Regression}, in-sample, out-of-sample, 5-fold cross validation, and feature selection results are given for multiple linear regression on all three data sets. The results come from both scalation in scala and statsmodels in python. \Cref{Regularized Regression} goes over in-sample and out-of-sample quality of fit metrics and plots for Ridge Regression and Lasso. \Cref{Transformed Regression} gives in-sample, out-of-sample, and feature selection results for the Sqrt, Log1p, and Box-Cox transformations.
+
+\input{Sections/EDA}
 
 \input{Sections/Linear_Regression}
 
@@ -165,7 +167,5 @@ In \Cref{Linear Regression}, in-sample, out-of-sample, 5-fold cross validation, 
 \input{Sections/Transformed_Regression}
 
 \input{Sections/Comp_mods}
-
-
 
 \end{document}

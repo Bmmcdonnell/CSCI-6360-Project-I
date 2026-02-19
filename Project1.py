@@ -4,6 +4,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 from sklearn.model_selection import train_test_split
 
+
 def getQoF(y_actual, y_pred, k, mod):
     # Get the number of observations (m)
     m = len(y_actual)  # Number of observations in the original dataset

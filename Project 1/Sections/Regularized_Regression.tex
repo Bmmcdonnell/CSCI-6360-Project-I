@@ -1,5 +1,7 @@
 \section{Regularized Regression}\label{Regularized Regression}
 
+For regularized regression, we applied both lasso and ridge regression to each dataset and compared the performance from each method among each dataset. More specifically, in scala we applied all forms of feature selection alongside cross validation to ridge regression, while applying forward selection to lasso regression. In statsmodels we split each dataset into in-sample and $80$--$20$ splits and tested them on the lasso and ridge models.
+
 \subsection{Auto MPG}
 
 \begin{table}[H]

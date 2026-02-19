@@ -1,5 +1,11 @@
 \section{Comparing Different Models on the Same Data Set}\label{Comp_mods}
 
+In summary, the linear regression model for the Auto MPG dataset achieved an $R^2$ and adjusted $R^2$ of $0.81$, with consistent results of $0.80$ across cross-validation in both Scala and Python. For the House Price dataset, the model performed exceptionally well, with $R^2$ values nearly reaching $1.0$ across in-sample, validation, and cross-validation sets. The Insurance dataset showed lower performance, with an $R^2$ of $0.75$ and an adjusted $R^2$ of $0.72$.
+
+When applying regularized regression, on the Auto MPG dataset, Lasso performed slightly better than Ridge when using scalation, but in statsmodels Lasso took a significant dip, resulting in Ridge performing better. They both performed comparably on the House Price dataset. On the Insurance dataset, using scalation they again performed comparably, but in statsmodels Ridge performed far worse.
+
+Regarding data transformations, the Log1p method was most effective for the Auto MPG dataset, whereas the Box-Cox transformation yielded the best results for House Price prediction. For the Insurance dataset, the Sqrt transformation achieved the highest performance, reaching an $R^2$ and adjusted $R^2$ of $0.75$ for in-sample data and $0.73$ for validation. These findings remained consistent when implemented through both ScalaTion and statsmodels.
+
 \subsection{Auto MPG}
 
 \begin{table}[H]

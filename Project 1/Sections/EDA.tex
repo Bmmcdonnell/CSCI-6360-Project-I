@@ -1,0 +1,364 @@
+\section{Exploratory Data Analysis (EDA)}\label{EDA}
+
+\subsection{Auto MPG Dataset}
+
+\subsubsection{Introduction}
+This analysis is conducted on the Auto MPG dataset obtained from the UCI Machine Learning Repository. This dataset contains information about various automobiles and their fuel efficiency.
+
+The primary objective of this dataset is to predict the fuel efficiency (miles per gallon - MPG) of a car based on the technical characteristics. This dataset consists of the 398 Observations.
+
+\textbf{Predictive Variables (Features):}\\
+cylinders, displacement, horsepower, weight, acceleration, model\_year, origin (If car\_name exists, it is treated as non-numeric and is typically excluded for basic linear regression).
+
+\textbf{Target variable:}\\
+mpg (miles per gallon) The prediction task is a regression problem, since the target variable (mpg) is continuous.
+
+\subsubsection{Data Preprocessing}
+Dataset obtained from the UCI Machine Learning Repository.\\
+Retrieved programmatically using the ucimlrepo Python package and ID used: 9 (Auto MPG dataset).
+
+The returned object contains:
+\begin{enumerate}
+    \item auto\_mpg.data.features $\rightarrow$ Independent variables (pandas DataFrame)
+    \item auto\_mpg.data.targets $\rightarrow$ Dependent variable (pandas DataFrame)
+    \item auto\_mpg.metadata $\rightarrow$ Dataset description and source details
+    \item auto\_mpg.variables $\rightarrow$ Column-level information
+\end{enumerate}
+
+\subsubsection{Dataset Dimensions}
+The dataset contains 398 rows (observations). The dataset contains 8 columns (features + target).
+
+\subsubsection{Column Names}
+The dataset includes the following variables:
+\begin{enumerate}
+    \item displacement
+    \item cylinders
+    \item horsepower
+    \item weight
+    \item acceleration
+    \item model\_year
+    \item origin
+    \item mpg (target variable)
+\end{enumerate}
+
+Shape of dataset: (398, 8)
+
+\subsubsection{Numerical Distribution}
+
+\indent \hspace{0.42cm} Float columns: displacement, horsepower, acceleration, mpg
+
+Integer columns: cylinders, weight, model\_year, origin
+
+
+\subsubsection{Missing Value Analysis}
+
+\indent\hspace{0.42cm} horsepower column contains 6 missing values out of 398 observations.\\
+\indent All other variables contain complete data.\\
+\indent Missing percentage in horsepower: $$\frac{6}{13}\approx 1.5\%$$ Since missing data is very small ($< 5\%$), it does not significantly affect overall dataset structure.\\
+We dropped those records which had null values, since there are only a few records.
+
+\subsubsection{Heat Map}
+\begin{figure}[H]
+    \centering
+    \captionsetup{justification=centering}
+    \includegraphics[width=0.5\textwidth]{EDA/Auto_Mpg/correlation_heatmap.png} 
+    \caption{Auto MPG Correlation Heat Map}
+    \label{fig:Auto MPG Correlation Heat Map}
+\end{figure}
+
+\subsubsection{Correlation Analysis}
+Strong negative correlation observed between mpg and engine-related features such as weight, displacement, horsepower, and cylinders. model\_year and origin show moderate positive correlation with mpg. High inter-correlation among displacement, cylinders, and weight indicates potential multicollinearity.
+
+\subsubsection{Box Plots}
+\begin{figure}[H]
+    \centering
+    \captionsetup{justification=centering}
+    \includegraphics[width=\textwidth]{EDA/Auto_Mpg/boxplots.png} 
+    \caption{Auto MPG Box Plots}
+    \label{fig:Auto MPG Box Plots}
+\end{figure}
+
+Weight and displacement show wide spread but no extreme outliers.
+
+Horsepower contains a few high-value outliers and is slightly right-skewed.
+
+Acceleration shows moderate spread with minor outliers on both ends.
+
+Overall, variables exhibit reasonable variability; only horsepower may require attention during modeling.
+
+
+\subsubsection{Count Plots}
+\begin{figure}[H]
+    \centering
+    \captionsetup{justification=centering}
+    \begin{subfigure}[b]{0.45\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{EDA/Auto_Mpg/cylinders_countplot.png} 
+        %\caption{Description of left image}
+        %\label{fig:left}
+    \end{subfigure}
+    \hfill % Adds flexible space between the images
+    \begin{subfigure}[b]{0.45\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{EDA/Auto_Mpg/origin_countplot.png}
+        %\caption{Description of right image}
+        %\label{fig:right}
+    \end{subfigure}
+    \caption{Auto MPG Count Plots}
+    \label{fig:Auto MPG Count Plots}
+\end{figure}
+
+Most vehicles have 4 cylinders, making it the dominant engine type.
+
+Very few vehicles have 3 or 5 cylinders, indicating class imbalance.
+
+A substantial number of vehicles have 6 and 8 cylinders, but significantly fewer than 4-cylinder cars.
+
+Majority of cars originate from Origin 1 (USA). Origins 2 and 3 (Europe and Japan) have fewer observations, showing dataset imbalance across regions.
+
+
+\subsubsection{Scatter Plot Observations}
+\begin{figure}[H]
+    \centering
+    \captionsetup{justification=centering}
+    \includegraphics[width=\textwidth]{EDA/Auto_Mpg/scatterplots.png} 
+    \caption{Auto MPG Scatter Plots}
+    \label{fig:Auto MPG Scatter Plots}
+\end{figure}
+
+Weight, displacement, horsepower, and cylinders show strong negative relationships with mpg — higher engine size and vehicle weight correspond to lower fuel efficiency.
+
+Model\_year shows a clear positive trend with mpg — newer cars tend to have better fuel efficiency.
+
+Acceleration shows a weak to moderate positive relationship with mpg.
+
+Relationships appear largely linear, supporting the use of linear regression.
+
+No extreme structural anomalies are observed, though some spread increases for lighter vehicles.
+
+\subsection{House Price Regression Dataset}
+
+\subsubsection{Introduction}
+This analysis is conducted on the House Price Regression Dataset. The dataset contains structural and location-related attributes of houses along with their market prices. The primary objective of this dataset is to predict the House\_Price based on housing characteristics. The dataset consists of 1000 observations.
+
+\textbf{Predictive Variables (Features):}\\
+Square\_Footage, Num\_Bedrooms, Num\_Bathrooms, Year\_Built, Lot\_Size, Garage\_Size, Neighborhood\_Quality.
+
+\textbf{Target Variable:}\\
+House\_Price. The prediction task is a regression problem, since the target variable (House\_Price) is continuous.
+
+\subsubsection{Dataset Dimensions}
+The dataset contains 1000 rows (observations) and 8 columns (7 features + 1 target). Shape of dataset: (1000, 8).
+
+\subsubsection{Data Types}
+\begin{itemize}
+    \item 6 columns are of type int64: Square\_Footage, Num\_Bedrooms, Num\_Bathrooms, Year\_Built, Garage\_Size, Neighborhood\_Quality.
+    \item 2 columns are of type float64: Lot\_Size, House\_Price.
+\end{itemize}
+No object or categorical string columns are present.
+
+\subsubsection{Missing Value Analysis}
+All columns contain 1000 non-null values. No missing values are present. Missing percentage in dataset: 0\%. No imputation or deletion was required.
+
+\subsubsection{Heat Map}
+\begin{figure}[H]
+    \centering
+    \captionsetup{justification=centering}
+    \includegraphics[width=0.5\textwidth]{EDA/Housing_Price_Regression/heatmap.png} 
+    \caption{House Price Correlation Heat Map}
+    \label{fig:House Price Correlation Heat Map}
+\end{figure}
+
+Square\_Footage and House\_Price show extremely strong positive correlation (0.99).
+
+Lot\_Size shows weak positive correlation (0.16) with House\_Price.
+
+Year\_Built shows very weak correlation (0.052) with House\_Price.
+
+Num\_Bedrooms and Num\_Bathrooms show near-zero correlation with House\_Price.
+
+No strong multicollinearity exists among independent variables.
+
+
+\subsubsection{Distribution Analysis of Continuous Variables}
+\begin{figure}[H]
+    \centering
+    \captionsetup{justification=centering}
+    \includegraphics[width=\textwidth]{EDA/Housing_Price_Regression/historgram_Continous.png} 
+    \caption{House Price Distribution Analysis of Continuous Variables}
+    \label{fig:House Price Distribution Analysis of Continuous Variables}
+\end{figure}
+
+\noindent \textbf{Square\_Footage}: Ranges from approximately 500 to 5000 sq.ft. The distribution appears relatively uniform across the range. No strong skewness is observed. There is substantial variability in property sizes. This wide variation suggests square footage may strongly influence house price.
+
+\noindent \textbf{Lot\_Size}:\\
+Lot size ranges from approximately 0.5 to 5 units. The distribution is fairly evenly spread. No significant skewness or extreme outliers are visible. The spread indicates moderate variability across properties.
+
+\noindent \textbf{Year\_Built}:\\
+Houses were constructed between 1950 and 2022. The distribution is relatively balanced across decades. No strong clustering in a specific time period is observed.
+
+\noindent \textbf{House\_Price}:\\
+House prices range from approximately \$111,626 to \$1,108,237. The distribution shows moderate spread across the price range. No severe skewness is evident.
+
+\subsubsection{Distribution Analysis of Discrete Variables}
+\begin{figure}[H]
+    \centering
+    \captionsetup{justification=centering}
+    \includegraphics[width=\textwidth]{EDA/Housing_Price_Regression/historgram_group2.png} 
+    \caption{House Price Distribution Analysis of Discrete Variables}
+    \label{fig:House Price Distribution Analysis of Discrete Variables}
+\end{figure}
+
+\noindent \textbf{Num\_Bedrooms}:\\
+The number of bedrooms ranges from 1 to 5. The distribution appears relatively balanced across categories. Houses with 2 and 5 bedrooms are slightly more frequent.
+
+\noindent \textbf{Num\_Bathrooms}:\\
+Bathrooms range from 1 to 3. Properties with 1 bathroom appear slightly more common.
+
+\noindent \textbf{Garage\_Size}:\\
+Garage size ranges from 0 to 2. The three categories are nearly evenly distributed.
+
+\noindent \textbf{Neighborhood\_Quality}:\\
+Neighborhood quality ranges from 1 to 10. The distribution is fairly spread across all quality levels. Slightly higher counts appear in mid-to-high quality ranges.
+
+\subsubsection{Bivariate Analysis: Features vs House Price}
+\begin{figure}[H]
+    \centering
+    \captionsetup{justification=centering}
+    \includegraphics[width=\textwidth]{EDA/Housing_Price_Regression/scatter_group1.png} 
+    \caption{House Price Bivariate Analysis: Features vs House Price}
+    \label{fig:House Price Bivariate Analysis: Features vs House Price1}
+\end{figure}
+
+\noindent \textbf{Square\_Footage vs House\_Price}:\\
+A very strong positive linear relationship is observed. As square footage increases, house price increases proportionally. The points are tightly clustered along a straight upward trend. This indicates extremely high correlation ($\approx 0.99$).
+
+\noindent \textbf{Lot\_Size vs House\_Price}:\\
+The scatter plot shows a widely dispersed pattern. No clear linear trend is visible. The relationship appears weak.
+
+\noindent \textbf{Num\_Bedrooms vs House\_Price}:\\
+Vertical strip pattern is observed due to discrete values (1–5). No strong increasing price trend across bedroom categories. Prices vary significantly within each bedroom count.
+
+\noindent \textbf{Num\_Bathrooms vs House\_Price}:\\
+Similar vertical strip pattern due to discrete values (1–3). No clear monotonic increase in price. Price variation is high within each bathroom category.
+
+\begin{figure}[H]
+    \centering
+    \captionsetup{justification=centering}
+    \includegraphics[width=\textwidth]{EDA/Housing_Price_Regression/scatter_group2.png} 
+    \caption{House Price Bivariate Analysis: Features vs House Price}
+    \label{fig:House Price Bivariate Analysis: Features vs House Price2}
+\end{figure}
+
+\noindent \textbf{Garage\_Size vs House\_Price}:\\
+A vertical strip pattern is observed due to discrete values (0, 1, 2). Prices vary widely within each garage category. No strong linear upward trend is visible.
+
+\noindent \textbf{Neighborhood\_Quality vs House\_Price}:\\
+Discrete vertical clusters are visible (values 1 to 10). Slight upward tendency is noticeable as quality increases. However, price variation remains high within each category.
+
+\noindent \textbf{Year\_Built vs House\_Price}:\\
+Scatter points are widely dispersed. No clear increasing or decreasing linear trend is visible.
+
+\subsection{Medical Cost Personal Dataset}
+
+\subsubsection{Introduction}
+This analysis is conducted on the Insurance dataset obtained from Kaggle. This dataset contains demographic and health-related information of individuals along with their medical insurance charges. The primary objective is to predict the medical insurance charges (charges) based on demographic and health-related characteristics.
+
+\textbf{Predictive Variables (Features):}\\
+age, sex, bmi, children, smoker, region.
+
+\textbf{Target Variable:}\\
+charges (medical insurance cost). The prediction task is a regression problem, since the target variable (charges) is continuous.
+
+\subsubsection{Dataset Overview}
+Dataset obtained from Kaggle: \url{https://www.kaggle.com/datasets/mirichoi0218/insurance}. The dataset is provided as a CSV file (insurance.csv).
+
+\subsubsection{Dataset Dimensions}
+The dataset contains 1,338 rows (observations) and 7 columns (features + target). Shape of dataset: (1338, 7).
+
+\subsubsection{Data Types}
+\begin{itemize}
+    \item 3 columns are of type int64 $\rightarrow$ age, children
+    \item 2 columns are of type float64 $\rightarrow$ bmi, charges
+    \item 3 columns are of type object $\rightarrow$ sex, smoker, region
+\end{itemize}
+
+\subsubsection{Numerical Distribution}
+\begin{itemize}
+    \item Continuous Variables: age, bmi, charges
+    \item Discrete Numerical Variable: children
+    \item Categorical Variables: sex, smoker, region
+\end{itemize}
+
+\subsubsection{Missing Value Analysis}
+No missing values are present in the dataset. All 1,338 observations are complete. Missing percentage in all columns: 0\%. Since there are no missing values, no imputation or deletion is required.
+
+\subsubsection{Histogram of Continuous Variables}
+\begin{figure}[H]
+    \centering
+    \captionsetup{justification=centering}
+    \includegraphics[width=\textwidth]{EDA/Insurance_EDA/hist_continuous.png} 
+    \caption{Insurance Charges Histogram of Continuous Variables}
+    \label{fig:Insurance Charges Histogram of Continuous Variables}
+\end{figure}
+Charges distribution is highly right-skewed. Age distribution is fairly uniform across adult range. BMI is approximately normally distributed with slight right skew. Charges show large variance compared to other variables. Skewness in charges suggests possible log transformation.
+
+\subsubsection{Boxplots (Outliers)}
+\begin{figure}[H]
+    \centering
+    \captionsetup{justification=centering}
+    \includegraphics[width=\textwidth]{EDA/Insurance_EDA/boxplots_continuous.png} 
+    \caption{Insurance Charges Boxplots (Outliers)}
+    \label{fig:Insurance Charges Boxplots (Outliers)}
+\end{figure}
+Charges contain significant high-value outliers. BMI shows moderate outliers. Age does not show extreme outliers. Charges variability is much larger than other variables. Outliers may influence regression performance.
+
+\subsubsection{Countplots (Categorical Variables)}
+\begin{figure}[H]
+    \centering
+    \captionsetup{justification=centering}
+    \includegraphics[width=\textwidth]{EDA/Insurance_EDA/countplots_categorical.png} 
+    \caption{Insurance Charges Countplots (Categorical Variables)}
+    \label{fig:Insurance Charges Countplots (Categorical Variables)}
+\end{figure}
+Gender distribution is nearly balanced. Non-smokers are more frequent than smokers. Regions are relatively evenly distributed. No major imbalance in categorical predictors. Smoker category likely impactful despite lower frequency.
+
+\subsubsection{Children Distribution}
+\begin{figure}[H]
+    \centering
+    \captionsetup{justification=centering}
+    \includegraphics[width=0.5\textwidth]{EDA/Insurance_EDA/children_distribution.png} 
+    \caption{Insurance Charges Children Distribution}
+    \label{fig:Insurance Charges Children Distribution}
+\end{figure}
+Majority have 0–2 children. Few observations for higher number of children. Distribution is right-skewed. Variable has limited range. Impact on charges appears minor but requires further testing.
+
+\subsubsection{Scatterplots (Continuous vs Charges)}
+\begin{figure}[H]
+    \centering
+    \captionsetup{justification=centering}
+    \includegraphics[width=\textwidth]{EDA/Insurance_EDA/scatter_continuous_vs_target.png} 
+    \caption{Insurance Charges Scatterplots (Continuous vs Charges)}
+    \label{fig:Insurance Charges Scatterplots (Continuous vs Charges)}
+\end{figure}
+Age shows positive relationship with charges. BMI shows moderate upward trend with charges. Charges variability increases at higher age and BMI. Evidence of heteroscedasticity. Possible non-linear relationship exists.
+
+\subsubsection{Categorical vs Charges (Boxplots)}
+\begin{figure}[H]
+    \centering
+    \captionsetup{justification=centering}
+    \includegraphics[width=\textwidth]{EDA/Insurance_EDA/categorical_vs_target.png} 
+    \caption{Insurance Charges Categorical vs Charges (Boxplots)}
+    \label{fig:Insurance Charges Categorical vs Charges (Boxplots)}
+\end{figure}
+Smokers have significantly higher charges. Clear separation between smoker and non-smoker groups. Gender difference in charges is minimal. Regional differences are small. Smoker variable appears strongest categorical predictor.
+
+\subsubsection{Heatmap}
+\begin{figure}[H]
+    \centering
+    \captionsetup{justification=centering}
+    \includegraphics[width=0.5\textwidth]{EDA/Insurance_EDA/correlation_heatmap.png} 
+    \caption{Insurance Charges Correlation Heat Map}
+    \label{fig:Insurance Charges Correlation Heat Map}
+\end{figure}
+Strongest correlation with charges: smoker. Moderate correlation: BMI and age. Weak correlation: children. No severe multicollinearity among numeric features. Age, BMI, and smoker likely key predictors.
